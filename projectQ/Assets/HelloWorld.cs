@@ -6,7 +6,7 @@ public class HelloWorld : MonoBehaviour
 {
     void Start()
     {
-        Debug.Log("æ»≥Á«œººø‰!");
+        Debug.Log("Hello World!");
     }
 
     void Update()
