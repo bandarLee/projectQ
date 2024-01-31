@@ -33,6 +33,7 @@ public class Enemy : MonoBehaviour // Basic타입
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("enter");
         if (collision.collider.CompareTag("Wall_Top"))
         {
             _dir = Vector2.left;
