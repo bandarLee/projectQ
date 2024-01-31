@@ -11,11 +11,6 @@ public class OneEyeMon : MonoBehaviour //프리팹 OneEyeMon(clone)에다가 삽
 
 
 
-
-
-
-
-
     public float Destroytime = 0.8f;
 
     void Start()
