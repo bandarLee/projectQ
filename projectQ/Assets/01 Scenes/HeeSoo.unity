@@ -1750,7 +1750,7 @@ GameObject:
   - component: {fileID: 80735451}
   m_Layer: 6
   m_Name: Wall_Top
-  m_TagString: Untagged
+  m_TagString: Wall_Top
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5982,7 +5982,7 @@ GameObject:
   - component: {fileID: 466422062}
   m_Layer: 6
   m_Name: Wall_Left
-  m_TagString: Untagged
+  m_TagString: Wall_Left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29192,7 +29192,7 @@ GameObject:
   - component: {fileID: 1943787597}
   m_Layer: 6
   m_Name: Wall_Bottom
-  m_TagString: Untagged
+  m_TagString: Wall_Bottom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31475,7 +31475,7 @@ GameObject:
   - component: {fileID: 1978247045}
   m_Layer: 6
   m_Name: Wall_Right
-  m_TagString: Untagged
+  m_TagString: Wall_Right
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36101,27 +36101,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6056364363682408152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8487795718602356412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0041d79300067a34bb479c090d3bb4ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Movespeed: 2
-  Movespeed2: 4
-  _target: {fileID: 1832778140}
-  shadowPrefab: {fileID: 3943061821854831983, guid: fcc69b46dde369347a8b9178d7176d50, type: 3}
-  isDelay: 0
-  Respawntime: 0.1
-  swingtime: 0.8
-  time: 0
-  time2: 0
 --- !u!4 &7132248678986227713
 Transform:
   m_ObjectHideFlags: 0
@@ -36659,7 +36638,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7132248678986227713}
   - component: {fileID: 4566413673850222711}
-  - component: {fileID: 6056364363682408152}
+  - component: {fileID: 8487795718602356413}
   m_Layer: 0
   m_Name: OneEyeMon
   m_TagString: Untagged
@@ -36667,6 +36646,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8487795718602356413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8487795718602356412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ac7a67f37913a4b956bf34863a6a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Movespeed: 2
+  Movespeed2: 4
+  _target: {fileID: 1832778140}
+  shadowPrefab: {fileID: 3943061821854831983, guid: fcc69b46dde369347a8b9178d7176d50, type: 3}
+  isDelay: 0
+  Respawntime: 0.1
+  swingtime: 0.6
+  time: 0
+  time2: 0
 --- !u!1 &9056056782053948100
 GameObject:
   m_ObjectHideFlags: 0

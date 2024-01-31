@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemytarget : MonoBehaviour // target타입
+public class Monster_Target : MonoBehaviour // target타입
 {
     // 플레이어를 따라가는 속도
     public float Movespeed;
@@ -29,7 +29,7 @@ public class enemytarget : MonoBehaviour // target타입
     public float time;
 
     // 위아래 흔들림 상태 변경까지 남은 시간
-    public float time2; 
+    public float time2;
 
 
     void Update()
@@ -41,14 +41,14 @@ public class enemytarget : MonoBehaviour // target타입
         Vector2 dir2 = new Vector2(0, -0.1f);
 
         //플레이어를 향하는 방향
-        Vector2 dir3 = _target.transform.position - this.transform.position; 
+        Vector2 dir3 = _target.transform.position - this.transform.position;
 
         // 잔상 생성 주기를 계산
-        if (isDelay) 
+        if (isDelay)
         {
 
             time += Time.deltaTime;
-            if (time >= Respawntime) 
+            if (time >= Respawntime)
             {
                 time = 0.0f;
                 isDelay = false;
@@ -64,7 +64,7 @@ public class enemytarget : MonoBehaviour // target타입
         }
 
         // 플레이어를 향하는 방향으로 이동하면서 잔상 생성
-        if (!isDelay && ((dir3.x * dir3.y) > 1 || (dir3.x * dir3.y) < -1)) 
+        if (!isDelay && ((dir3.x * dir3.y) > 1 || (dir3.x * dir3.y) < -1))
         {
             GameObject enemy = Instantiate(shadowPrefab);
             enemy.transform.position = this.transform.position;
