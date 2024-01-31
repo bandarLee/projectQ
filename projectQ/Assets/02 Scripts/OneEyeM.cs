@@ -5,7 +5,7 @@ using UnityEngine;
 public class OneEyeMon : MonoBehaviour
 {
     public float time;
-    public float Destroytime = 0.01f;
+    public float Destroytime = 0.8f;
 
     void Start()
     {
