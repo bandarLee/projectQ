@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class enemytest : MonoBehaviour // target타입
+public class EnemyTarget : MonoBehaviour // target타입
 {
     // 플레이어를 따라가는 속도
     public float Movespeed;
@@ -15,7 +15,7 @@ public class enemytest : MonoBehaviour // target타입
     public GameObject _target;
 
     // 잔상 프리팹
-    public GameObject shadowPrefab; //프리팹 OneEyeMon(clone) 쓰임: OneEyeM 스크립트 가져다 씀.
+    public GameObject shadowPrefab; //프리팹 OneEyeMon(clone) 쓰임: OneEyeMon 스크립트 가져다 씀.
 
     // 잔상 생성 지연 여부
     public bool isDelay;
