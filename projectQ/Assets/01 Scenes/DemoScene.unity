@@ -175,6 +175,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6168548707041885466, guid: 336cc964207b7bd40be82519121c1540, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168548707041885466, guid: 336cc964207b7bd40be82519121c1540, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -305,6 +313,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3361265839669413047, guid: 336cc964207b7bd40be82519121c1540, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168548707041885466, guid: 336cc964207b7bd40be82519121c1540, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168548707041885466, guid: 336cc964207b7bd40be82519121c1540, type: 3}
+      propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -646,6 +662,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6168548707041885466, guid: 336cc964207b7bd40be82519121c1540, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168548707041885466, guid: 336cc964207b7bd40be82519121c1540, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -853,6 +877,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6168548707041885466, guid: 336cc964207b7bd40be82519121c1540, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168548707041885466, guid: 336cc964207b7bd40be82519121c1540, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -972,6 +1004,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3361265839669413047, guid: 336cc964207b7bd40be82519121c1540, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168548707041885466, guid: 336cc964207b7bd40be82519121c1540, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168548707041885466, guid: 336cc964207b7bd40be82519121c1540, type: 3}
+      propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1106,6 +1146,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3361265839669413047, guid: 336cc964207b7bd40be82519121c1540, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168548707041885466, guid: 336cc964207b7bd40be82519121c1540, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168548707041885466, guid: 336cc964207b7bd40be82519121c1540, type: 3}
+      propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1523,6 +1571,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3361265839669413047, guid: 336cc964207b7bd40be82519121c1540, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168548707041885466, guid: 336cc964207b7bd40be82519121c1540, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168548707041885466, guid: 336cc964207b7bd40be82519121c1540, type: 3}
+      propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
