@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class PlayerFire : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    [Header("플레이어 공격 프리팹")]
+    public GameObject NormalBulletPrefab;
+    public float ShootTimer;
+    public float Cool_Time = 4;
+
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+    }
+    private void Shooting()
+    {
+        ShootTimer = Cool_Time;
+
+
     }
 }
