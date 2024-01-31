@@ -6576,6 +6576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f4f053b52a9c6041a093e8fdd456112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RoomC: {fileID: 0}
   LeftMove: 0
   RightMove: 0
   UpMove: 0
