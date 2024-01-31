@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OneEyeMon : MonoBehaviour
+public class OneEyeMon : MonoBehaviour //프리팹 OneEyeMon(clone)에다가 삽입
 {
-    public float time;
-    public float Destroytime = 0.01f;
+    public float time = 0;
+    public float Destroytime = 0.8f;
 
     void Start()
     {
