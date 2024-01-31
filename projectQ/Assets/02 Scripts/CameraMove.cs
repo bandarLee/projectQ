@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class CameraMove : MonoBehaviour
 {
     private float Movespeed = 2f; // 이동 속도 : 초당 3만큼 이동하겠다.
-    public GameObject RoomC;
     public static CameraMove Instance;
     public bool LeftMove = false;
     public bool RightMove = false;
@@ -41,6 +40,12 @@ public class CameraMove : MonoBehaviour
                 Vector3 newPosition = (transform.position + (Vector3)(dir * Movespeed * Time.deltaTime));
                 newPosition.z = -10;
                 transform.position = newPosition;
+
+            }
+            else
+            {
+                LeftMove = false;
+                intiatePosition = this.transform.position;
             }
 
 
@@ -53,6 +58,12 @@ public class CameraMove : MonoBehaviour
                 Vector3 newPosition = (transform.position + (Vector3)(dir * Movespeed * Time.deltaTime));
                 newPosition.z = -10;
                 transform.position = newPosition;
+
+            }
+            else
+            {
+                RightMove = false;
+                intiatePosition = this.transform.position;
             }
 
         }
@@ -64,6 +75,12 @@ public class CameraMove : MonoBehaviour
                 Vector3 newPosition = (transform.position + (Vector3)(dir * Movespeed * Time.deltaTime));
                 newPosition.z = -10;
                 transform.position = newPosition;
+
+            }
+            else
+            {
+                UpMove = false;
+                intiatePosition = this.transform.position;
             }
 
         }
@@ -75,6 +92,12 @@ public class CameraMove : MonoBehaviour
                 Vector3 newPosition = (transform.position + (Vector3)(dir * Movespeed * Time.deltaTime));
                 newPosition.z = -10;
                 transform.position = newPosition;
+
+            }
+            else
+            {
+                DownMove = false;
+                intiatePosition = this.transform.position;
             }
 
         }
