@@ -6576,6 +6576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f4f053b52a9c6041a093e8fdd456112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RoomC: {fileID: 0}
   LeftMove: 0
   RightMove: 0
   UpMove: 0
@@ -35033,7 +35034,7 @@ MonoBehaviour:
   Movespeed: 2
   Movespeed2: 4
   _target: {fileID: 1832778140}
-  shadowPrefab: {fileID: 0}
+  octopusPrefab: {fileID: 3943061821854831983, guid: fcc69b46dde369347a8b9178d7176d50, type: 3}
   isDelay: 0
   Respawntime: 0.1
   swingtime: 0.8
@@ -35583,7 +35584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
