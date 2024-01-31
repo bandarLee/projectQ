@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Octopus : MonoBehaviour
+public class OneEyeMon : MonoBehaviour
 {
     public float time;
     public float Destroytime = 0.01f;
