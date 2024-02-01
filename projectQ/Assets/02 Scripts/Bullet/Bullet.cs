@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     {
         Normal = 1,
         Fire = 2,
+        
 
 
     }
@@ -27,5 +28,7 @@ public class Bullet : MonoBehaviour
         transform.position = (Vector2)transform.position + dir * NormalBulletSpeed * Time.deltaTime;
 
     }
+
+    
 
 }

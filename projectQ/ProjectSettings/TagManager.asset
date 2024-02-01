@@ -4,10 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Wall_Top
-  - Wall_Bottom
-  - Wall_Left
-  - Wall_Right
   - Bullet
   layers:
   - Default

@@ -24,5 +24,13 @@ public class RoomManager : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+
+        if (collision.collider.tag == "Bullet")
+        {
+
+            Destroy(collision.collider.gameObject);
+        }
+
     }
 }
