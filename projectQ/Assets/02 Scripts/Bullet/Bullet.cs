@@ -12,6 +12,15 @@ public class Bullet : MonoBehaviour
 
 
     }
+
+    public BulletType BType { get; internal set; }
+
+    // 목표: 총알이 방향키를 누름에 따라 앞으로 나아가도록
+
+    void Start()
+    {
+
+    }
     public float NormalBulletSpeed;
     private Vector2 dir;
     public void SetDirection(Vector2 direction)
