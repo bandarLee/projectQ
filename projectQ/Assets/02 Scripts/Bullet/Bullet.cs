@@ -10,6 +10,9 @@ public class Bullet : MonoBehaviour
 
     }
     public float Speed;
+
+    public BulletType BType { get; internal set; }
+
     // 목표: 총알이 방향키를 누름에 따라 앞으로 나아가도록
 
     void Start()
