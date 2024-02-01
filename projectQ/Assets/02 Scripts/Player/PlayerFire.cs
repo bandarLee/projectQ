@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 
@@ -26,60 +27,15 @@ public class PlayerFire : MonoBehaviour
     void Update()
     {
         ShootTimer += Time.deltaTime;
-        AnimatorStateInfo stateInfo = playerAnimator.GetCurrentAnimatorStateInfo(0);
 
         if (ShootTimer >= Cool_Time && Input.GetMouseButtonDown(0))
         {
-
-            if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
-            {
-                Debug.Log("대각선공격1");
-                Shooting(new Vector2(1, 1));
-            }
-            else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
-            {
-                Debug.Log("대각선공격");
-
-                Shooting(new Vector2(-1, 1));
-            }
-            else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
-            {
-                Debug.Log("대각선공격");
-
-                Shooting(new Vector2(1, -1));
-            }
-            else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
-            {
-                Debug.Log("대각선공격");
-
-                Shooting(new Vector2(-1, -1));
-            }
-            else if (Input.GetKey(KeyCode.W) || stateInfo.IsName("Back_Idle"))
-            {
-                Shooting(new Vector2(0, 1));
-            }
-            else if (Input.GetKey(KeyCode.S) || stateInfo.IsName("Front_Idle"))
-            {
-                Shooting(new Vector2(0, -1));
-            }
-            else if (Input.GetKey(KeyCode.A) || stateInfo.IsName("Left_Idle"))
-            {
-                Shooting(new Vector2(-1, 0));
-            }
-            else if (Input.GetKey(KeyCode.D) || stateInfo.IsName("Right_Idle"))
-            {
-                Shooting(new Vector2(1, 0));
-            }
+            BulletAxisShoot();
         }
-    
-
-
-
-
 
     }
 
-    // 총알을 발사하는 코드 
+    // 총알을 발사하는 메서드
     public void Shooting(Vector2 dir)
     {
         ShootTimer = 0;
@@ -93,5 +49,53 @@ public class PlayerFire : MonoBehaviour
             }
 
         }
+    }
+    
+
+    // 방향키에 따라 총알이 나가도록 하는 메서드
+    private void BulletAxisShoot()
+    {
+        AnimatorStateInfo stateInfo = playerAnimator.GetCurrentAnimatorStateInfo(0);
+
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
+        {
+            Debug.Log("대각선공격1");
+            Shooting(new Vector2(1, 1));
+        }
+        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
+        {
+            Debug.Log("대각선공격");
+
+            Shooting(new Vector2(-1, 1));
+        }
+        else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
+        {
+            Debug.Log("대각선공격");
+
+            Shooting(new Vector2(1, -1));
+        }
+        else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
+        {
+            Debug.Log("대각선공격");
+
+            Shooting(new Vector2(-1, -1));
+        }
+        else if (Input.GetKey(KeyCode.W) || stateInfo.IsName("Back_Idle"))
+        {
+            Shooting(new Vector2(0, 1));
+        }
+        else if (Input.GetKey(KeyCode.S) || stateInfo.IsName("Front_Idle"))
+        {
+            Shooting(new Vector2(0, -1));
+        }
+        else if (Input.GetKey(KeyCode.A) || stateInfo.IsName("Left_Idle"))
+        {
+            Shooting(new Vector2(-1, 0));
+        }
+        else if (Input.GetKey(KeyCode.D) || stateInfo.IsName("Right_Idle"))
+        {
+            Shooting(new Vector2(1, 0));
+        }
+
     }
 }
