@@ -6,6 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour // Basic타입
 {
+    public enum WallType
+    {
+        Left,
+        Right,
+        Top,
+        Bot
+    }
+    public WallType walltype;
+
 
     // 목표: 적을 벽 안에서 부딪힐 때까지 상하좌우로 이동시키고 싶다.
     // 속성:
@@ -28,27 +37,26 @@ public class Enemy : MonoBehaviour // Basic타입
         // 2. 이동한다. 
         // 새로운 위치 = 현재 위치 + 속도 * 시간
         transform.position += (Vector3)(_dir * Speed) * Time.deltaTime;
+        _dir.Normalize();
 
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Wall_Top"))
-        {
-            _dir = Vector2.left;
-        }
-        if (collision.collider.CompareTag("Wall_Bottom"))
-        {
-            _dir = Vector2.right;
-        }
-        if (collision.collider.CompareTag("Wall_Left"))
-        {
-            _dir = Vector2.down;
-        }
-        if (collision.collider.CompareTag("Wall_Right"))
+        if(walltype == WallType.Bot)
         {
             _dir = Vector2.up;
+
+            // 1. 각도를 구한다. 
+            //tanθ = y/x    ->  θ = y/x * atan(탄젠트의 역함수)
+            float radian = Mathf.Atan2(_dir.y, _dir.x); // '호'도법 -> 라디안 값
+            float degree = radian * Mathf.Rad2Deg;
+            //Debug.Log(degree);
+
+            // 2. 각도에 맞게 회전한다.
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, degree + 90)); //이미지 리소스를 따라 90도 더해줌
         }
+        
 
     }
 
