@@ -10,6 +10,10 @@ public class PlayerFire : MonoBehaviour
     public float ShootTimer;
     public float Cool_Time = 4;
 
+    [Header("일반 공격 총구")]
+    public List<GameObject> Muzzles;
+
+
 
     void Start()
     {
@@ -23,6 +27,13 @@ public class PlayerFire : MonoBehaviour
     private void Shooting()
     {
         ShootTimer = Cool_Time;
+
+        for (int i = 0; i < Muzzles.Count; i++)
+        {
+
+        }
+
+
 
 
     }
