@@ -63,24 +63,24 @@ public class PlayerFire : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
         {
-            Debug.Log("대각선공격1");
+            //Debug.Log("대각선공격1");
             Shooting(new Vector2(1, 1));
         }
         else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
         {
-            Debug.Log("대각선공격");
+            //Debug.Log("대각선공격");
 
             Shooting(new Vector2(-1, 1));
         }
         else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
         {
-            Debug.Log("대각선공격");
+            //Debug.Log("대각선공격");
 
             Shooting(new Vector2(1, -1));
         }
         else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
         {
-            Debug.Log("대각선공격");
+            //Debug.Log("대각선공격");
 
             Shooting(new Vector2(-1, -1));
         }
