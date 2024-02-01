@@ -766,7 +766,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1299146938730861928, guid: 7341a5159d565a343a79974c756a658a, type: 3}
       propertyPath: Cool_Time
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1299146938730861928, guid: 7341a5159d565a343a79974c756a658a, type: 3}
       propertyPath: playerAnimator
@@ -774,7 +774,7 @@ PrefabInstance:
       objectReference: {fileID: 938063332}
     - target: {fileID: 2176203675867688227, guid: 7341a5159d565a343a79974c756a658a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.433
+      value: -0.48
       objectReference: {fileID: 0}
     - target: {fileID: 4878934592145815868, guid: 7341a5159d565a343a79974c756a658a, type: 3}
       propertyPath: m_Name
@@ -782,11 +782,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7862749494523347955, guid: 7341a5159d565a343a79974c756a658a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.18
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: 7862749494523347955, guid: 7341a5159d565a343a79974c756a658a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.51
+      value: -0.78
       objectReference: {fileID: 0}
     - target: {fileID: 7862749494523347955, guid: 7341a5159d565a343a79974c756a658a, type: 3}
       propertyPath: m_LocalPosition.z

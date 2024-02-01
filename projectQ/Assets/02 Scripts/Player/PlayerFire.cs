@@ -10,6 +10,7 @@ public class PlayerFire : MonoBehaviour
     public GameObject NormalBulletPrefab;
     public float ShootTimer;
     public float Cool_Time = 4;
+
     [Header("일반 공격 총구")]
     public List<GameObject> Muzzles;
 
@@ -27,45 +28,45 @@ public class PlayerFire : MonoBehaviour
         ShootTimer += Time.deltaTime;
         AnimatorStateInfo stateInfo = playerAnimator.GetCurrentAnimatorStateInfo(0);
 
-        if (ShootTimer >= Cool_Time && Input.GetKeyDown(KeyCode.Space))
+        if (ShootTimer >= Cool_Time && Input.GetMouseButtonDown(0))
         {
 
-            if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
             {
                 Debug.Log("대각선공격1");
                 Shooting(new Vector2(1, 1));
             }
-            else if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftArrow))
+            else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
             {
                 Debug.Log("대각선공격");
 
                 Shooting(new Vector2(-1, 1));
             }
-            else if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.RightArrow))
+            else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
             {
                 Debug.Log("대각선공격");
 
                 Shooting(new Vector2(1, -1));
             }
-            else if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftArrow))
+            else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
             {
                 Debug.Log("대각선공격");
 
                 Shooting(new Vector2(-1, -1));
             }
-            else if (Input.GetKey(KeyCode.UpArrow) || stateInfo.IsName("Back_Idle"))
+            else if (Input.GetKey(KeyCode.W) || stateInfo.IsName("Back_Idle"))
             {
                 Shooting(new Vector2(0, 1));
             }
-            else if (Input.GetKey(KeyCode.DownArrow) || stateInfo.IsName("Front_Idle"))
+            else if (Input.GetKey(KeyCode.S) || stateInfo.IsName("Front_Idle"))
             {
                 Shooting(new Vector2(0, -1));
             }
-            else if (Input.GetKey(KeyCode.LeftArrow) || stateInfo.IsName("Left_Idle"))
+            else if (Input.GetKey(KeyCode.A) || stateInfo.IsName("Left_Idle"))
             {
                 Shooting(new Vector2(-1, 0));
             }
-            else if (Input.GetKey(KeyCode.RightArrow) || stateInfo.IsName("Right_Idle"))
+            else if (Input.GetKey(KeyCode.D) || stateInfo.IsName("Right_Idle"))
             {
                 Shooting(new Vector2(1, 0));
             }
@@ -82,7 +83,7 @@ public class PlayerFire : MonoBehaviour
     public void Shooting(Vector2 dir)
     {
         ShootTimer = 0;
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
             for (int i = 0; i < Muzzles.Count; i++)
             {
