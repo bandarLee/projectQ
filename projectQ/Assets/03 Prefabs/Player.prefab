@@ -374,7 +374,8 @@ MonoBehaviour:
   NormalBulletPrefab: {fileID: 1476319619623086005, guid: e23285d9dbda89243ad8d1cbfc954bd7, type: 3}
   ShootTimer: 0
   Cool_Time: 0.2
-  NormalMuzzles: []
+  NormalMuzzles:
+  - {fileID: 2858570210544943505}
   FireMuzzles:
   - {fileID: 513157344209856879}
   - {fileID: 3667419196645704950}
