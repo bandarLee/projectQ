@@ -46,7 +46,6 @@ GameObject:
   - component: {fileID: 1828036861084729506}
   - component: {fileID: 2334810450824739251}
   - component: {fileID: 8763238243334855361}
-  - component: {fileID: 8314834149458391500}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -185,7 +184,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!60 &2334810450824739251
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -295,18 +294,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerPosition: {x: 0, y: 0}
---- !u!114 &8314834149458391500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4878934592145815868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 728ea897353f24041a1e37d358a01731, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NormalBulletPrefab: {fileID: 1476319619623086005, guid: e23285d9dbda89243ad8d1cbfc954bd7, type: 3}
-  ShootTimer: 0
-  Cool_Time: 4

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4089435128118857685}
   - component: {fileID: 1105880803273207540}
   - component: {fileID: 560040914929165556}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TopDoorTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8064112775665531207}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Top_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4955128801455838476}
   - component: {fileID: 2858748095503107081}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TopDoorBackside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3248538135397535839}
   - component: {fileID: 2297054604633654682}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TopDoorBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
