@@ -6,14 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour // Basic타입
 {
-    public enum WallType
-    {
-        Left,
-        Right,
-        Top,
-        Bot
-    }
-    public WallType walltype;
+
 
 
     // 목표: 적을 벽 안에서 부딪힐 때까지 상하좌우로 이동시키고 싶다.
@@ -43,7 +36,7 @@ public class Enemy : MonoBehaviour // Basic타입
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if(walltype == WallType.Bot)
+        /*if(RoomManager.walltype == RoomManager.WallType.Bot)
         {
             _dir = Vector2.up;
 
@@ -55,7 +48,7 @@ public class Enemy : MonoBehaviour // Basic타입
 
             // 2. 각도에 맞게 회전한다.
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, degree + 90)); //이미지 리소스를 따라 90도 더해줌
-        }
+        }*/
         
 
     }
