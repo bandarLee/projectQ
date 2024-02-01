@@ -20,8 +20,7 @@ public class OneEye_Clone : MonoBehaviour //프리팹 OneEyeMon(clone)에다가 
         if (time >= Destroytime)
         {
             time = 0;
-            GameObject afterImage = Instantiate(OneEye, OneEye.transform.position, OneEye.transform.rotation);
-            Destroy(afterImage, Destroytime);
+            Destroy(gameObject);
         }
 
     }
