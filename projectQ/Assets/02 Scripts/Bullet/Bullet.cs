@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
         Normal = 1,
 
     }
-    public float Speed;
+    public float NormalBulletSpeed;
     // 목표: 총알이 방향키를 누름에 따라 앞으로 나아가도록
 
     void Start()
@@ -19,6 +19,9 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        
+        float MoveH = Input.GetAxis("Horizontal");
+        float MoveV = Input.GetAxis("Vertical");
+
+        //Vector2 dir = new 
     }
 }
