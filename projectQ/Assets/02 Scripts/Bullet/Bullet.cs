@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour
     public enum BulletType
     {
         Normal = 1,
+        Fire = 2,
+
 
     }
     public float NormalBulletSpeed;

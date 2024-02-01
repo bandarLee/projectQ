@@ -13,7 +13,11 @@ public class PlayerFire : MonoBehaviour
     public float Cool_Time = 4;
 
     [Header("일반 공격 총구")]
-    public List<GameObject> Muzzles;
+    public List<GameObject> NormalMuzzles;
+
+    [Header("화염 공격 총구")]
+    public List<GameObject> FireMuzzles;
+
 
     public Animator playerAnimator;
 
@@ -41,10 +45,10 @@ public class PlayerFire : MonoBehaviour
         ShootTimer = 0;
         if (Input.GetMouseButtonDown(0))
         {
-            for (int i = 0; i < Muzzles.Count; i++)
+            for (int i = 0; i < NormalMuzzles.Count; i++)
             {
                 GameObject normalBullet = Instantiate(NormalBulletPrefab, transform.position, Quaternion.identity);
-                normalBullet.transform.position = Muzzles[i].transform.position;
+                normalBullet.transform.position = NormalMuzzles[i].transform.position;
                 normalBullet.GetComponent<Bullet>().SetDirection(dir);
             }
 
