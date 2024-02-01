@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5096713228979852203}
   - component: {fileID: 8603857912485388942}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftDoorBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 8430769682542103648}
   - component: {fileID: 200171744957443102}
   - component: {fileID: 5572374996319696207}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftDoorTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 430153530781556330}
   - component: {fileID: 3678748382664587297}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftDoorBackside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 107035983901250023}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Left_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
