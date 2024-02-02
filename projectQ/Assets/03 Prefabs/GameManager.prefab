@@ -64,3 +64,4 @@ MonoBehaviour:
   - {fileID: 5551068039274124315, guid: 285ead76370dca843b88e843d5a79f07, type: 3}
   RoomX: 18.46
   RoomY: 10.25
+  Player: {fileID: 4878934592145815868, guid: 7341a5159d565a343a79974c756a658a, type: 3}
