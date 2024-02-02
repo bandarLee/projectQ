@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
                 (new Vector3(-1, 0), 6),
                 (new Vector3(-1, -1), 15),
                 (new Vector3(-1, -2), 15),
-                (new Vector3(-1, -3), 1),
+                (new Vector3(-1, -3), 14),
                 (new Vector3(-1, 1), 15),
                 (new Vector3(-1, 2), 11),
                 (new Vector3(-2, 0), 10),
