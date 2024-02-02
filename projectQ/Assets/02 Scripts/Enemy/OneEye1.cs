@@ -32,7 +32,6 @@ public class OneEye1 : MonoBehaviour // follow 타입
     public float swingtime = 0.6f;
 
     // 잔상 생성까지 남은 시간
-    public float time;
 
     // 위아래 흔들림 상태 변경까지 남은 시간
     public float time2;
@@ -64,16 +63,7 @@ public class OneEye1 : MonoBehaviour // follow 타입
         Vector2 dir3 = _target.transform.position - this.transform.position;
 
         // 잔상 생성 주기를 계산
-        if (isDelay)
-        {
-
-            time += Time.deltaTime;
-            if (time >= Respawntime)
-            {
-                time = 0.0f;
-                isDelay = false;
-            }
-        }
+    
         if (isMonsterDelay)
         {
             Timer += Time.deltaTime;
@@ -107,12 +97,12 @@ public class OneEye1 : MonoBehaviour // follow 타입
 
 
         //위아래 흔들림
-        if (time2 < 0.4f) //위로 이동
+        if (time2 < 0.6f) //위로 이동
         {
             transform.position += (Vector3)(dir1 * Movespeed2 * Time.deltaTime);
 
         }
-        if (time2 > 0.4f) //아래로 이동
+        if (time2 > 0.6f) //아래로 이동
         {
             transform.position += (Vector3)(dir2 * Movespeed2 * Time.deltaTime);
 

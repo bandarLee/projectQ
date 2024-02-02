@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 231900896889121445}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Muzzle (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2866384567994063180}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Muzzle (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1672170422009113365}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1896817537378162562}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Muzzle (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1571411627143617315}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Muzzle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2174288757508567658}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Muzzle (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 1634940847955279930}
   - component: {fileID: -5919325760820420406}
   - component: {fileID: 6666766151065118054}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OneEye(redEye)
   m_TagString: OneEyeEnemy
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.51, y: 0.82, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1672170422009113365}
@@ -295,14 +295,13 @@ MonoBehaviour:
   ItemPrefab_Money: {fileID: 0}
   ItemPrefab_CardKey: {fileID: 0}
   replacesuccess: 0
-  Movespeed: 1
-  Movespeed2: 1
+  Movespeed: 2
+  Movespeed2: 8
   _target: {fileID: 4878934592145815868, guid: 7341a5159d565a343a79974c756a658a, type: 3}
   isDelay: 0
   isMonsterDelay: 0
   Respawntime: 1
-  swingtime: 0.6
-  time: 0
+  swingtime: 1.2
   time2: 0
   progressTime: 0
   UpgradePrefab: {fileID: 0}
