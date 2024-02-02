@@ -46,7 +46,6 @@ public class OneEye : MonoBehaviour // follow 타입
         // 잔상 생성 주기를 계산
         if (isDelay)
         {
-
             time += Time.deltaTime;
             if (time >= Respawntime)
             {
@@ -86,7 +85,6 @@ public class OneEye : MonoBehaviour // follow 타입
         if (time2 > 0.4f) //아래로 이동
         {
             transform.position += (Vector3)(dir2 * Movespeed2 * Time.deltaTime);
-
         }
     }
 }

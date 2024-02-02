@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public static Player Instance;
     public Vector2 PlayerPosition;
 
-    public int PlayerHealth = 3; 
+    public float PlayerHealth = 3; 
 
     private void Awake()
     {
@@ -33,5 +33,14 @@ public class Player : MonoBehaviour
     {
         
     }
-    
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.collider.CompareTag(""))
+        {
+            PlayerHealth--;
+        }
+    }
+
 }
