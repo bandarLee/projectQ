@@ -306,7 +306,7 @@ MonoBehaviour:
   time2: 0
   progressTime: 0
   UpgradePrefab: {fileID: 0}
-  MonsterBullet: {fileID: 3125413714479659704, guid: 8cf48387e959f634a800763bc4e0755e, type: 3}
+  MonsterBullet: {fileID: 4351388047594135514, guid: f4f146d76f18e2943b5f50c46edcc446, type: 3}
   Muzzles:
   - {fileID: 2084971874873822592}
   - {fileID: 4700509533359415790}
