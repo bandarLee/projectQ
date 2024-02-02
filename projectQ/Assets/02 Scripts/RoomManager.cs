@@ -4,33 +4,22 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
-    public enum WallType
-    {
-        Default,
-        Left,
-        Right,
-        Top,
-        Bot
-    }
-    public  WallType walltype; 
     void Start()
     {
-        
+        OneEye oneeye = GameObject.FindObjectOfType<OneEye>();
+
+        oneeye.gameObject.SetActive(false);
+
     }
+
 
     void Update()
     {
-        
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
+        OneEye oneeye = GameObject.FindObjectOfType<OneEye>();
 
-
-        if (collision.collider.CompareTag("Bullet"))
+        if (oneeye != null && !oneeye.gameObject.activeInHierarchy)
         {
-
-            Destroy(collision.collider.gameObject);
+            oneeye.gameObject.SetActive(true);
         }
-
     }
 }

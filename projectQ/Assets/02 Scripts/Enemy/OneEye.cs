@@ -17,8 +17,7 @@ public class OneEye : MonoBehaviour // follow 타입
     // 위아래로 흔들리는 속도 
     public float Movespeed2;
 
-    // 플레이어 객체
-    public GameObject _target;
+
 
     // 잔상 프리팹
     public GameObject shadowPrefab; //프리팹 OneEyeMon(clone) 쓰임: OneEyeMon 스크립트 가져다 씀.
@@ -62,7 +61,7 @@ public class OneEye : MonoBehaviour // follow 타입
         Vector2 dir2 = new Vector2(0, -0.1f);
 
         //플레이어를 향하는 방향
-        Vector2 dir3 = _target.transform.position - this.transform.position;
+        Vector2 dir3 = Player.Instance.transform.position - this.transform.position; 
 
         // 잔상 생성 주기를 계산
         if (isDelay)
