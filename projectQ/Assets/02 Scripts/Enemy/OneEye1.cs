@@ -123,7 +123,10 @@ public class OneEye1 : MonoBehaviour // follow 타입
             // 적의 체력이 끝
             if (Health <= 0)
             {
-                Destroy(gameObject);
+                OneEye oneeye = GetComponent<OneEye>();
+
+                gameObject.SetActive(false);
+                oneeye.replacesuccess = false;
                 MakeItem();
             }    
         }

@@ -165,7 +165,7 @@ public class OneEye : MonoBehaviour // follow 타입
             if (Health <= 0)
             {
                 //gameObject.SetActive(false);
-                Destroy(gameObject);
+                gameObject.SetActive(false);
                 MakeItem();
             }   
         }
@@ -193,7 +193,7 @@ public class OneEye : MonoBehaviour // follow 타입
     public void ReplacePrefab()
     {
         GameObject newObject = Instantiate(UpgradePrefab, this.gameObject.transform.position, this.gameObject.transform.rotation);
-        Destroy(this.gameObject);
+        gameObject.SetActive(false);
     }
 }
 
