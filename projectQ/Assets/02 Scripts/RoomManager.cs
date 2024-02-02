@@ -4,22 +4,28 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
-    void Start()
+    public OneEye[] oneeyes;
+    void Awake()
     {
-        OneEye oneeye = GameObject.FindObjectOfType<OneEye>();
+        OneEye[] oneeyes = GameObject.FindObjectsOfType<OneEye>();
 
-        oneeye.gameObject.SetActive(false);
+        foreach (OneEye oneeye in oneeyes)
+        {
+            oneeye.gameObject.SetActive(false);
+        }
 
     }
 
 
     void Update()
-    {
-        OneEye oneeye = GameObject.FindObjectOfType<OneEye>();
+    {        
 
-        if (oneeye != null && !oneeye.gameObject.activeInHierarchy)
+        foreach (OneEye oneeye in oneeyes)
         {
-            oneeye.gameObject.SetActive(true);
+            if (!oneeye.gameObject.activeInHierarchy)
+            {
+                oneeye.gameObject.SetActive(true);
+            }
         }
     }
 }
