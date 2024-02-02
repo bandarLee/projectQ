@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     public enum BulletType
     {
         Normal = 1,
-        Fire = 2,
+        Fire = 2,   // 화염 아이템 얻으면 발동
 
     }
 
