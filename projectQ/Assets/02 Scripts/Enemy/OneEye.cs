@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class OneEye : MonoBehaviour // follow 타입
 {
+    public float Health = 2;
+
+    public GameObject ItemPrefab_Health; // DropItem
+    public GameObject ItemPrefab_Speed;
+    public GameObject ItemPrefab_Money; // 상점에 꼭 필요
+    public GameObject ItemPrefab_CardKey; // 다음 층으로 넘어갈 수 있는 카드키
+
     // 플레이어를 따라가는 속도
     public float Movespeed;
 
@@ -30,6 +37,10 @@ public class OneEye : MonoBehaviour // follow 타입
 
     // 위아래 흔들림 상태 변경까지 남은 시간
     public float time2;
+
+    // 몬스터 등장 이후 누적 시간
+    public float progressTime = 0;
+    public GameObject UpgradePrefab;
 
 
     void Update()
@@ -86,7 +97,72 @@ public class OneEye : MonoBehaviour // follow 타입
         {
             transform.position += (Vector3)(dir2 * Movespeed2 * Time.deltaTime);
         }
+
+        progressTime += Time.deltaTime;
+        if (progressTime > 10.0f)
+        {
+            /*GameObject enemy = Instantiate(UpgradePrefab);
+            enemy.transform.position = this.transform.position;*/
+            ReplacePrefab();
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        // 플레이어는 적과 충돌하면 체력이 닳는다
+        if (collision.collider.CompareTag("Player"))
+        {
+            Player player = collision.collider.GetComponent<Player>();
+            //player.DecreaseHealth(1); //player 클래스에 체력 달아줘야 함
+        }
+
+        // 플레이어의 공격을 받았을 때 죽는다
+        /*  else if (collision.collider.CompareTag("Bullet")) //enemy와 총알이 부딪혔을 때 //-> 아직 "tag:bullet" 없음
+          {
+              Bullet bullet = collision.collider.GetComponent<Bullet>();
+              if (bullet.BType == BulletType.Normal) //enum
+              {
+                  Health -= 1;
+              }
+
+
+              // 총알 삭제
+              collision.collider.gameObject.SetActive(false);
+
+              // 적의 체력이 끝
+              if (Health <= 0)
+              {
+                  //gameObject.SetActive(false);
+                  Destroy(gameObject);
+                  MakeItem();
+              }*/
+    }
+
+    public void MakeItem()
+        {
+            // 목표: 20% 확률로 다음 층으로 넘어갈 수 있는 카드키, 80% 확률로 머니주는 아이템 (확률넣기)
+            if (Random.Range(0, 10) == 0 || Random.Range(0, 10) == 1)
+            {
+                // -다음 층으로 넘어갈 수 있는 카드키 만들고
+                GameObject item_CardKey = Instantiate(ItemPrefab_CardKey);
+                // -위치를 나의 위치로 수정
+                item_CardKey.transform.position = this.transform.position;
+            }
+            else
+            {
+                // -머니주는 아이템 만들고
+                GameObject item_Money = Instantiate(ItemPrefab_Money);
+                // -위치를 나의 위치로 수정
+                item_Money.transform.position = this.transform.position;
+            }
+        }
+
+    public void ReplacePrefab()
+    {
+        GameObject newObject = Instantiate(UpgradePrefab, this.gameObject.transform.position, this.gameObject.transform.rotation);
+        Destroy(this.gameObject);
     }
 }
+
 
 
