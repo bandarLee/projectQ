@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public static Player Instance;
     public Vector2 PlayerPosition;
 
-    public float PlayerHealth = 3; 
+    public float PlayerHealth = 3f; 
 
 
     private void Awake()
@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -40,8 +40,10 @@ public class Player : MonoBehaviour
 
         if (collision.collider.CompareTag("OneEyeEnemy"))
         {
-            
+            PlayerHealth = PlayerHealth - 0.5f;
         } 
+
+
         
     }
 
