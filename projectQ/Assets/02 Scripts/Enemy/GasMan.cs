@@ -36,27 +36,27 @@ public class GasMan : MonoBehaviour // " Basic 타입 "
     {
 
         // GasMan(Basic 타입) 움직임
-        RoomManager roomManager = collision.collider.GetComponent<RoomManager>();
-        if (roomManager.walltype == RoomManager.WallType.Right)
+        WallManager roomManager = collision.collider.GetComponent<WallManager>();
+        if (roomManager.walltype == WallManager.WallType.Right)
         {
             _dir = Vector2.down;
 
             
         }
 
-        if (roomManager.walltype == RoomManager.WallType.Bot)
+        if (roomManager.walltype == WallManager.WallType.Bot)
         {
             _dir = Vector2.left;
 
         }
 
-        if (roomManager.walltype == RoomManager.WallType.Left)
+        if (roomManager.walltype == WallManager.WallType.Left)
         {
             _dir = Vector2.up;
 
         }
 
-        if (roomManager.walltype == RoomManager.WallType.Top)
+        if (roomManager.walltype == WallManager.WallType.Top)
         {
             _dir = Vector2.right;
 

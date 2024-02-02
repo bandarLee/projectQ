@@ -47,8 +47,8 @@ public class Snake : MonoBehaviour// " Basic 타입 "
     {
 
         // snake(Basic 타입) 움직임
-        RoomManager roomManager = collision.collider.GetComponent<RoomManager>();
-        if (roomManager.walltype == RoomManager.WallType.Bot)
+        WallManager roomManager = collision.collider.GetComponent<WallManager>();
+        if (roomManager.walltype == WallManager.WallType.Bot)
         {
             _dir = Vector2.up;
 
@@ -66,7 +66,7 @@ public class Snake : MonoBehaviour// " Basic 타입 "
             }
         }
 
-        if (roomManager.walltype == RoomManager.WallType.Top)
+        if (roomManager.walltype == WallManager.WallType.Top)
         {
             _dir = Vector2.down;
 

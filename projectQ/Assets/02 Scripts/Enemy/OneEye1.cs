@@ -17,8 +17,6 @@ public class OneEye1 : MonoBehaviour // follow 타입
     // 위아래로 흔들리는 속도 
     public float Movespeed2;
 
-    // 플레이어 객체
-    public GameObject _target;
 
     // 총알 생성 지연 여부
     public bool isMonsterDelay;
@@ -38,7 +36,9 @@ public class OneEye1 : MonoBehaviour // follow 타입
     [Header("타이머")]
     public float Timer = 0f;
     public const float COOL_TIME = 3f;
-
+    private void Awake()
+    {
+    }
 
     void Update()
     {
@@ -49,11 +49,12 @@ public class OneEye1 : MonoBehaviour // follow 타입
         Vector2 dir2 = new Vector2(0, -0.1f);
 
         //플레이어를 향하는 방향
-        Vector2 dir3 = _target.transform.position - this.transform.position;
+        Vector2 dir3 = Player.Instance.transform.position - this.transform.position;
 
         // 새로운 위치 = 현재 위치 + 속도 * 시간
-        transform.position += (Vector3)(dir3 * Movespeed) * Time.deltaTime;
+        dir3.Normalize();
 
+        transform.position += (Vector3)(dir3 * Movespeed) * Time.deltaTime;
         // 각도를 구하고, 각도에 맞게 회전한다.
         float radian = Mathf.Atan2(dir3.y, dir3.x);
         float degree = radian * Mathf.Rad2Deg;
@@ -88,8 +89,7 @@ public class OneEye1 : MonoBehaviour // follow 타입
        
 
         // 플레이어를 향해 이동
-        dir3.Normalize();
-        transform.position += (Vector3)(dir3 * Movespeed * Time.deltaTime);
+     
 
 
         //위아래 흔들림
