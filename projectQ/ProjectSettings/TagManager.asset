@@ -48,3 +48,6 @@ TagManager:
   - name: Bullet
     uniqueID: 2265472283
     locked: 0
+  - name: Chest
+    uniqueID: 3759599173
+    locked: 0
