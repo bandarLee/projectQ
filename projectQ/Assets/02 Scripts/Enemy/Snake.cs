@@ -66,7 +66,7 @@ public class Snake : MonoBehaviour// " Basic 타입 "
         if (collision.collider.CompareTag("Player"))
         {
             Player player = collision.collider.GetComponent<Player>();
-            //player.DecreaseHealth(1); //player 클래스에 체력 달아줘야 함
+            player.PlayerHealth -= 0.05f; 
         }
 
         // 플레이어의 공격을 받았을 때 죽는다
