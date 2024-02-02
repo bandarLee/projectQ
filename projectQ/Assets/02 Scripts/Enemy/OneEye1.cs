@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OneEye : MonoBehaviour // follow 타입
+public class OneEye1 : MonoBehaviour // follow 타입
 {
     public float Health = 2;
 
@@ -21,11 +21,10 @@ public class OneEye : MonoBehaviour // follow 타입
     public GameObject _target;
 
     // 잔상 프리팹
-    public GameObject shadowPrefab; //프리팹 OneEyeMon(clone) 쓰임: OneEyeMon 스크립트 가져다 씀.
 
     // 잔상 생성 지연 여부
     public bool isDelay;
-
+    public bool isMonsterDelay;
     // 잔상 생성 주기
     public float Respawntime = 1f;
 
@@ -49,8 +48,8 @@ public class OneEye : MonoBehaviour // follow 타입
     public GameObject[] Muzzles;
 
     [Header("타이머")]
-    public float Timer = 5.6f;
-    public const float COOL_TIME = 0.6f;
+    public float Timer = 0f;
+    public const float COOL_TIME = 3f;
 
 
     void Update()
@@ -67,6 +66,7 @@ public class OneEye : MonoBehaviour // follow 타입
         // 잔상 생성 주기를 계산
         if (isDelay)
         {
+
             time += Time.deltaTime;
             if (time >= Respawntime)
             {
@@ -74,11 +74,24 @@ public class OneEye : MonoBehaviour // follow 타입
                 isDelay = false;
             }
         }
+        if (isMonsterDelay)
+        {
+            Timer += Time.deltaTime;
+            if( Timer >= COOL_TIME)
+            {
+                Timer = 0.0f;
+                isMonsterDelay = false;
+            }
+        }
+        if(!isMonsterDelay)
+        {
+            Fire();
+            isMonsterDelay = true;
+        }
 
-
-        // 위아래 흔들림 주기를 계산
+            // 위아래 흔들림 주기를 계산
         time2 += Time.deltaTime;
-        Timer -= Time.deltaTime;
+        
 
         if (time2 >= swingtime)
         {
@@ -86,13 +99,7 @@ public class OneEye : MonoBehaviour // follow 타입
         }
 
         // 플레이어를 향하는 방향으로 이동하면서 잔상 생성
-        if (!isDelay && ((dir3.x * dir3.y) > 1 || (dir3.x * dir3.y) < -1))
-        {
-            GameObject enemy = Instantiate(shadowPrefab);
-            enemy.transform.position = this.transform.position;
-            isDelay = true;
-        }
-
+       
 
         // 플레이어를 향해 이동
         dir3.Normalize();
@@ -108,32 +115,18 @@ public class OneEye : MonoBehaviour // follow 타입
         if (time2 > 0.4f) //아래로 이동
         {
             transform.position += (Vector3)(dir2 * Movespeed2 * Time.deltaTime);
-        }
-        if (!replacesuccess)
-        {
-            progressTime += Time.deltaTime;
-        }
-        if (progressTime > 5.0f)
-        {
-            /*GameObject enemy = Instantiate(UpgradePrefab);
-            enemy.transform.position = this.transform.position;*/
-            ReplacePrefab();
-            replacesuccess = true;
 
-            progressTime = 0.0f;
-            // 타이머 계산
-
-            Fire();
         }
+      
+       
+
+        
     }
 
     private void Fire()
     {
-        Timer = COOL_TIME;
 
-        if (Timer <= 0)
-        {
-            // 타이머 초기화
+   
 
             for (int i = 0; i < Muzzles.Length; i++)
             {
@@ -146,9 +139,10 @@ public class OneEye : MonoBehaviour // follow 타입
             }
 
         }
+      
 
-  
-    }
+
+    
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -200,11 +194,6 @@ public class OneEye : MonoBehaviour // follow 타입
             }
         }
 
-    public void ReplacePrefab()
-    {
-        GameObject newObject = Instantiate(UpgradePrefab, this.gameObject.transform.position, this.gameObject.transform.rotation);
-        Destroy(this.gameObject);
-    }
 }
 
 

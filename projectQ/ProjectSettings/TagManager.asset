@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - OneEyeEnemy
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - UI
   - Player
   - Bullet
-  - 
+  - Item
   - 
   - 
   - 
@@ -51,6 +53,11 @@ TagManager:
   - name: Chest
     uniqueID: 3759599173
     locked: 0
+<<<<<<< HEAD
   - name: Wall
     uniqueID: 524746497
+=======
+  - name: Item
+    uniqueID: 3363024827
+>>>>>>> 8d763d5f3301e6afb94238e42a20490fe438b555
     locked: 0

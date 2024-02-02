@@ -1531,7 +1531,7 @@ SpriteRenderer:
   m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &6866786891747876716
@@ -1569,6 +1569,7 @@ MonoBehaviour:
   ItemPrefab_Speed: {fileID: 0}
   ItemPrefab_Money: {fileID: 0}
   ItemPrefab_CardKey: {fileID: 0}
+  replacesuccess: 0
   Movespeed: 2
   Movespeed2: 4
   _target: {fileID: 2025597727}
@@ -1580,6 +1581,9 @@ MonoBehaviour:
   time2: 0
   progressTime: 0
   UpgradePrefab: {fileID: 7445180921780457434, guid: f66e37a81f50dcb4e8599b6e93e56a13, type: 3}
+  MonsterBullet: {fileID: 3125413714479659704, guid: 8cf48387e959f634a800763bc4e0755e, type: 3}
+  Muzzles: []
+  Timer: 5.6
 --- !u!212 &7669685807192923678
 SpriteRenderer:
   m_ObjectHideFlags: 0

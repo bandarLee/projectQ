@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5775763775838630272}
   - component: {fileID: -2339291237186770322}
-  m_Layer: 0
+  - component: {fileID: 7420644793060401747}
+  m_Layer: 6
   m_Name: OneEye
-  m_TagString: Untagged
+  m_TagString: OneEyeEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4126484306638653213}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 6.16, y: 2.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -84,3 +85,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7420644793060401747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4126484306638653213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e5641330425cb4fab321692d6c90ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 2
+  ItemPrefab_Health: {fileID: 0}
+  ItemPrefab_Speed: {fileID: 0}
+  ItemPrefab_Money: {fileID: 0}
+  ItemPrefab_CardKey: {fileID: 0}
+  replacesuccess: 0
+  Movespeed: 2
+  Movespeed2: 4
+  _target: {fileID: 0}
+  shadowPrefab: {fileID: 5714454640231796403, guid: 71f3a035d3e628544b37809a63ca5a3a, type: 3}
+  isDelay: 0
+  Respawntime: 0.1
+  swingtime: 0.6
+  time: 0
+  time2: 0
+  progressTime: 0
+  UpgradePrefab: {fileID: 7445180921780457434, guid: f66e37a81f50dcb4e8599b6e93e56a13, type: 3}
+  MonsterBullet: {fileID: 3125413714479659704, guid: 8cf48387e959f634a800763bc4e0755e, type: 3}
+  Muzzles: []
+  Timer: 5.6
