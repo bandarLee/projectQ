@@ -675,56 +675,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991800656}
   m_CullTransparentMesh: 1
---- !u!1 &1052017445 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7575769219153781173, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
-  m_PrefabInstance: {fileID: 1585537896066948777}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1052017448
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052017445}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.728364, y: -0.42021036}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 14.726868, y: 7.2191114}
-  m_EdgeRadius: 0
 --- !u!1 &1161268590
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,16 +894,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1185113249279688860, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1185113249279688860, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       propertyPath: m_SortingLayerID
       value: 524746497
-      objectReference: {fileID: 0}
-    - target: {fileID: 1216903833933150356, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1216903833933150356, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       propertyPath: m_SortingLayerID
@@ -964,18 +906,6 @@ PrefabInstance:
       value: Room0
       objectReference: {fileID: 0}
     - target: {fileID: 2104787927118341050, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2104787927118341050, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 524746497
-      objectReference: {fileID: 0}
-    - target: {fileID: 2604391886582705690, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2604391886582705690, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       propertyPath: m_SortingLayerID
       value: 524746497
       objectReference: {fileID: 0}
@@ -983,31 +913,11 @@ PrefabInstance:
       propertyPath: walltype
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2835719968349295341, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2835719968349295341, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 524746497
-      objectReference: {fileID: 0}
     - target: {fileID: 3578257957752100910, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       propertyPath: walltype
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3894630290509496327, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3894630290509496327, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 524746497
-      objectReference: {fileID: 0}
-    - target: {fileID: 3907883893849082176, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3907883893849082176, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       propertyPath: m_SortingLayerID
       value: 524746497
       objectReference: {fileID: 0}
@@ -1016,24 +926,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4428871767127450476, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4428871767127450476, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       propertyPath: m_SortingLayerID
       value: 524746497
-      objectReference: {fileID: 0}
-    - target: {fileID: 7147214047963957314, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7147214047963957314, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 524746497
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099771046230727206, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9099771046230727206, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       propertyPath: m_SortingLayerID
@@ -1042,10 +936,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7575769219153781173, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1052017448}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
