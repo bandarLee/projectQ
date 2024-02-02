@@ -20,25 +20,14 @@ public class OneEye1 : MonoBehaviour // follow 타입
     // 플레이어 객체
     public GameObject _target;
 
-    // 잔상 프리팹
-
-    // 잔상 생성 지연 여부
-    public bool isDelay;
+    // 총알 생성 지연 여부
     public bool isMonsterDelay;
-    // 잔상 생성 주기
-    public float Respawntime = 1f;
 
     // 위아래 흔들림 주기
     public float swingtime = 0.6f;
 
-    // 잔상 생성까지 남은 시간
-
     // 위아래 흔들림 상태 변경까지 남은 시간
     public float time2;
-
-    // 몬스터 등장 이후 누적 시간
-    public float progressTime = 0;
-    public GameObject UpgradePrefab;
 
     [Header("총알 프리팹")]
     public GameObject MonsterBullet;
@@ -62,8 +51,15 @@ public class OneEye1 : MonoBehaviour // follow 타입
         //플레이어를 향하는 방향
         Vector2 dir3 = _target.transform.position - this.transform.position;
 
-        // 잔상 생성 주기를 계산
-    
+        // 새로운 위치 = 현재 위치 + 속도 * 시간
+        transform.position += (Vector3)(dir3 * Movespeed) * Time.deltaTime;
+
+        // 각도를 구하고, 각도에 맞게 회전한다.
+        float radian = Mathf.Atan2(dir3.y, dir3.x);
+        float degree = radian * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, degree + 90));
+
+
         if (isMonsterDelay)
         {
             Timer += Time.deltaTime;
@@ -155,7 +151,6 @@ public class OneEye1 : MonoBehaviour // follow 타입
 
               // 총알 삭제
               collision.collider.gameObject.SetActive(false);
-
               // 적의 체력이 끝
               if (Health <= 0)
               {
