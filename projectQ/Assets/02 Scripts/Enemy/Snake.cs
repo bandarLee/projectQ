@@ -38,11 +38,11 @@ public class Snake : MonoBehaviour// " Basic 타입 "
 
     }
 
-    void OnTriggerEnter(Collider other)
+    public void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
-            StartCoroutine(InfectWithY909(other.gameObject.GetComponent<Player>()));
+            StartCoroutine(InfectWithY909(collision.gameObject.GetComponent<Player>()));
         }
     }
 
