@@ -37,6 +37,8 @@ public class PlayerFire : MonoBehaviour
             BulletAxisShoot();
         }
 
+        
+
     }
 
     // 총알을 발사하는 메서드

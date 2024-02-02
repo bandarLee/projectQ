@@ -1108,7 +1108,6 @@ MonoBehaviour:
   ItemPrefab_Speed: {fileID: 0}
   ItemPrefab_Money: {fileID: 2110187213992637357, guid: 6730239b89874ad4eb8968f058f9a304, type: 3}
   ItemPrefab_CardKey: {fileID: 0}
-  BType: 0
   Speed: 3
   _dir: {x: 0, y: 0}
   MyAnimator: {fileID: 0}
