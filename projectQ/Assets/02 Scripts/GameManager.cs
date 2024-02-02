@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
                 (new Vector3(-1, -1), 15), 
                 (new Vector3(-1, 0), 16), 
                 (new Vector3(-1, 1), 15), 
-                (new Vector3(-1, 2), 7),
+                (new Vector3(-1, 2), 12),
                 (new Vector3(0, 2), 8), 
              },
         new (Vector3 position, int roomType)[]

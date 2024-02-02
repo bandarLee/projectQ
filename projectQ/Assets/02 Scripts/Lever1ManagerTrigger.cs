@@ -27,7 +27,6 @@ public class Lever1ManagerTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Enter");
             switch(doortype)
             {
                 case DoorType.Left:

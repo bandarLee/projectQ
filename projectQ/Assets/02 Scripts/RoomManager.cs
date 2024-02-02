@@ -26,7 +26,7 @@ public class RoomManager : MonoBehaviour
     {
 
 
-        if (collision.collider.CompareTag( "Bullet"))
+        if (collision.collider.CompareTag("Bullet"))
         {
 
             Destroy(collision.collider.gameObject);
