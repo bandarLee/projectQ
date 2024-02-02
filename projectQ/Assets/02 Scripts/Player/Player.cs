@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
     public float PlayerHealth = 3; 
 
+
     private void Awake()
     {
         // 싱글톤 패턴 : 오직 한개의 클래스 인스턴스를 갖도록 보장
@@ -40,7 +41,8 @@ public class Player : MonoBehaviour
         if (collision.collider.CompareTag("OneEyeEnemy"))
         {
             
-        }
+        } 
+        
     }
 
 }

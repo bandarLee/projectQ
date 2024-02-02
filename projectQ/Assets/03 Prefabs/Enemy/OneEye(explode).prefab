@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6210901559518029987}
   - component: {fileID: 3531865363427654441}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OneEye(explode)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

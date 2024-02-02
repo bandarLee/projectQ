@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2225361900710971878}
   - component: {fileID: 2553614264369158525}
   - component: {fileID: -5595651334918995312}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OneEye(clone)
   m_TagString: OneEyeEnemy
   m_Icon: {fileID: 0}
