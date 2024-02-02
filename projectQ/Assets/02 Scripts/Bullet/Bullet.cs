@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
     public BulletType Btype;
 
     private float rotateSpeed = 300f;
-    public float maxDistance = 3f;   // 총알 사거리
+    public float maxDistance = 3.5f;   // 총알 사거리
     public float NormalBulletSpeed;   // 총알의 속도
     public float BulletPower;         // 총알의 데미지
 
@@ -43,6 +43,20 @@ public class Bullet : MonoBehaviour
     {
         // 총알의 시작 위치를 저장
         startPos = transform.position;
+
+        // 
+        if (Btype == BulletType.Knife)
+        {
+            BulletPower = 0.8f;
+        }
+        else if (Btype == BulletType.Fire)
+        {
+            BulletPower = 3f;
+        }
+        else if (Btype == BulletType.Normal)
+        {
+            BulletPower = 0.5f;
+        }
     }
     // 목표: 총알이 방향키를 누름에 따라 앞으로 나아가도록
 
@@ -77,10 +91,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.collider.CompareTag("OneEyeEnemy"))
         {
-
             Destroy(this.gameObject);
         }
-        
-        
     }
 }

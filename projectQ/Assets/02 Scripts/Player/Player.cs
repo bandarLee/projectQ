@@ -9,8 +9,8 @@ public class Player : MonoBehaviour
     public static Player Instance;
     public Vector2 PlayerPosition;
 
-    public float PlayerHealth = 3f; 
-
+    public float PlayerHealth = 3f;
+    
 
     private void Awake()
     {
@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
 
     }
     void Start()
@@ -40,11 +41,17 @@ public class Player : MonoBehaviour
 
         if (collision.collider.CompareTag("OneEyeEnemy"))
         {
-            PlayerHealth = PlayerHealth - 0.5f;
+            PlayerHealth = PlayerHealth - 0.3f;
         } 
 
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("OneEyeEnemy"))
+        {
+            PlayerHealth -= 0.1f * Time.deltaTime;
+        }
 
-        
     }
 
 }
