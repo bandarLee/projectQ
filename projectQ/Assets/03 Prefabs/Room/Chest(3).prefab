@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2364870722601664323}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chest(3)
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,6 +45,10 @@ PrefabInstance:
     - target: {fileID: 1998873333861008, guid: a566a4ec74b362446811254d0c887410, type: 3}
       propertyPath: m_Name
       value: chest (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998873333861008, guid: a566a4ec74b362446811254d0c887410, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4124728988837648, guid: a566a4ec74b362446811254d0c887410, type: 3}
       propertyPath: m_LocalPosition.x
@@ -203,6 +207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chest (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1998873333861008, guid: a566a4ec74b362446811254d0c887410, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4124728988837648, guid: a566a4ec74b362446811254d0c887410, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.2183352
@@ -359,6 +367,10 @@ PrefabInstance:
     - target: {fileID: 1998873333861008, guid: a566a4ec74b362446811254d0c887410, type: 3}
       propertyPath: m_Name
       value: chest (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998873333861008, guid: a566a4ec74b362446811254d0c887410, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4124728988837648, guid: a566a4ec74b362446811254d0c887410, type: 3}
       propertyPath: m_LocalPosition.x
