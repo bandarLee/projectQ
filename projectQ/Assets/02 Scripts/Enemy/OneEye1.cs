@@ -132,24 +132,38 @@ public class OneEye1 : MonoBehaviour // follow 타입
         }
     }
 
-     public void MakeItem()
+    public void MakeItem()
+    {
+        // 목표: 25% 확률로 다음 층으로 넘어갈 수 있는 카드키, 머니, 체력, 스피드 아이템(확률넣기)
+        if (Random.Range(0, 100) < 25)
         {
-            // 목표: 20% 확률로 다음 층으로 넘어갈 수 있는 카드키, 80% 확률로 머니주는 아이템 (확률넣기)
-            if (Random.Range(0, 10) == 0 || Random.Range(0, 10) == 1)
-            {
-                // -다음 층으로 넘어갈 수 있는 카드키 만들고
-                GameObject item_CardKey = Instantiate(ItemPrefab_CardKey);
-                // -위치를 나의 위치로 수정
-                item_CardKey.transform.position = this.transform.position;
-            }
-            else
-            {
-                // -머니주는 아이템 만들고
-                GameObject item_Money = Instantiate(ItemPrefab_Money);
-                // -위치를 나의 위치로 수정
-                item_Money.transform.position = this.transform.position;
-            }
+            // -다음 층으로 넘어갈 수 있는 카드키 만들고
+            GameObject item_CardKey = Instantiate(ItemPrefab_CardKey);
+            // -위치를 나의 위치로 수정
+            item_CardKey.transform.position = this.transform.position;
         }
+        else if (Random.Range(0, 100) < 50)
+        {
+            // -머니주는 아이템 만들고
+            GameObject item_Money = Instantiate(ItemPrefab_Money);
+            // -위치를 나의 위치로 수정
+            item_Money.transform.position = this.transform.position;
+        }
+        else if (Random.Range(0, 100) < 75)
+        {
+            // -체력 아이템 만들고
+            GameObject item_Health = Instantiate(ItemPrefab_Health);
+            // -위치를 나의 위치로 수정
+            item_Health.transform.position = this.transform.position;
+        }
+        else
+        {
+            // -스피드 아이템 만들고
+            GameObject item_Speed = Instantiate(ItemPrefab_Speed);
+            // -위치를 나의 위치로 수정
+            item_Speed.transform.position = this.transform.position;
+        }
+    }
 
 }
 
