@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -5595651334918995312}
   m_Layer: 0
   m_Name: OneEye(clone)
-  m_TagString: Untagged
+  m_TagString: OneEyeEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
