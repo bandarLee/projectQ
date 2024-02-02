@@ -43,7 +43,7 @@ public class Bullet : MonoBehaviour
         transform.position = (Vector2)transform.position + dir * NormalBulletSpeed * Time.deltaTime;
         if (Btype == BulletType.Knife)
         {
-            Debug.Log("회전");
+            //Debug.Log("회전");
             Rotate();
         }
 
