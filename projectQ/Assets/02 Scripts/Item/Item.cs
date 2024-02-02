@@ -23,11 +23,26 @@ public class Item : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-       if (collision.collider.CompareTag("Player") && IType == ItemType.FireItem )
+        PlayerFire playerFire = collision.GetComponent<PlayerFire>();
+
+       if (collision.CompareTag ( "Player"))
         {
-            
+
+            // 파이어볼, 데미지 3, 광역, 연사속도 0.5,사거리 1.5(레어)
+            if (IType == ItemType.FireItem)
+            {
+
+            }
+            // 
+            else if (IType == ItemType.KnifeItem)
+            {
+
+            }
+
+            Destroy(this.gameObject);
+
         }
     }
 }
