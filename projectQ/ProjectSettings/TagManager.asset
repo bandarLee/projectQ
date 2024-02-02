@@ -51,3 +51,6 @@ TagManager:
   - name: Chest
     uniqueID: 3759599173
     locked: 0
+  - name: Wall
+    uniqueID: 524746497
+    locked: 0
