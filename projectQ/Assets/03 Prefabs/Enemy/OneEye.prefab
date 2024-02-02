@@ -105,10 +105,9 @@ MonoBehaviour:
   replacesuccess: 0
   Movespeed: 2
   Movespeed2: 4
-  _target: {fileID: 4878934592145815868, guid: 7341a5159d565a343a79974c756a658a, type: 3}
   shadowPrefab: {fileID: 5714454640231796403, guid: 71f3a035d3e628544b37809a63ca5a3a, type: 3}
   isDelay: 0
-  Respawntime: 0.1
+  Respawntime: 5
   swingtime: 0.6
   time: 0
   time2: 0

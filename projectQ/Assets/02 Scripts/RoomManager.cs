@@ -4,10 +4,24 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
+    public static RoomManager Instance;
+
     public OneEye[] oneeyes;
-    void Awake()
+    private void Awake()
     {
-        OneEye[] oneeyes = GameObject.FindObjectsOfType<OneEye>();
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+    }
+    void Start()
+    {
+        oneeyes = GameObject.FindObjectsOfType<OneEye>();
 
         foreach (OneEye oneeye in oneeyes)
         {
@@ -20,12 +34,6 @@ public class RoomManager : MonoBehaviour
     void Update()
     {        
 
-        foreach (OneEye oneeye in oneeyes)
-        {
-            if (!oneeye.gameObject.activeInHierarchy)
-            {
-                oneeye.gameObject.SetActive(true);
-            }
-        }
+      
     }
 }
