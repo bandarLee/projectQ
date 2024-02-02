@@ -13,9 +13,6 @@ public class Snake : MonoBehaviour// " Basic 타입 "
     public GameObject ItemPrefab_Money; // 상점에 꼭 필요
     public GameObject ItemPrefab_CardKey; // 다음 층으로 넘어갈 수 있는 카드키
 
-
-    public BulletType BType; // Normal 타입
-
     // 목표: 적을 벽 안에서 부딪힐 때까지 상하좌우로 이동시키고 싶다.
     // 속성:
     // - 속력
@@ -33,14 +30,31 @@ public class Snake : MonoBehaviour// " Basic 타입 "
 
     void Update()
     {
-
         //구현 순서
         // 2. 이동한다. 
         // 새로운 위치 = 현재 위치 + 속도 * 시간
         transform.position += (Vector3)(_dir * Speed) * Time.deltaTime;
         _dir.Normalize();
 
+    }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            StartCoroutine(InfectWithY909(other.gameObject.GetComponent<Player>()));
+        }
+    }
+
+    IEnumerator InfectWithY909(Player player)
+    {
+        // 독의 효과가 2초간 지속되도록 설정합니다.
+        for (int i = 0; i < 2; i++)
+        {
+            // 매 초마다 플레이어 체력을 10씩 감소시킵니다.
+            player.PlayerHealth -= 0.05f;
+            yield return new WaitForSeconds(1f);
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
