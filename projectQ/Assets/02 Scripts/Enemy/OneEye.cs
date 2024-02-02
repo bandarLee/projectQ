@@ -114,8 +114,6 @@ public class OneEye : MonoBehaviour // follow 타입
         }
         if (progressTime > 5.0f)
         {
-            /*GameObject enemy = Instantiate(UpgradePrefab);
-            enemy.transform.position = this.transform.position;*/
             ReplacePrefab();
             replacesuccess = true;
 
@@ -141,12 +139,8 @@ public class OneEye : MonoBehaviour // follow 타입
 
                 // 2. 위치를 설정한다.
                 bullet.transform.position = Muzzles[i].transform.position;
-
             }
-
         }
-
-  
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -155,29 +149,26 @@ public class OneEye : MonoBehaviour // follow 타입
         if (collision.collider.CompareTag("Player"))
         {
             Player player = collision.collider.GetComponent<Player>();
-            //player.DecreaseHealth(1); //player 클래스에 체력 달아줘야 함
+            player.PlayerHealth--;
         }
 
         // 플레이어의 공격을 받았을 때 죽는다
-        /*  else if (collision.collider.CompareTag("Bullet")) //enemy와 총알이 부딪혔을 때 //-> 아직 "tag:bullet" 없음
+          else if (collision.collider.CompareTag("Bullet")) //enemy와 총알이 부딪혔을 때 
           {
               Bullet bullet = collision.collider.GetComponent<Bullet>();
-              if (bullet.BType == BulletType.Normal) //enum
+              if (bullet.Btype == Bullet.BulletType.Normal) //enum
               {
                   Health -= 1;
               }
 
-
-              // 총알 삭제
-              collision.collider.gameObject.SetActive(false);
-
-              // 적의 체력이 끝
-              if (Health <= 0)
-              {
-                  //gameObject.SetActive(false);
-                  Destroy(gameObject);
-                  MakeItem();
-              }*/
+            // 적의 체력이 끝
+            if (Health <= 0)
+            {
+                //gameObject.SetActive(false);
+                Destroy(gameObject);
+                MakeItem();
+            }   
+        }
     }
 
     public void MakeItem()
