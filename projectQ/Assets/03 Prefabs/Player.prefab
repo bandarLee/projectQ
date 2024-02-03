@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7157291188788828678}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FireMuzzle 1
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,9 +71,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7447187224939599125}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FireMuzzle 2
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -359,6 +359,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerPosition: {x: 0, y: 0}
+  PlayerHealth: 3
+  maxDistance: 3.5
+  NormalBulletSpeed: 3.5
+  BulletPower: 1
 --- !u!114 &1299146938730861928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,6 +376,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NormalBulletPrefab: {fileID: 1476319619623086005, guid: e23285d9dbda89243ad8d1cbfc954bd7, type: 3}
+  FireBulletPrefab: {fileID: 2246287635761883646, guid: 8fc50240308b8b24482d7e61da3c8738, type: 3}
+  KnifeBulletPrefab: {fileID: 4586667306290933860, guid: c1e08cba98ed7d54ebffb1a12a68e0e3, type: 3}
   ShootTimer: 0
   Cool_Time: 0.2
   NormalMuzzles:

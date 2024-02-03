@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ItemMove : MonoBehaviour
 {
-    public float amplitude = 0.5f; // 움직임의 범위를 설정. 이 값을 바꾸면 움직임의 범위가 바뀜.
-    public float frequency = 1f; // 움직임의 속도를 설정. 이 값을 바꾸면 움직임의 속도가 바뀜.
+    public float amplitude = 0.08f; // 움직임의 범위를 설정. 이 값을 바꾸면 움직임의 범위가 바뀜.
+    public float frequency = 3f; // 움직임의 속도를 설정. 이 값을 바꾸면 움직임의 속도가 바뀜.
 
     Vector3 startPos;
 

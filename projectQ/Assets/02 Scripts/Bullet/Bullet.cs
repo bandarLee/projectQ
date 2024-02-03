@@ -8,7 +8,8 @@ public class Bullet : MonoBehaviour
     {
         Normal,
         Fire,     // 화염 아이템 얻으면 발동
-        Knife     // Knife 아이템 얻으면
+        Knife,    // Knife 아이템 얻으면
+        Blood     // Blood 스킬
 
     }
 

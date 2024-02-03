@@ -8,6 +8,7 @@ public class Item : MonoBehaviour
     {
         FireItem,
         KnifeItem,
+        BloodItem
 
     }
 
