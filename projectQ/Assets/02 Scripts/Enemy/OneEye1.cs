@@ -33,7 +33,7 @@ public class OneEye1 : MonoBehaviour // follow 타입
     [Header("총구들")]
     public GameObject[] Muzzles;
 
-    public int bulletCount = 10; // 한 번에 발사할 총알의 수
+    public int bulletCount = 10; // 원하는 총알의 수
 
     [Header("타이머")]
     public float Timer = 0f;
@@ -96,12 +96,12 @@ public class OneEye1 : MonoBehaviour // follow 타입
 
     private void Fire()
     {
-            for (int i = 0; i < bulletCount; i++)
-            {
-            // 총구의 위치에서 총알 오브젝트를 생성한다.
-            GameObject bullet = Instantiate(MonsterBullet, Muzzles[i].transform.position, Quaternion.identity);
+        for (int i = 0; i < bulletCount; i++)
+        {
+        // 총구의 위치에서 총알 오브젝트를 생성한다.
+        GameObject bullet = Instantiate(MonsterBullet, Muzzles[i].transform.position, Quaternion.identity);
         }
-        }
+    }
     public void OnCollisionEnter2D(Collision2D collision)
     {
         // 플레이어는 적과 충돌하면 체력이 닳는다

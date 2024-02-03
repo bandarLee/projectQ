@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48e5641330425cb4fab321692d6c90ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aboveY: 1
   Health: 3
   ItemPrefab_Health: {fileID: 2110187213992637357, guid: 6730239b89874ad4eb8968f058f9a304, type: 3}
   ItemPrefab_Speed: {fileID: 1961759127131361017, guid: 2f6229f82c171744690a05717b49af83, type: 3}
