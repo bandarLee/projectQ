@@ -19,7 +19,7 @@ public class DetailRoomManager : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        OneEye[] oneeyes = RoomManager.Instance.oneeyes;
+        OneEye[] oneeyes = GameManager.Instance.oneeyes;
         if (other.gameObject.CompareTag("Player")) 
         {
             foreach (OneEye oneeye in oneeyes)
@@ -36,12 +36,12 @@ public class DetailRoomManager : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        OneEye[] oneeyes = RoomManager.Instance.oneeyes;
+        OneEye[] oneeyes = GameManager.Instance.oneeyes;
         if (other.gameObject.CompareTag("Player"))
         {
             foreach (OneEye oneeye in oneeyes)
             {
-                if (oneeye.gameObject.activeInHierarchy && !roomRect.Contains(oneeye.gameObject.transform.position))
+                if (oneeye.gameObject.activeInHierarchy && roomRect.Contains(oneeye.gameObject.transform.position))
                 {
                     oneeye.gameObject.SetActive(false);
                 }

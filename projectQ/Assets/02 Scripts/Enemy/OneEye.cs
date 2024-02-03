@@ -49,7 +49,18 @@ public class OneEye : MonoBehaviour // follow 타입
     public float Timer = 5.6f;
     public const float COOL_TIME = 0.6f;
 
+    private void Start()
+    {
+    }
+    private void OnEnable()
+      {
+        Health = 2;
+        replacesuccess = false;
+        time = 0; 
+        progressTime = 0;
+        time2 = 0;
 
+      }
     void Update()
     {
         // 위로 이동하는 방향

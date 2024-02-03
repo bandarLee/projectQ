@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     public float RoomX = 18.46f;
     public float RoomY = 10.25f;
     public GameObject Player;
+    public OneEye[] oneeyes;
+    public static GameManager Instance;
     // 각 패턴의 방 위치와 타입을 저장하는 배열
     private (Vector3 position, int roomType)[][] roomPatterns =
     {
@@ -210,6 +212,14 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         roomInfos = roomPatterns[Random.Range(0, roomPatterns.Length)];
 
         foreach (var (position, roomType) in roomInfos)
@@ -218,5 +228,14 @@ public class GameManager : MonoBehaviour
         }
 
         Instantiate(Player, this.gameObject.transform.position, Quaternion.identity);
+    }
+    private void Start()
+    {
+        oneeyes = GameObject.FindObjectsOfType<OneEye>();
+
+        foreach (OneEye oneeye in oneeyes)
+        {
+            oneeye.gameObject.SetActive(false);
+        }
     }
 }
