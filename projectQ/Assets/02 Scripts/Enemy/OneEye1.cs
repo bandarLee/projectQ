@@ -100,8 +100,7 @@ public class OneEye1 : MonoBehaviour // follow 타입
             {
             // 총구의 위치에서 총알 오브젝트를 생성한다.
             GameObject bullet = Instantiate(MonsterBullet, Muzzles[i].transform.position, Quaternion.identity);
-
-            }
+        }
         }
     public void OnCollisionEnter2D(Collision2D collision)
     {
