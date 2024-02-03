@@ -33,14 +33,8 @@ public class Snake : MonoBehaviour// " Basic 타입 "
         // 새로운 위치 = 현재 위치 + 속도 * 시간
         transform.position += (Vector3)(_dir * Speed) * Time.deltaTime;
         _dir.Normalize();
-
     }
-    private void RotateSnake(Vector2 direction)
-    {
-        float radian = Mathf.Atan2(direction.y, direction.x);
-        float degree = radian * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, degree + 90));
-    }
+    
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -48,21 +42,23 @@ public class Snake : MonoBehaviour// " Basic 타입 "
         {
             StartCoroutine(InfectWithY909(collision.gameObject.GetComponent<Player>()));
         }
-        else if (collision.gameObject.tag == "Envirnoment")
+        if (collision.gameObject.tag == "Environment")
         {
+
             WallManager roomManager = collision.collider.GetComponent<WallManager>();
             if (roomManager.walltype == WallManager.WallType.Bot)
             {
-                RotateSnake(_dir);
                 _dir = Vector2.up;
+                RotateSnake(_dir);
                 
                 if (Speed < 7) AddSpeed(1);
                 
             }
             else if(roomManager.walltype == WallManager.WallType.Top)
             {
-                RotateSnake(_dir);
                 _dir = Vector2.down;
+                RotateSnake(_dir);
+     
                 
                 if (Speed < 7) AddSpeed(1);
             }
@@ -88,8 +84,15 @@ public class Snake : MonoBehaviour// " Basic 타입 "
                   MakeItem();
               }
           }
-
     }
+
+    private void RotateSnake(Vector2 direction)
+    {
+        float radian = Mathf.Atan2(direction.y, direction.x);
+        float degree = radian * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, degree + 90));
+    }
+
     IEnumerator InfectWithY909(Player player)
     {
         // 독의 효과가 2초간 지속되도록 설정합니다.
