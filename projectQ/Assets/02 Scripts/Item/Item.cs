@@ -6,9 +6,9 @@ public class Item : MonoBehaviour
 {
     public enum ItemType
     {
-        FireItem,
-        KnifeItem,
-        BloodItem
+        FireItem,     // Epic
+        KnifeItem,    // Rare
+        BloodItem     // Unique
 
     }
 
@@ -36,6 +36,7 @@ public class Item : MonoBehaviour
             // 파이어볼, 데미지 3, 광역, 연사속도 +0.5,사거리 5(레어)
             if (IType == ItemType.FireItem)
             {
+                
                 Player.Instance.NormalBulletSpeed += 0.5f;
                 Player.Instance.maxDistance = 5f;
 

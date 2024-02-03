@@ -43,12 +43,13 @@ public class Bullet : MonoBehaviour
         // 총알의 시작 위치를 저장
         startPos = transform.position;
 
-        // 
+        // 만약 총알 타입이 Knife 타입이면 총알 파워는 0.8
         if (Btype == BulletType.Knife)
         {
             Player.Instance.BulletPower = 0.8f;
         }
-        else if (Btype == BulletType.Fire)
+        // 만약 총알 타입이 Fire 타입이면 총알 파워는 3
+        else if (Btype == BulletType.Fire) 
         {
             Player.Instance.BulletPower = 3f;
         }

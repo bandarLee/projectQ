@@ -7,13 +7,14 @@ using static Item;
 
 public class PlayerFire : MonoBehaviour
 {
-
+    // 플레이어가 사용할 수 있는 공격 타입의 프리팹들
     [Header("플레이어 공격 프리팹")]
     public GameObject NormalBulletPrefab;
     public GameObject FireBulletPrefab;
     public GameObject KnifeBulletPrefab;
     public GameObject BloodBulletPrefab;
 
+    // 공격 쿨타임과 쿨타임을 재는 타이머
     public float ShootTimer;
     public float Cool_Time = 4;
 
@@ -37,6 +38,7 @@ public class PlayerFire : MonoBehaviour
     {
         ShootTimer += Time.deltaTime;
 
+        // 쿨타임이 다 찼고, 마우스 버튼이 눌렸다면 공격 실행
         if (ShootTimer >= Cool_Time && Input.GetMouseButtonDown(0))
         {
             BulletAxisShoot();
@@ -49,6 +51,7 @@ public class PlayerFire : MonoBehaviour
     // 총알을 발사하는 메서드
     public void Shooting(Vector2 dir)
     {
+        // 공격이 실행되면 쿨타임 타이머를 0으로 초기화하고 총알 생성
         ShootTimer = 0;
         if (Input.GetMouseButtonDown(0))
         {
@@ -61,14 +64,26 @@ public class PlayerFire : MonoBehaviour
                     normalBullet.GetComponent<Bullet>().SetDirection(dir);
 
                 }
-                if (Player.Instance.weapon == Player.PlayerWeapon.FireItem)
+                else if (Player.Instance.weapon == Player.PlayerWeapon.FireItem)
                 {
-                    GameObject fireBullet = Instantiate(NormalBulletPrefab, transform.position, Quaternion.identity);
+                    GameObject fireBullet = Instantiate(FireBulletPrefab, transform.position, Quaternion.identity);
                     fireBullet.transform.position = NormalMuzzles[i].transform.position;
                     fireBullet.GetComponent<Bullet>().SetDirection(dir);
                 }
-                 
 
+                else if (Player.Instance.weapon == Player.PlayerWeapon.KnifeItem)
+                {
+                    GameObject knifeBullet = Instantiate(KnifeBulletPrefab, transform.position, Quaternion.identity);
+                    knifeBullet.transform.position = NormalMuzzles[i].transform.position;
+                    knifeBullet.GetComponent<Bullet>().SetDirection(dir);
+                }
+                else if (Player.Instance.weapon == Player.PlayerWeapon.BloodItem)
+                {
+                    GameObject bloodBullet = Instantiate(BloodBulletPrefab, transform.position, Quaternion.identity);
+                    bloodBullet.transform.position = NormalMuzzles[i].transform.position;
+                    bloodBullet.GetComponent<Bullet>().SetDirection(dir);
+
+                }
 
             }
 
@@ -84,44 +99,53 @@ public class PlayerFire : MonoBehaviour
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
         {
             //Debug.Log("대각선공격1");
+            //gameObject.transform.Rotate(0, 0, 135);
             Shooting(new Vector2(1, 1));
+
         }
         else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
         {
             //Debug.Log("대각선공격");
-
+            //gameObject.transform.Rotate(0, 0, -135);
             Shooting(new Vector2(-1, 1));
+
         }
         else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
         {
             //Debug.Log("대각선공격");
 
+            //gameObject.transform.Rotate(0, 0, 45);
             Shooting(new Vector2(1, -1));
+
         }
         else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
         {
             //Debug.Log("대각선공격");
-
+            //gameObject.transform.Rotate(0, 0, -45);
             Shooting(new Vector2(-1, -1));
+
         }
         else if (Input.GetKey(KeyCode.W) || stateInfo.IsName("Back_Idle"))
         {
+            //gameObject.transform.Rotate(0, 0, 180);
             Shooting(new Vector2(0, 1));
         }
         else if (Input.GetKey(KeyCode.S) || stateInfo.IsName("Front_Idle"))
         {
+
             Shooting(new Vector2(0, -1));
         }
         else if (Input.GetKey(KeyCode.A) || stateInfo.IsName("Left_Idle"))
         {
+            //gameObject.transform.Rotate(0, 0, -90);
             Shooting(new Vector2(-1, 0));
         }
         else if (Input.GetKey(KeyCode.D) || stateInfo.IsName("Right_Idle"))
         {
+            //gameObject.transform.Rotate(0, 0, 90);
             Shooting(new Vector2(1, 0));
         }
 
     }
-  
 
 }

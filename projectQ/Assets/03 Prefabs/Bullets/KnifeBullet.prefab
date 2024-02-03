@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 149670578682798279}
   m_Layer: 7
   m_Name: KnifeBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,7 +199,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Btype: 2
   FireVFX: {fileID: 0}
-  NormalBulletSpeed: 8
 --- !u!50 &149670578682798279
 Rigidbody2D:
   serializedVersion: 4

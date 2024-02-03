@@ -101,7 +101,10 @@ public class Player : MonoBehaviour
         {
             weapon = PlayerWeapon.BloodItem;
         }
-
+        else
+        {
+            weapon = PlayerWeapon.Basic;
+        }
 
 
     }
