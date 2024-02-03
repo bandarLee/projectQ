@@ -104,15 +104,9 @@ public class OneEye1 : MonoBehaviour // follow 타입
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        // 플레이어는 적과 충돌하면 체력이 닳는다
-        if (collision.collider.CompareTag("Player"))
-        {
-            Player player = collision.collider.GetComponent<Player>();
-            player.PlayerHealth--; 
-        }
 
         // 플레이어의 공격을 받았을 때 죽는다
-         else if (collision.collider.CompareTag("Bullet")) //enemy와 총알이 부딪혔을 때 
+         if (collision.collider.CompareTag("Bullet")) //enemy와 총알이 부딪혔을 때 
           {
               Bullet bullet = collision.collider.GetComponent<Bullet>();
               if (bullet.Btype == Bullet.BulletType.Normal) //enum

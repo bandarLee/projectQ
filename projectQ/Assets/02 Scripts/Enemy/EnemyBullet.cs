@@ -6,6 +6,7 @@ using static Bullet;
 public enum EnemyBulletType
 {
     Blood,
+    SnakePoison,
 
 }
 
