@@ -14,6 +14,9 @@ public class Player : MonoBehaviour
     public float NormalBulletSpeed;   // 총알의 속도
     public float BulletPower;         // 총알의 데미지
 
+    public bool PlayerDamageDelay = false;
+    public float time;
+    public float PlayerDamageNuckbackTime = 1f;
 
     private void Awake()
     {
@@ -36,19 +39,32 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        
+        if (PlayerDamageDelay)
+        {
+            time += Time.deltaTime;
+            if (time >= PlayerDamageNuckbackTime)
+            {
+                Debug.Log("넉백");
+                time = 0.0f;
+                PlayerDamageDelay = false;
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
-        if (collision.collider.CompareTag("OneEyeEnemy"))
+        if (!PlayerDamageDelay)
         {
-            PlayerHealth = PlayerHealth - 0.3f;
-        } 
+            if (collision.collider.CompareTag("OneEyeEnemy"))
+            {
+                PlayerHealth -= PlayerHealth - 0.5f;
+            }
+            PlayerDamageDelay = true;
+
+        }
 
     }
-    private void OnCollisionStay2D(Collision2D collision)
+    /*private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("OneEyeEnemy"))
         {
@@ -56,5 +72,5 @@ public class Player : MonoBehaviour
         }
 
     }
-
+    */
 }
