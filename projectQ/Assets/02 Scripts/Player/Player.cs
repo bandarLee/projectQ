@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
         {
             if (collision.collider.CompareTag("OneEyeEnemy"))
             {
-                PlayerHealth -= PlayerHealth - 0.5f;
+                PlayerHealth -= 0.5f;
             }
             PlayerDamageDelay = true;
 
