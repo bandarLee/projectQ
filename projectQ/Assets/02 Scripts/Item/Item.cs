@@ -11,7 +11,8 @@ public class Item : MonoBehaviour
         Basic,
         FireItem,     // Epic
         KnifeItem,    // Rare
-        BloodItem     // Unique
+        BloodItem,    // Unique
+        CoinItem
 
     }
 
@@ -42,8 +43,8 @@ public class Item : MonoBehaviour
             {
                 Player.Instance.weapon = PlayerWeapon.FireItem;
 
-                Player.Instance.NormalBulletSpeed += 0.5f;
-                Player.Instance.maxDistance = 5f;
+                Player.Instance.NormalBulletSpeed = 4.5f;
+                Player.Instance.maxDistance = 7f;
 
             }
             // 수리검, 데미지 0.8, 연사속도 +2, 사거리 1.3(커몬)
@@ -51,12 +52,20 @@ public class Item : MonoBehaviour
             {
                 Player.Instance.weapon = PlayerWeapon.KnifeItem;
 
-                Player.Instance.NormalBulletSpeed += 2f;
-                Player.Instance.maxDistance = 4f;
+                Player.Instance.NormalBulletSpeed = 6f;
+                Player.Instance.maxDistance = 4.5f;
             }
             else if (IType == ItemType.BloodItem)
             {
                 Player.Instance.weapon = PlayerWeapon.BloodItem;
+
+                Player.Instance.NormalBulletSpeed = 5.5f;
+                Player.Instance.maxDistance = 5.5f;
+            }
+
+            else if (IType == ItemType.CoinItem)
+            {
+                Player.Instance.CoinCount += 1;
             }
 
             else

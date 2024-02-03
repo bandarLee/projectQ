@@ -19,6 +19,7 @@ public class Bullet : MonoBehaviour
 
 
 
+
     private Vector2 startPos;   // 총알이 발사된 시작 위치
     private Vector2 dir;        // 임의의 방향
 
@@ -39,8 +40,6 @@ public class Bullet : MonoBehaviour
 
     public void Awake()
     {
-        PlayerFire playerfire = GetComponent<PlayerFire>();
-
         // 총알의 시작 위치를 저장
         startPos = transform.position;
 
@@ -52,7 +51,6 @@ public class Bullet : MonoBehaviour
         // 만약 총알 타입이 Fire 타입이면 총알 파워는 3
         else if (Btype == BulletType.Fire) 
         {
-
             Player.Instance.BulletPower = 3f;
         }
         else if (Btype == BulletType.Normal)
@@ -69,12 +67,11 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-
         transform.position = (Vector2)transform.position + dir * Player.Instance.NormalBulletSpeed * Time.deltaTime;
         if (Btype == BulletType.Knife)
         {
             //Debug.Log("회전");
-            KnifeRotate();
+            Rotate();
         }
 
         if (Vector2.Distance(startPos, transform.position) >= Player.Instance.maxDistance)
@@ -88,7 +85,7 @@ public class Bullet : MonoBehaviour
 
     }
 
-    void KnifeRotate()
+    void Rotate()
     {
         // 게임 오브젝트를 Z축을 중심으로 회전.
         transform.Rotate(new Vector3(0, 0, 1), rotateSpeed * Time.deltaTime);
