@@ -6,21 +6,17 @@ using static Bullet;
 public class Virus : MonoBehaviour // " Follow 타입 "
 {
     public float Health = 1;
+  
 
     public GameObject ItemPrefab_Health; // DropItem
     public GameObject ItemPrefab_Speed;
     public GameObject ItemPrefab_Money;
     public GameObject ItemPrefab_CardKey;
 
-    public BulletType BType; // Normal 타입 등등
-
     // 플레이어를 따라가는 속도
     public float Movespeed;
     // 위아래로 흔들리는 속도 
     public float Movespeed2;
-
-    /*// 플레이어 객체
-    public GameObject _target;*/
 
     // 위아래 흔들림 주기
     public float swingtime = 0.6f;
@@ -56,7 +52,6 @@ public class Virus : MonoBehaviour // " Follow 타입 "
         // 자기 복제 생성 주기를 계산
         if (isCloneDelay)
         {
-
             time += Time.deltaTime;
             if (time >= Respawntime)
             {
@@ -75,10 +70,12 @@ public class Virus : MonoBehaviour // " Follow 타입 "
         float angle = Mathf.Atan2(dir3.y, dir3.x) * Mathf.Rad2Deg;
         angle += 90f;  // 몬스터가 플레이어를 둘러싸도록 각도를 조절
         dir3 = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
-        
-        // 플레이어를 향해 이동
         transform.position += (Vector3)(dir3 * Movespeed * Time.deltaTime);
 
+        // 플레이어를 향해 이동
+        Vector2 dir4 = new Vector2((Player.Instance.transform.position.x - this.transform.position.x), (Player.Instance.transform.position.y  - this.transform.position.y));
+        dir4.Normalize();
+        transform.position += (Vector3)(dir4 * Movespeed * Time.deltaTime);
 
         //위아래 흔들림
         if (time2 < 0.3f) //위로 이동
@@ -91,35 +88,32 @@ public class Virus : MonoBehaviour // " Follow 타입 "
             transform.position += (Vector3)(dir2 * Movespeed2 * Time.deltaTime);
 
         }
-
-
     }
 
-    void OnCollisionStay2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         // 플레이어와 충돌했는지 확인
         if (collision.collider.CompareTag("Player"))
         {
-            // 복제 생성 여부와 현재 복제 개수를 확인
+
+            // 복제 생성 여부
             if (!isCloneDelay)
             {
-                // 복제를 생성하고 현재 복제 개수를 증가
-                GameObject enemy = Instantiate(shadowPrefab);
-                enemy.transform.position = this.transform.position;
                 isCloneDelay = true;
+
+                // 복제물 생성 코루틴 시작
+                StartCoroutine(CreateClones());
             }
 
-            Player.Instance.PlayerHealth -= 1f;
         }
 
         // 플레이어의 공격을 받았을 때 죽는다
         if (collision.collider.CompareTag("Bullet")) //enemy와 총알이 부딪혔을 때 
         {
             Bullet bullet = collision.collider.GetComponent<Bullet>();
-            if (bullet.Btype == Bullet.BulletType.Normal) //enum
-            {
-                Health -= 1;
-            }
+   
+                Health -= Player.Instance.BulletPower;
+            
 
             // 적의 체력이 끝
             if (Health <= 0)
@@ -129,6 +123,29 @@ public class Virus : MonoBehaviour // " Follow 타입 "
             }
         }
     }
+
+    private IEnumerator CreateClones()
+    {
+        int cloneCount = 5; // 생성할 복제물의 수
+        float radius = 1f; // 복제가 생성될 반경 설정
+        Vector2 playerPos = Player.Instance.transform.position; // 플레이어 위치 가져오기
+
+        // 원형으로 복제물 배치
+        for (int i = 0; i < cloneCount; i++)
+        {
+            // 원형 내에서 복제물의 위치를 결정
+            float angle = i * Mathf.PI * 2f / cloneCount; // 복제물 간의 각도 차이 계산
+            Vector2 newPos = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * radius; // 원형 내 위치 계산
+
+            // 복제물 생성
+            GameObject enemy = Instantiate(shadowPrefab);
+            enemy.transform.position = playerPos + newPos; // 복제물 위치 설정
+
+            // 1초 대기
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
 
     public void MakeItem()
     {
