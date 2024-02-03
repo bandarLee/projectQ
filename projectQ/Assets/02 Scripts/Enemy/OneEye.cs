@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OneEye : MonoBehaviour // follow 타입
 {
+    public float aboveY = 1f; // enemy가 player 위에 떠다닐 y축 거리
     public float Health = 2;
 
     public GameObject ItemPrefab_Health; // DropItem
@@ -70,8 +71,16 @@ public class OneEye : MonoBehaviour // follow 타입
         // 아래로 이동하는 방향
         Vector2 dir2 = new Vector2(0, -0.1f);
 
-        //플레이어를 향하는 방향
-        Vector2 dir3 = Player.Instance.transform.position - this.transform.position; 
+        //플레이어를 향하는 방향 
+        //Vector2 dir3 = Player.Instance.transform.position - this.transform.position;
+
+        // player의 위치를 기반으로 'enemy의 위치'를 업데이트한다. // 플레이어 머리 위에 떠다니게 하도록
+        Vector2 dir3 = new Vector2((Player.Instance.transform.position.x - this.transform.position.x), (Player.Instance.transform.position.y + aboveY - this.transform.position.y));
+
+        // 플레이어를 향해 이동
+        dir3.Normalize();
+            transform.position += (Vector3)(dir3 * Movespeed * Time.deltaTime);
+        
 
         // 잔상 생성 주기를 계산
         if (isDelay)
@@ -101,12 +110,6 @@ public class OneEye : MonoBehaviour // follow 타입
             enemy.transform.position = this.transform.position;
             isDelay = true;
         }
-
-
-        // 플레이어를 향해 이동
-        dir3.Normalize();
-        transform.position += (Vector3)(dir3 * Movespeed * Time.deltaTime);
-
 
         //위아래 흔들림
         if (time2 < 0.4f) //위로 이동

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5016574229474844799}
   - component: {fileID: 4071683306942100577}
   - component: {fileID: 1896792353679018335}
+  - component: {fileID: 8110646255457416071}
   m_Layer: 10
   m_Name: Blood
   m_TagString: Untagged
@@ -234,3 +235,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8110646255457416071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4351388047594135514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e700317ed661982478c5da7fd06e679a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyBType: 0
+  Speed: 5

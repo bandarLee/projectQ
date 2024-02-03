@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OneEye1 : MonoBehaviour // follow 타입
 {
+    public float aboveY = 1f; // enemy가 player 위에 떠다닐 y축 거리
     public float Health = 2;
 
     public GameObject ItemPrefab_Health; // DropItem
@@ -32,6 +33,8 @@ public class OneEye1 : MonoBehaviour // follow 타입
     [Header("총구들")]
     public GameObject[] Muzzles;
 
+    public int bulletCount = 10; // 한 번에 발사할 총알의 수
+
     [Header("타이머")]
     public float Timer = 0f;
     public const float COOL_TIME = 3f;
@@ -47,13 +50,13 @@ public class OneEye1 : MonoBehaviour // follow 타입
         // 아래로 이동하는 방향
         Vector2 dir2 = new Vector2(0, -0.1f);
 
-        //플레이어를 향하는 방향
-        Vector2 dir3 = Player.Instance.transform.position - this.transform.position;
+        // player의 위치를 기반으로 'enemy의 위치'를 업데이트한다. // 플레이어 머리 위에 떠다니게 하도록
+        Vector2 dir3 = new Vector2((Player.Instance.transform.position.x - this.transform.position.x), (Player.Instance.transform.position.y + aboveY - this.transform.position.y));
 
-        // 새로운 위치 = 현재 위치 + 속도 * 시간
+        // 플레이어를 향해 이동
         dir3.Normalize();
-        transform.position += (Vector3)(dir3 * Movespeed) * Time.deltaTime;
-        
+        transform.position += (Vector3)(dir3 * Movespeed * Time.deltaTime);
+
 
         if (isMonsterDelay)
         {
@@ -66,7 +69,7 @@ public class OneEye1 : MonoBehaviour // follow 타입
         }
         if(!isMonsterDelay)
         {
-            Fire();
+                Fire();
             isMonsterDelay = true;
         }
 
@@ -93,13 +96,11 @@ public class OneEye1 : MonoBehaviour // follow 타입
 
     private void Fire()
     {
-            for (int i = 0; i < Muzzles.Length; i++)
+            for (int i = 0; i < bulletCount; i++)
             {
-                // 1. 총알을 만들고
-               GameObject bullet = Instantiate(MonsterBullet);
+            // 총구의 위치에서 총알 오브젝트를 생성한다.
+            GameObject bullet = Instantiate(MonsterBullet, Muzzles[i].transform.position, Quaternion.identity);
 
-                // 2. 위치를 설정한다.
-                bullet.transform.position = Muzzles[i].transform.position;
             }
         }
     public void OnCollisionEnter2D(Collision2D collision)
