@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
     public float PlayerHealth;
+    public GameObject[] Health;
 
     private void Awake()
     {
@@ -28,7 +29,7 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        Player.Instance.PlayerHealth = PlayerHealth;
+        PlayerHealth = Player.Instance.PlayerHealth;
 
 
       
