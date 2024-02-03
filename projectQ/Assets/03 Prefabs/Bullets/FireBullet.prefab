@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Btype: 1
-  NormalBulletSpeed: 8
+  FireVFX: {fileID: 8641398879589446046}
 --- !u!1 &4198940188047927763
 GameObject:
   m_ObjectHideFlags: 0

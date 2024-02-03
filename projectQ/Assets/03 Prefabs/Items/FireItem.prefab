@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd5cf14f02adf343a207ac4ed85d41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IType: 0
+  IType: 1
 --- !u!1 &2113309751526553709
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,7 +58,6 @@ GameObject:
   - component: {fileID: 4750059453591290779}
   - component: {fileID: 8897700416793197809}
   - component: {fileID: 681234513141311168}
-  - component: {fileID: 39232571935584004}
   m_Layer: 8
   m_Name: ItemShadow
   m_TagString: Item
@@ -168,19 +167,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.88437295}
   serializedVersion: 2
   m_Radius: 0.62172836
---- !u!114 &39232571935584004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113309751526553709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbd5cf14f02adf343a207ac4ed85d41b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IType: 0
 --- !u!1 &5863007606635764375
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +179,7 @@ GameObject:
   - component: {fileID: 1217702789943042581}
   - component: {fileID: 4070577982435247144}
   - component: {fileID: 1180580684794021363}
-  - component: {fileID: 7904985660859259401}
+  - component: {fileID: 2851278203330737573}
   m_Layer: 8
   m_Name: FireItembody
   m_TagString: Item
@@ -408,7 +394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amplitude: 0.08
   frequency: 3
---- !u!114 &7904985660859259401
+--- !u!114 &2851278203330737573
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -420,4 +406,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd5cf14f02adf343a207ac4ed85d41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IType: 0
+  IType: 1

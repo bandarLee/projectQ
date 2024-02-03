@@ -87,24 +87,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Item item = collision.GetComponent<Item>();
 
-        if (item.IType == ItemType.FireItem)
-        {
-            weapon = PlayerWeapon.FireItem;
-        }
-        else if (item.IType == ItemType.KnifeItem)
-        {
-            weapon = PlayerWeapon.KnifeItem;
-        }
-        else if (item.IType == ItemType.BloodItem)
-        {
-            weapon = PlayerWeapon.BloodItem;
-        }
-        else
-        {
-            weapon = PlayerWeapon.Basic;
-        }
 
 
     }

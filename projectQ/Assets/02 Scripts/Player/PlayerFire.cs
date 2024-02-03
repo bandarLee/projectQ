@@ -24,7 +24,7 @@ public class PlayerFire : MonoBehaviour
     [Header("두배 공격 총구")]
     public List<GameObject> DoubleMuzzles;
 
-
+    public Vector3 bulletVector;
     public Animator playerAnimator;
 
 
@@ -59,27 +59,27 @@ public class PlayerFire : MonoBehaviour
             {
                 if (Player.Instance.weapon == Player.PlayerWeapon.Basic)
                 {
-                    GameObject normalBullet = Instantiate(NormalBulletPrefab, transform.position, Quaternion.identity);
+                    GameObject normalBullet = Instantiate(NormalBulletPrefab, transform.position, Quaternion.Euler(bulletVector));
                     normalBullet.transform.position = NormalMuzzles[i].transform.position;
                     normalBullet.GetComponent<Bullet>().SetDirection(dir);
 
                 }
                 else if (Player.Instance.weapon == Player.PlayerWeapon.FireItem)
                 {
-                    GameObject fireBullet = Instantiate(FireBulletPrefab, transform.position, Quaternion.identity);
+                    GameObject fireBullet = Instantiate(FireBulletPrefab, transform.position, Quaternion.Euler(bulletVector));
                     fireBullet.transform.position = NormalMuzzles[i].transform.position;
                     fireBullet.GetComponent<Bullet>().SetDirection(dir);
                 }
 
                 else if (Player.Instance.weapon == Player.PlayerWeapon.KnifeItem)
                 {
-                    GameObject knifeBullet = Instantiate(KnifeBulletPrefab, transform.position, Quaternion.identity);
+                    GameObject knifeBullet = Instantiate(KnifeBulletPrefab, transform.position, Quaternion.Euler(bulletVector));
                     knifeBullet.transform.position = NormalMuzzles[i].transform.position;
                     knifeBullet.GetComponent<Bullet>().SetDirection(dir);
                 }
                 else if (Player.Instance.weapon == Player.PlayerWeapon.BloodItem)
                 {
-                    GameObject bloodBullet = Instantiate(BloodBulletPrefab, transform.position, Quaternion.identity);
+                    GameObject bloodBullet = Instantiate(BloodBulletPrefab, transform.position, Quaternion.Euler(bulletVector));
                     bloodBullet.transform.position = NormalMuzzles[i].transform.position;
                     bloodBullet.GetComponent<Bullet>().SetDirection(dir);
 
@@ -98,52 +98,61 @@ public class PlayerFire : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
         {
-            //Debug.Log("대각선공격1");
-            //gameObject.transform.Rotate(0, 0, 135);
+            bulletVector = new Vector3(0, 0, 145);
+
             Shooting(new Vector2(1, 1));
 
         }
         else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
         {
-            //Debug.Log("대각선공격");
-            //gameObject.transform.Rotate(0, 0, -135);
-            Shooting(new Vector2(-1, 1));
+
+           bulletVector = new Vector3(0, 0, -125);
+           Shooting(new Vector2(-1, 1));
 
         }
         else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
         {
-            //Debug.Log("대각선공격");
 
-            //gameObject.transform.Rotate(0, 0, 45);
+            bulletVector = new Vector3(0, 0, 55);
+
             Shooting(new Vector2(1, -1));
 
         }
         else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
         {
+            bulletVector = new Vector3(0, 0, -35);
+
             //Debug.Log("대각선공격");
-            //gameObject.transform.Rotate(0, 0, -45);
             Shooting(new Vector2(-1, -1));
 
         }
         else if (Input.GetKey(KeyCode.W) || stateInfo.IsName("Back_Idle"))
         {
-            //gameObject.transform.Rotate(0, 0, 180);
+            bulletVector = new Vector3(0, 0, 180);
+
             Shooting(new Vector2(0, 1));
+
         }
         else if (Input.GetKey(KeyCode.S) || stateInfo.IsName("Front_Idle"))
         {
+            bulletVector = new Vector3(0, 0, 0);
 
             Shooting(new Vector2(0, -1));
+
         }
         else if (Input.GetKey(KeyCode.A) || stateInfo.IsName("Left_Idle"))
         {
-            //gameObject.transform.Rotate(0, 0, -90);
+            bulletVector = new Vector3(0, 0, -90);
+
             Shooting(new Vector2(-1, 0));
+
         }
         else if (Input.GetKey(KeyCode.D) || stateInfo.IsName("Right_Idle"))
         {
-            //gameObject.transform.Rotate(0, 0, 90);
+            bulletVector = new Vector3(0, 0, 90);
+
             Shooting(new Vector2(1, 0));
+
         }
 
     }
