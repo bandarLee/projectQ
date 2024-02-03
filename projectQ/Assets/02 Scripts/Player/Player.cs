@@ -40,6 +40,8 @@ public class Player : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+
     }
     void Start()
     {

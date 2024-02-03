@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &94772701 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1559474277854641305, guid: 07e293d64be43b147b3cd469fb6a19f3, type: 3}
+  m_PrefabInstance: {fileID: 106402599464761934}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &328214003
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +235,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &405909565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 289719878912803062, guid: 735243fd39230394b93617b087288093, type: 3}
+  m_PrefabInstance: {fileID: 1336851491201982639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,15 +418,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &695354853 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 952272689724061617, guid: 20fd32d3726ed504394f2d36c8db6f2e, type: 3}
+  m_PrefabInstance: {fileID: 1486928829919137862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &978857869 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1811727068740670655, guid: 9b088006ee9f87749944f45805220d3b, type: 3}
+  m_PrefabInstance: {fileID: 6177113306447441366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &978857870 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1405678545833261899, guid: 9b088006ee9f87749944f45805220d3b, type: 3}
   m_PrefabInstance: {fileID: 6177113306447441366}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &991800656 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 982073886452996647, guid: e3d86c98f7c779b4c8f057c0df379d20, type: 3}
+  m_PrefabInstance: {fileID: 3501462679063699904}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &991800657 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1451137066993628444, guid: e3d86c98f7c779b4c8f057c0df379d20, type: 3}
   m_PrefabInstance: {fileID: 3501462679063699904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1337090539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8165565315100123392, guid: d26582424dafe7542837427adc9a24f9, type: 3}
+  m_PrefabInstance: {fileID: 8409237491086078850}
   m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &1350516103
 LightingSettings:
@@ -1245,6 +1275,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6257415875409972647, guid: 33bb99ff64c9919459525fa4456774ea, type: 3}
+      propertyPath: Health.Array.data[0]
+      value: 
+      objectReference: {fileID: 991800656}
+    - target: {fileID: 6257415875409972647, guid: 33bb99ff64c9919459525fa4456774ea, type: 3}
+      propertyPath: Health.Array.data[1]
+      value: 
+      objectReference: {fileID: 978857869}
+    - target: {fileID: 6257415875409972647, guid: 33bb99ff64c9919459525fa4456774ea, type: 3}
+      propertyPath: Health.Array.data[2]
+      value: 
+      objectReference: {fileID: 1337090539}
+    - target: {fileID: 6257415875409972647, guid: 33bb99ff64c9919459525fa4456774ea, type: 3}
+      propertyPath: Health.Array.data[3]
+      value: 
+      objectReference: {fileID: 94772701}
+    - target: {fileID: 6257415875409972647, guid: 33bb99ff64c9919459525fa4456774ea, type: 3}
+      propertyPath: Health.Array.data[4]
+      value: 
+      objectReference: {fileID: 695354853}
+    - target: {fileID: 6257415875409972647, guid: 33bb99ff64c9919459525fa4456774ea, type: 3}
+      propertyPath: Health.Array.data[5]
+      value: 
+      objectReference: {fileID: 405909565}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
