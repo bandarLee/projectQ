@@ -482,7 +482,7 @@ LightingSettings:
   m_PVRTiledBaking: 0
   m_NumRaysToShootPerTexel: -1
   m_RespectSceneVisibilityWhenBakingGI: 0
---- !u!1001 &1444982311
+--- !u!1001 &1933025733
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -496,11 +496,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5775763775838630272, guid: 6c405a87246c5c64bb9b7ef31ccf3c74, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.1605206
+      value: 6.16
       objectReference: {fileID: 0}
     - target: {fileID: 5775763775838630272, guid: 6c405a87246c5c64bb9b7ef31ccf3c74, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9348197
+      value: 2.47
       objectReference: {fileID: 0}
     - target: {fileID: 5775763775838630272, guid: 6c405a87246c5c64bb9b7ef31ccf3c74, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1362,4 +1362,4 @@ SceneRoots:
   - {fileID: 641916878}
   - {fileID: 2054118678}
   - {fileID: 7286962168466374588}
-  - {fileID: 1444982311}
+  - {fileID: 1933025733}
