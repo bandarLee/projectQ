@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,6 +10,10 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
     public float PlayerHealth;
     public GameObject[] Health;
+
+    public TMP_Text Damage;
+    public TMP_Text Range;
+    public TMP_Text BulletSpeed;
 
     private void Awake()
     {
@@ -34,17 +39,21 @@ public class UIManager : MonoBehaviour
     {
         PlayerHealth = Player.Instance.PlayerHealth;
 
-        switch(PlayerHealth)
+        Damage.text = $"{Player.Instance.BulletPower}";
+        Range.text = $"{Player.Instance.maxDistance}";
+        BulletSpeed.text = $"{Player.Instance.NormalBulletSpeed}";
+
+
+
+        switch (PlayerHealth)
         {
             case 0:
-                Debug.Log("플레이어 체력 0");
                 foreach (GameObject heart in Health)
                 {
                     heart.gameObject.SetActive(false);
                 }
                 break;
             case 0.5f:
-                Debug.Log("플레이어 체력 0.5");
 
                 Health[1].SetActive(false);
                 Health[2].SetActive(false);
@@ -53,7 +62,6 @@ public class UIManager : MonoBehaviour
                 Health[5].SetActive(false);
                 break;
             case 1f:
-                Debug.Log("플레이어 체력 1");
 
                 Health[2].SetActive(false);
                 Health[3].SetActive(false);
@@ -73,12 +81,10 @@ public class UIManager : MonoBehaviour
 
                 break;
             case 2.5f:
-                Debug.Log("플레이어 체력 2.5");
 
                 Health[5].SetActive(false);
                 break;
             case 3f:
-                Debug.Log("플레이어 체력 3");
 
                 foreach (GameObject heart in Health)
                 {
