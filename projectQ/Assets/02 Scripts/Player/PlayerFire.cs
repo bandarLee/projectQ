@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
+using static Item;
 
 public class PlayerFire : MonoBehaviour
 {
@@ -105,5 +106,17 @@ public class PlayerFire : MonoBehaviour
             Shooting(new Vector2(1, 0));
         }
 
+
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Item item = collision.GetComponent<Item>();
+
+        if (item.IType == ItemType.FireItem)
+        {
+
+        }
+    }
+
+
 }

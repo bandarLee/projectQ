@@ -56,6 +56,11 @@ public class Bullet : MonoBehaviour
         {
             Player.Instance.BulletPower = 0.5f;
         }
+        else if (Btype == BulletType.Blood)
+        {
+            Player.Instance.BulletPower = 0.5f;
+
+        }
     }
     // 목표: 총알이 방향키를 누름에 따라 앞으로 나아가도록
 
