@@ -10,14 +10,16 @@ public class Player : MonoBehaviour
     public static Player Instance;
     public Vector2 PlayerPosition;
 
-    public float PlayerHealth = 3f;
-    public float maxDistance = 3.5f;   // 총알 사거리
+    public float PlayerHealth = 5f;
+    public float maxDistance = 4f;   // 총알 사거리
     public float NormalBulletSpeed;   // 총알의 속도
     public float BulletPower;         // 총알의 데미지
 
     public bool PlayerDamageDelay = false;
     public float time;
     public float PlayerDamageNuckbackTime = 1f;
+
+    public int CoinCount = 0;
 
     public enum PlayerWeapon
     {
@@ -85,11 +87,6 @@ public class Player : MonoBehaviour
     }
     */
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-
-
-
-    }
+   
 
 }

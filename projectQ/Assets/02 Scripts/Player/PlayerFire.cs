@@ -61,27 +61,27 @@ public class PlayerFire : MonoBehaviour
                 {
                     GameObject normalBullet = Instantiate(NormalBulletPrefab, transform.position, Quaternion.Euler(bulletVector));
                     normalBullet.transform.position = NormalMuzzles[i].transform.position;
-                    normalBullet.GetComponent<Bullet>().SetDirection(dir);
+                    normalBullet.GetComponent<Bullet>().SetDirection(dir.normalized);
 
                 }
                 else if (Player.Instance.weapon == Player.PlayerWeapon.FireItem)
                 {
                     GameObject fireBullet = Instantiate(FireBulletPrefab, transform.position, Quaternion.Euler(bulletVector));
                     fireBullet.transform.position = NormalMuzzles[i].transform.position;
-                    fireBullet.GetComponent<Bullet>().SetDirection(dir);
+                    fireBullet.GetComponent<Bullet>().SetDirection(dir.normalized);
                 }
 
                 else if (Player.Instance.weapon == Player.PlayerWeapon.KnifeItem)
                 {
                     GameObject knifeBullet = Instantiate(KnifeBulletPrefab, transform.position, Quaternion.Euler(bulletVector));
                     knifeBullet.transform.position = NormalMuzzles[i].transform.position;
-                    knifeBullet.GetComponent<Bullet>().SetDirection(dir);
+                    knifeBullet.GetComponent<Bullet>().SetDirection(dir.normalized);
                 }
                 else if (Player.Instance.weapon == Player.PlayerWeapon.BloodItem)
                 {
                     GameObject bloodBullet = Instantiate(BloodBulletPrefab, transform.position, Quaternion.Euler(bulletVector));
                     bloodBullet.transform.position = NormalMuzzles[i].transform.position;
-                    bloodBullet.GetComponent<Bullet>().SetDirection(dir);
+                    bloodBullet.GetComponent<Bullet>().SetDirection(dir.normalized);
 
                 }
 

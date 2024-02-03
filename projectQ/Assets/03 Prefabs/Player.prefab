@@ -53,6 +53,7 @@ MonoBehaviour:
   NormalMuzzles:
   - {fileID: 2858570210544943505}
   DoubleMuzzles: []
+  bulletVector: {x: 0, y: 0, z: 0}
   playerAnimator: {fileID: 1398313297994513101}
 --- !u!1 &4878934592145815868
 GameObject:
@@ -130,8 +131,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1994637125
+  m_SortingLayer: 5
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 1deace56f374ddd48a30dcbd716dfd69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -324,4 +325,5 @@ MonoBehaviour:
   PlayerDamageDelay: 0
   time: 0
   PlayerDamageNuckbackTime: 1
+  CoinCount: 0
   weapon: 0

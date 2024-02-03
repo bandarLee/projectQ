@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     public TMP_Text Damage;
     public TMP_Text Range;
     public TMP_Text BulletSpeed;
+    public TMP_Text Coin;
 
     private void Awake()
     {
@@ -42,6 +43,8 @@ public class UIManager : MonoBehaviour
         Damage.text = $"{Player.Instance.BulletPower}";
         Range.text = $"{Player.Instance.maxDistance}";
         BulletSpeed.text = $"{Player.Instance.NormalBulletSpeed}";
+        Coin.text = $"{Player.Instance.CoinCount}";
+        
 
 
 
