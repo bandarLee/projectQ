@@ -8,6 +8,7 @@ TagManager:
   - OneEyeEnemy
   - Item
   - Environment
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -56,4 +57,7 @@ TagManager:
     locked: 0
   - name: Item
     uniqueID: 3363024827
+    locked: 0
+  - name: Player
+    uniqueID: 1994637125
     locked: 0

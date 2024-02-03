@@ -31,7 +31,6 @@ public class Item : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        PlayerFire playerFire = collision.GetComponent<PlayerFire>();
 
 
         if (collision.CompareTag("Player"))
@@ -50,6 +49,8 @@ public class Item : MonoBehaviour
             // 수리검, 데미지 0.8, 연사속도 +2, 사거리 1.3(커몬)
             else if (IType == ItemType.KnifeItem)
             {
+                //Debug.Log("표창");
+
                 Player.Instance.weapon = PlayerWeapon.KnifeItem;
 
                 Player.Instance.NormalBulletSpeed = 6f;
@@ -57,6 +58,7 @@ public class Item : MonoBehaviour
             }
             else if (IType == ItemType.BloodItem)
             {
+                //Debug.Log("피");
                 Player.Instance.weapon = PlayerWeapon.BloodItem;
 
                 Player.Instance.NormalBulletSpeed = 5.5f;
