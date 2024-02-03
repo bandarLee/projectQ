@@ -27,7 +27,6 @@ public class Item : MonoBehaviour
     {
 
         PlayerFire playerFire = collision.GetComponent<PlayerFire>();
-        Bullet bullet = GetComponent<Bullet>();
 
 
         if (collision.CompareTag("Player"))
@@ -36,15 +35,15 @@ public class Item : MonoBehaviour
             // 파이어볼, 데미지 3, 광역, 연사속도 +0.5,사거리 5(레어)
             if (IType == ItemType.FireItem)
             {
-                //bullet.NormalBulletSpeed = bullet.NormalBulletSpeed + 0.5f;
-                //bullet.maxDistance = 5f;
+                Player.Instance.NormalBulletSpeed += 0.5f;
+                Player.Instance.maxDistance = 5f;
 
             }
             // 수리검, 데미지 0.8, 연사속도 +2, 사거리 1.3(커몬)
             else if (IType == ItemType.KnifeItem)
             {
-                // bullet.NormalBulletSpeed = bullet.NormalBulletSpeed + 2f;
-                // bullet.maxDistance = 4f;
+                Player.Instance.NormalBulletSpeed += 2f;
+                Player.Instance.maxDistance = 4f;
             }
 
             Destroy(this.gameObject);

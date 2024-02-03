@@ -15,9 +15,7 @@ public class Bullet : MonoBehaviour
     public BulletType Btype;
 
     private float rotateSpeed = 300f;
-    public float maxDistance = 3.5f;   // 총알 사거리
-    public float NormalBulletSpeed;   // 총알의 속도
-    public float BulletPower;         // 총알의 데미지
+
 
 
 
@@ -31,7 +29,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         // 처음 시작하면 총알 발사
-        BulletPower = 1;
+        Player.Instance.BulletPower = 1;
 
     }
     public void SetDirection(Vector2 direction)
@@ -47,29 +45,29 @@ public class Bullet : MonoBehaviour
         // 
         if (Btype == BulletType.Knife)
         {
-            BulletPower = 0.8f;
+            Player.Instance.BulletPower = 0.8f;
         }
         else if (Btype == BulletType.Fire)
         {
-            BulletPower = 3f;
+            Player.Instance.BulletPower = 3f;
         }
         else if (Btype == BulletType.Normal)
         {
-            BulletPower = 0.5f;
+            Player.Instance.BulletPower = 0.5f;
         }
     }
     // 목표: 총알이 방향키를 누름에 따라 앞으로 나아가도록
 
     void Update()
     {
-        transform.position = (Vector2)transform.position + dir * NormalBulletSpeed * Time.deltaTime;
+        transform.position = (Vector2)transform.position + dir * Player.Instance.NormalBulletSpeed * Time.deltaTime;
         if (Btype == BulletType.Knife)
         {
             //Debug.Log("회전");
             Rotate();
         }
 
-        if (Vector2.Distance(startPos, transform.position) >= maxDistance)
+        if (Vector2.Distance(startPos, transform.position) >= Player.Instance.maxDistance)
         {
             Destroy(this.gameObject);
         }

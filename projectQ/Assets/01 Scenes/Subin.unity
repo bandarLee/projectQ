@@ -954,6 +954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireItem
       objectReference: {fileID: 0}
+    - target: {fileID: 2109103808495969511, guid: c7de252f186d90d4db326eb532167d84, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4828164486934912036, guid: c7de252f186d90d4db326eb532167d84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1077,6 +1081,10 @@ PrefabInstance:
     - target: {fileID: 7323054253133404418, guid: 2f6229f82c171744690a05717b49af83, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379606184638649864, guid: 2f6229f82c171744690a05717b49af83, type: 3}
+      propertyPath: IType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

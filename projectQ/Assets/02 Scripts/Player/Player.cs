@@ -10,7 +10,10 @@ public class Player : MonoBehaviour
     public Vector2 PlayerPosition;
 
     public float PlayerHealth = 3f;
-    
+    public float maxDistance = 3.5f;   // 총알 사거리
+    public float NormalBulletSpeed;   // 총알의 속도
+    public float BulletPower;         // 총알의 데미지
+
 
     private void Awake()
     {
