@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 6990302416554929997}
   m_Layer: 3
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -705,6 +705,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5310ba039085e84bbdfcf9016c0abc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
 --- !u!1 &2464167047932272282
 GameObject:
   m_ObjectHideFlags: 0

@@ -210,11 +210,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7703316667840127520, guid: 53465340c72be8c4aa9bcc141ae6d4b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.765
+      value: -3.436
       objectReference: {fileID: 0}
     - target: {fileID: 7703316667840127520, guid: 53465340c72be8c4aa9bcc141ae6d4b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.994
+      value: -0.502
       objectReference: {fileID: 0}
     - target: {fileID: 7703316667840127520, guid: 53465340c72be8c4aa9bcc141ae6d4b6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -767,7 +767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 280479159611105151, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       propertyPath: walltype
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1185113249279688860, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       propertyPath: m_SortingLayerID
@@ -777,21 +777,33 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 524746497
       objectReference: {fileID: 0}
+    - target: {fileID: 1432240373496362286, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     - target: {fileID: 1692823173498779216, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       propertyPath: m_Name
       value: Room0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958558486384080982, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 2104787927118341050, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       propertyPath: m_SortingLayerID
       value: 524746497
       objectReference: {fileID: 0}
+    - target: {fileID: 2265209099975036556, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     - target: {fileID: 2657103996122115987, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       propertyPath: walltype
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3578257957752100910, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       propertyPath: walltype
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3894630290509496327, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       propertyPath: m_SortingLayerID
@@ -799,11 +811,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4391087501417237955, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       propertyPath: walltype
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4428871767127450476, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       propertyPath: m_SortingLayerID
       value: 524746497
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085790798279306121, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 9099771046230727206, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       propertyPath: m_SortingLayerID

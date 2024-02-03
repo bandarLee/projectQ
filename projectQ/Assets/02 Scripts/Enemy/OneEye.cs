@@ -71,10 +71,7 @@ public class OneEye : MonoBehaviour // follow 타입
         // 아래로 이동하는 방향
         Vector2 dir2 = new Vector2(0, -0.1f);
 
-        //플레이어를 향하는 방향 
-        //Vector2 dir3 = Player.Instance.transform.position - this.transform.position;
-
-        // player의 위치를 기반으로 'enemy의 위치'를 업데이트한다. // 플레이어 머리 위에 떠다니게 하도록
+      
         Vector2 dir3 = new Vector2((Player.Instance.transform.position.x - this.transform.position.x), (Player.Instance.transform.position.y + aboveY - this.transform.position.y));
 
         // 플레이어를 향해 이동
@@ -162,16 +159,12 @@ public class OneEye : MonoBehaviour // follow 타입
         // 플레이어의 공격을 받았을 때 죽는다
         if (collision.collider.CompareTag("Bullet")) //enemy와 총알이 부딪혔을 때 
         {
-            Bullet bullet = collision.collider.GetComponent<Bullet>();
-            if (bullet.Btype == Bullet.BulletType.Normal) //enum
-            {
-                Health -= 1;
-            }
+            Health -= Player.Instance.BulletPower;
 
             // 적의 체력이 끝
             if (Health <= 0)
             {
-                //gameObject.SetActive(false);
+
                 gameObject.SetActive(false);
                 MakeItem();
             }

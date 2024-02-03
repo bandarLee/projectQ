@@ -1237,6 +1237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor
       objectReference: {fileID: 0}
+    - target: {fileID: 1631105283125974911, guid: c238f9e5af2f6444e811cd797bc9255a, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1818571452310554260, guid: c238f9e5af2f6444e811cd797bc9255a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

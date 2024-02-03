@@ -37,7 +37,7 @@ public class OneEye1 : MonoBehaviour // follow 타입
 
     [Header("타이머")]
     public float Timer = 0f;
-    public const float COOL_TIME = 3f;
+    public const float COOL_TIME = 0.1f;
     private void Awake()
     {
     }
@@ -96,7 +96,7 @@ public class OneEye1 : MonoBehaviour // follow 타입
 
     private void Fire()
     {
-        for (int i = 0; i < bulletCount; i++)
+        for (int i = 0; i < Mathf.Min(bulletCount, Muzzles.Length); i++)
         {
         // 총구의 위치에서 총알 오브젝트를 생성한다.
         GameObject bullet = Instantiate(MonsterBullet, Muzzles[i].transform.position, Quaternion.identity);
@@ -108,19 +108,13 @@ public class OneEye1 : MonoBehaviour // follow 타입
         // 플레이어의 공격을 받았을 때 죽는다
          if (collision.collider.CompareTag("Bullet")) //enemy와 총알이 부딪혔을 때 
           {
-              Bullet bullet = collision.collider.GetComponent<Bullet>();
-              if (bullet.Btype == Bullet.BulletType.Normal) //enum
-              {
-                  Health -= 1;
-              }
+            Health -= Player.Instance.BulletPower;
 
             // 적의 체력이 끝
             if (Health <= 0)
             {
-                OneEye oneeye = GetComponent<OneEye>();
 
                 gameObject.SetActive(false);
-                oneeye.replacesuccess = false;
                 MakeItem();
             }    
         }

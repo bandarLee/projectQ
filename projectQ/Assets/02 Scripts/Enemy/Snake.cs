@@ -2,10 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static Bullet;
+using static Snake;
 
 public class Snake : MonoBehaviour// " Basic 타입 "
 {
-
+    public enum SnakeType
+    {
+        Left,
+        Right,
+        Top,
+        Bot
+    }
+    public SnakeType snakeType;
     public float Health = 1;
 
     public GameObject ItemPrefab_Health; // DropItem
@@ -25,7 +33,22 @@ public class Snake : MonoBehaviour// " Basic 타입 "
     // 시작할 때
     void Start()
     {
-        _dir = Vector2.down;
+        switch (snakeType)
+        {
+            case SnakeType.Left: 
+                _dir = Vector2.right;
+                break;
+            case SnakeType.Right:
+                _dir = Vector2.left;
+                break;
+            case SnakeType.Top:
+                _dir = Vector2.down;
+                break;
+            case SnakeType.Bot:
+                _dir = Vector2.up;
+                break;
+
+        }
     }
 
     void Update()
@@ -66,16 +89,30 @@ public class Snake : MonoBehaviour// " Basic 타입 "
                 
                 if (Speed < 7) AddSpeed(1);
             }
+            else if (roomManager.walltype == WallManager.WallType.Left)
+            {
+                _dir = Vector2.right;
+                RotateSnake(_dir);
+
+
+                if (Speed < 7) AddSpeed(1);
+            }
+            else if (roomManager.walltype == WallManager.WallType.Right)
+            {
+                _dir = Vector2.left;
+                RotateSnake(_dir);
+
+
+                if (Speed < 7) AddSpeed(1);
+            }
         }
 
         // 플레이어의 공격을 받았을 때 죽는다
          else if (collision.collider.CompareTag("Bullet")) //enemy와 총알이 부딪혔을 때 
           {
-              Bullet bullet = collision.collider.GetComponent<Bullet>();
-              if (bullet.Btype == BulletType.Normal) //enum
-              {
-                  Health -= 2;
-              }
+
+            Health -= Player.Instance.BulletPower;
+              
 
               // 총알 삭제
               collision.collider.gameObject.SetActive(false);

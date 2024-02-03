@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public OneEye[] oneeyes;
     public OneEye_Clone[] oneeyesClone;
+    public OneEye1[] oneeyesred;
+
 
     public static GameManager Instance;
     // 각 패턴의 방 위치와 타입을 저장하는 배열
@@ -235,12 +237,17 @@ public class GameManager : MonoBehaviour
     {
         oneeyes = GameObject.FindObjectsOfType<OneEye>();
         oneeyesClone = GameObject.FindObjectsOfType<OneEye_Clone>();
+        oneeyesred = GameObject.FindObjectsOfType<OneEye1>();
 
         foreach (OneEye oneeye in oneeyes)
         {
             oneeye.gameObject.SetActive(false);
         }
         foreach (OneEye_Clone oneeyes in oneeyesClone)
+        {
+            oneeyes.gameObject.SetActive(false);
+        }
+        foreach (OneEye1 oneeyes in oneeyesred)
         {
             oneeyes.gameObject.SetActive(false);
         }
