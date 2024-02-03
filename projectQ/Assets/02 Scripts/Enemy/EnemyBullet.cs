@@ -25,13 +25,16 @@ public class EnemyBullet : MonoBehaviour
 
     void Update()
     {
-        // 1. 이동할 방향을 구한다.
-        Vector2 dir = Vector2.down; // 핏방울 아래로
+        if(EnemyBType == EnemyBulletType.Blood)
+        {
+            // 1. 이동할 방향을 구한다.
+            Vector2 dir = Vector2.down; // 핏방울 아래로
 
-        // 2. 이동한다. 
-        //transform.Translate(dir * Speed * Time.deltaTime);
-        // 새로운 위치 = 현재 위치 + 속도 * 시간
-        transform.position += (Vector3)(dir * Speed) * Time.deltaTime;
+            // 2. 이동한다. 
+            //transform.Translate(dir * Speed * Time.deltaTime);
+            // 새로운 위치 = 현재 위치 + 속도 * 시간
+            transform.position += (Vector3)(dir * Speed) * Time.deltaTime;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
