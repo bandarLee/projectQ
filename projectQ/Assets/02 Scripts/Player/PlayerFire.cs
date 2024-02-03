@@ -12,14 +12,16 @@ public class PlayerFire : MonoBehaviour
     public GameObject NormalBulletPrefab;
     public GameObject FireBulletPrefab;
     public GameObject KnifeBulletPrefab;
+    public GameObject BloodBulletPrefab;
+
     public float ShootTimer;
     public float Cool_Time = 4;
 
     [Header("일반 공격 총구")]
     public List<GameObject> NormalMuzzles;
 
-    [Header("화염 공격 총구")]
-    public List<GameObject> FireMuzzles;
+    [Header("두배 공격 총구")]
+    public List<GameObject> DoubleMuzzles;
 
 
     public Animator playerAnimator;
@@ -52,9 +54,12 @@ public class PlayerFire : MonoBehaviour
         {
             for (int i = 0; i < NormalMuzzles.Count; i++)
             {
-                GameObject normalBullet = Instantiate(NormalBulletPrefab, transform.position, Quaternion.identity);
-                normalBullet.transform.position = NormalMuzzles[i].transform.position;
-                normalBullet.GetComponent<Bullet>().SetDirection(dir);
+                if (Player.Instance.weapon == Player.PlayerWeapon.FireItem)
+                {
+                    GameObject normalBullet = Instantiate(NormalBulletPrefab, transform.position, Quaternion.identity);
+                    normalBullet.transform.position = NormalMuzzles[i].transform.position;
+                    normalBullet.GetComponent<Bullet>().SetDirection(dir);
+                }
             }
 
         }
@@ -106,17 +111,7 @@ public class PlayerFire : MonoBehaviour
             Shooting(new Vector2(1, 0));
         }
 
-
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Item item = collision.GetComponent<Item>();
-
-        if (item.IType == ItemType.FireItem)
-        {
-
-        }
-    }
-
+  
 
 }

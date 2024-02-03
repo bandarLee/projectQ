@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static Item;
 
 public class Player : MonoBehaviour
 {
@@ -18,6 +19,16 @@ public class Player : MonoBehaviour
     public float time;
     public float PlayerDamageNuckbackTime = 1f;
 
+    public enum PlayerWeapon
+    {
+        Basic,
+        FireItem,
+        KnifeItem,
+        BloodItem
+
+    }
+
+    public PlayerWeapon weapon = PlayerWeapon.Basic;
     private void Awake()
     {
         // 싱글톤 패턴 : 오직 한개의 클래스 인스턴스를 갖도록 보장
@@ -29,8 +40,6 @@ public class Player : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
     }
     void Start()
     {
@@ -73,4 +82,26 @@ public class Player : MonoBehaviour
 
     }
     */
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Item item = collision.GetComponent<Item>();
+
+        if (item.IType == ItemType.FireItem)
+        {
+            weapon = PlayerWeapon.FireItem;
+        }
+        else if (item.IType == ItemType.KnifeItem)
+        {
+            weapon = PlayerWeapon.KnifeItem;
+        }
+        else if (item.IType == ItemType.BloodItem)
+        {
+            weapon = PlayerWeapon.BloodItem;
+        }
+
+
+
+    }
+
 }
