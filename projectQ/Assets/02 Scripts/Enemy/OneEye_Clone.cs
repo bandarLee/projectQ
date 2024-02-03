@@ -20,7 +20,7 @@ public class OneEye_Clone : MonoBehaviour //프리팹 OneEyeMon(clone)에다가 
         if (time >= Destroytime)
         {
             time = 0;
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 
     }

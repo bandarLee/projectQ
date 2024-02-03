@@ -99,4 +99,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OneEye: {fileID: 5714454640231796403}
   time: 0
-  Destroytime: 1.5
+  Destroytime: 0.8

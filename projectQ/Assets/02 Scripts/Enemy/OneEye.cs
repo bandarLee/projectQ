@@ -37,6 +37,7 @@ public class OneEye : MonoBehaviour // follow 타입
 
     // 몬스터 등장 이후 누적 시간
     public float progressTime = 0;
+    public float replaceTime = 3f;
     public GameObject UpgradePrefab;
 
     [Header("총알 프리팹")]
@@ -94,7 +95,7 @@ public class OneEye : MonoBehaviour // follow 타입
         }
 
         // 플레이어를 향하는 방향으로 이동하면서 잔상 생성
-        if (!isDelay && ((dir3.x * dir3.y) > 1 || (dir3.x * dir3.y) < -1))
+        if (!isDelay)
         {
             GameObject enemy = Instantiate(shadowPrefab);
             enemy.transform.position = this.transform.position;
@@ -121,7 +122,7 @@ public class OneEye : MonoBehaviour // follow 타입
         {
             progressTime += Time.deltaTime;
         }
-        if (progressTime > 5.0f)
+        if (progressTime > replaceTime)
         {
             ReplacePrefab();
             replacesuccess = true;
