@@ -54,12 +54,22 @@ public class PlayerFire : MonoBehaviour
         {
             for (int i = 0; i < NormalMuzzles.Count; i++)
             {
-                if (Player.Instance.weapon == Player.PlayerWeapon.FireItem)
+                if (Player.Instance.weapon == Player.PlayerWeapon.Basic)
                 {
                     GameObject normalBullet = Instantiate(NormalBulletPrefab, transform.position, Quaternion.identity);
                     normalBullet.transform.position = NormalMuzzles[i].transform.position;
                     normalBullet.GetComponent<Bullet>().SetDirection(dir);
+
                 }
+                if (Player.Instance.weapon == Player.PlayerWeapon.FireItem)
+                {
+                    GameObject fireBullet = Instantiate(NormalBulletPrefab, transform.position, Quaternion.identity);
+                    fireBullet.transform.position = NormalMuzzles[i].transform.position;
+                    fireBullet.GetComponent<Bullet>().SetDirection(dir);
+                }
+                 
+
+
             }
 
         }
