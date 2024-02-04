@@ -7,6 +7,7 @@ public enum EnemyBulletType
 {
     Blood,
     SnakePoison,
+    Skeleton,
 
 }
 
@@ -34,6 +35,12 @@ public class EnemyBullet : MonoBehaviour
             // 2. 이동한다. 
             //transform.Translate(dir * Speed * Time.deltaTime);
             // 새로운 위치 = 현재 위치 + 속도 * 시간
+            transform.position += (Vector3)(dir * Speed) * Time.deltaTime;
+        }
+
+        if (EnemyBType == EnemyBulletType.Skeleton)
+        {
+            Vector2 dir = new Vector2((Player.Instance.transform.position.x - this.transform.position.x), (Player.Instance.transform.position.y - this.transform.position.y));
             transform.position += (Vector3)(dir * Speed) * Time.deltaTime;
         }
     }

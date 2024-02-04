@@ -6,7 +6,6 @@ using static Bullet;
 public class Virus : MonoBehaviour // " Follow 타입 "
 {
     public float Health = 1;
-  
 
     public GameObject ItemPrefab_Health; // DropItem
     public GameObject ItemPrefab_Speed;
