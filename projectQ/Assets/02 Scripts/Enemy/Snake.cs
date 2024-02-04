@@ -65,7 +65,7 @@ public class Snake : MonoBehaviour// " Basic 타입 "
     {
         if (collision.gameObject.tag == "Player")
         {
-            StartCoroutine(InfectWithY909(collision.gameObject.GetComponent<Player>()));
+            //StartCoroutine(InfectWithY909(collision.gameObject.GetComponent<Player>()));
             Instantiate(DamageEffect, collision.transform.position, Quaternion.identity);
 
         }
@@ -134,7 +134,7 @@ public class Snake : MonoBehaviour// " Basic 타입 "
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, degree + 90));
     }
 
-    IEnumerator InfectWithY909(Player player)
+  /*  IEnumerator InfectWithY909(Player player)
     {
         // 독의 효과가 2초간 지속되도록 설정합니다.
         for (int i = 0; i < 2; i++)
@@ -143,7 +143,7 @@ public class Snake : MonoBehaviour// " Basic 타입 "
             player.PlayerHealth -= 0.05f;
             yield return new WaitForSeconds(1f);
         }
-    }
+    }*/
 
     public void MakeItem()
     {
