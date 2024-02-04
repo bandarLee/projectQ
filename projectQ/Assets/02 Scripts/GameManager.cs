@@ -115,20 +115,21 @@ public class GameManager : MonoBehaviour
     
                 (new Vector3(1, 0), 1),
                 (new Vector3(2, 0), 8), 
-                (new Vector3(0, 1), 4), 
-                (new Vector3(0, 2), 4), 
+                (new Vector3(0, 2), 2), 
                 (new Vector3(0, 3), 3), 
-                (new Vector3(0, -1), 4), 
 
-                (new Vector3(0, -2), 2),
+                (new Vector3(0, -2), 3),
                 (new Vector3(-1, 3), 12), 
-                (new Vector3(-1, -1), 6), 
-                (new Vector3(-1, -2), 14), 
+                (new Vector3(-1, -1), 4), 
+                (new Vector3(-1, -2), 16), 
                 (new Vector3(-1, 0), 16), 
-                (new Vector3(-1, 1), 16), 
+                (new Vector3(-1, 1), 15), 
                 (new Vector3(-1, 2), 6), 
                 (new Vector3(-2, 2), 10), 
-                (new Vector3(-2, -1), 10) 
+                (new Vector3(-2, -1), 10), 
+                (new Vector3(-1, -3), 14),
+                (new Vector3(0, -3), 2),
+
             },
         new (Vector3 position, int roomType)[]
             {
@@ -224,7 +225,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        roomInfos = roomPatterns[Random.Range(0, roomPatterns.Length)];
+        roomInfos = roomPatterns[5];
 
         foreach (var (position, roomType) in roomInfos)
         {
