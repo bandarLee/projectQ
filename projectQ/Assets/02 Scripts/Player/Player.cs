@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (PlayerDamageDelay)
+        /*if (PlayerDamageDelay)
         {
             time += Time.deltaTime;
             if (time >= PlayerDamageNuckbackTime)
@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
                 time = 0.0f;
                 PlayerDamageDelay = false;
             }
-        }
+        }*/
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
