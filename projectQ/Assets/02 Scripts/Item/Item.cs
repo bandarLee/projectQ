@@ -74,6 +74,10 @@ public class Item : MonoBehaviour
             else if (IType == ItemType.HeartItem)
             {
                 Player.Instance.PlayerHealth += 0.5f;
+                if (Player.Instance.PlayerHealth >= 3)
+                {
+                    Player.Instance.PlayerHealth = 3;
+                }
             }
 
             else
