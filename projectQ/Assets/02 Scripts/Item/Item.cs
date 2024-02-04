@@ -12,7 +12,8 @@ public class Item : MonoBehaviour
         FireItem,     // Epic
         KnifeItem,    // Rare
         BloodItem,    // Unique
-        CoinItem
+        CoinItem,     // Noraml
+        HeartItem     // Normal
 
     }
 
@@ -68,6 +69,11 @@ public class Item : MonoBehaviour
             else if (IType == ItemType.CoinItem)
             {
                 Player.Instance.CoinCount += 1;
+            }
+
+            else if (IType == ItemType.HeartItem)
+            {
+                Player.Instance.PlayerHealth += 0.5f;
             }
 
             else
