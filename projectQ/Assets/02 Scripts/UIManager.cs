@@ -51,49 +51,42 @@ public class UIManager : MonoBehaviour
         switch (PlayerHealth)
         {
             case 0:
-                foreach (GameObject heart in Health)
-                {
-                    heart.gameObject.SetActive(false);
-                }
+                SetPlayerHealthUI();
                 break;
             case 0.5f:
-
-                Health[1].SetActive(false);
-                Health[2].SetActive(false);
-                Health[3].SetActive(false);
-                Health[4].SetActive(false);
-                Health[5].SetActive(false);
+                SetPlayerHealthUI();
                 break;
             case 1f:
-
-                Health[2].SetActive(false);
-                Health[3].SetActive(false);
-                Health[4].SetActive(false);
-                Health[5].SetActive(false);
+                SetPlayerHealthUI();
 
                 break;
             case 1.5f:
-                Health[3].SetActive(false);
-                Health[4].SetActive(false);
-                Health[5].SetActive(false);
+                SetPlayerHealthUI();
 
                 break;
             case 2f:
-                Health[4].SetActive(false);
-                Health[5].SetActive(false);
+                SetPlayerHealthUI();
 
                 break;
             case 2.5f:
-
-                Health[5].SetActive(false);
+                SetPlayerHealthUI();                
                 break;
             case 3f:
-
-                foreach (GameObject heart in Health)
-                {
-                    heart.gameObject.SetActive(true);
-                }
+                SetPlayerHealthUI();
                 break;
+
+        }
+
+    }
+    void SetPlayerHealthUI()
+    {
+        for (float i = 0; i < PlayerHealth * 2; i++)
+        {
+            Health[(int)i].SetActive(true);
+        }
+        for (float i = PlayerHealth * 2; i < Health.Length; i++)
+        {
+            Health[(int)i].SetActive(false);
 
         }
     }
