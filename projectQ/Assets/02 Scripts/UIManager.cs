@@ -21,6 +21,8 @@ public class UIManager : MonoBehaviour
     public GameObject FireItem;
     public GameObject BloodItem;
     public GameObject KnifeItem;
+    public GameObject BoomItem;
+
 
 
 
@@ -91,18 +93,31 @@ public class UIManager : MonoBehaviour
             FireItem.SetActive(true);
             BloodItem.SetActive(false);
             KnifeItem.SetActive(false);
+            BoomItem.SetActive(false);
+
         }
         else if (Player.Instance.weapon == Player.PlayerWeapon.BloodItem)
         {
             BloodItem.SetActive(true);
             FireItem.SetActive(false);
             KnifeItem.SetActive(false);
+            BoomItem.SetActive(false);
+
         }
         else if (Player.Instance.weapon == Player.PlayerWeapon.KnifeItem)
         {
             KnifeItem.SetActive(true);
             BloodItem.SetActive(false);
             FireItem.SetActive (false);
+            BoomItem.SetActive(false);
+
+        }
+        else if (Player.Instance.weapon == Player.PlayerWeapon.BoomItem)
+        {
+            BoomItem.SetActive(true);
+            BloodItem.SetActive (false);
+            FireItem.SetActive(false);
+            KnifeItem.SetActive(false);
         }
 
     }
