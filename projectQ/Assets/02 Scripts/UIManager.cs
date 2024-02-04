@@ -1,3 +1,4 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -15,6 +16,13 @@ public class UIManager : MonoBehaviour
     public TMP_Text Range;
     public TMP_Text BulletSpeed;
     public TMP_Text Coin;
+
+    [Header("아이템 상태바")]
+    public GameObject FireItem;
+    public GameObject BloodItem;
+    public GameObject KnifeItem;
+
+
 
     private void Awake()
     {
@@ -44,7 +52,7 @@ public class UIManager : MonoBehaviour
         Range.text = $"사거리 {Player.Instance.maxDistance}";
         BulletSpeed.text = $"탄속도 {Player.Instance.NormalBulletSpeed}";
         Coin.text = $"{Player.Instance.CoinCount} Coin";
-        
+
 
 
 
@@ -69,12 +77,32 @@ public class UIManager : MonoBehaviour
 
                 break;
             case 2.5f:
-                SetPlayerHealthUI();                
+                SetPlayerHealthUI();
                 break;
             case 3f:
                 SetPlayerHealthUI();
                 break;
 
+        }
+
+
+        if (Player.Instance.weapon == Player.PlayerWeapon.FireItem)
+        {
+            FireItem.SetActive(true);
+            BloodItem.SetActive(false);
+            KnifeItem.SetActive(false);
+        }
+        else if (Player.Instance.weapon == Player.PlayerWeapon.BloodItem)
+        {
+            BloodItem.SetActive(true);
+            FireItem.SetActive(false);
+            KnifeItem.SetActive(false);
+        }
+        else if (Player.Instance.weapon == Player.PlayerWeapon.KnifeItem)
+        {
+            KnifeItem.SetActive(true);
+            BloodItem.SetActive(false);
+            FireItem.SetActive (false);
         }
 
     }
