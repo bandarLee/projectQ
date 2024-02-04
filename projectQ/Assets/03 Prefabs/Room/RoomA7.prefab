@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3159313278686576510}
   m_Layer: 3
   m_Name: left_wall
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 8126257593048310651}
   m_Layer: 3
   m_Name: right_wall
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 5751393722440679219}
   m_Layer: 3
   m_Name: bot_wall
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 711973202112175046}
   m_Layer: 3
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -607,7 +607,7 @@ GameObject:
   - component: {fileID: 8764802868986602807}
   m_Layer: 3
   m_Name: top_wall
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -749,7 +749,7 @@ GameObject:
   - component: {fileID: 8805670751288278960}
   m_Layer: 3
   m_Name: leftReplace (1)
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -875,7 +875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2669577939726962865, guid: ad5ec0c09664bdd42a78642e2de2c8e5, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -909,7 +909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 585615917344482201, guid: 1de623a1b58f6894584508ca8bab43c5, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 797097544800322085, guid: 1de623a1b58f6894584508ca8bab43c5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -958,6 +958,18 @@ PrefabInstance:
     - target: {fileID: 2203960552265063309, guid: 1de623a1b58f6894584508ca8bab43c5, type: 3}
       propertyPath: m_SortingLayerID
       value: 524746497
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083084623419101299, guid: 1de623a1b58f6894584508ca8bab43c5, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668697638631956855, guid: 1de623a1b58f6894584508ca8bab43c5, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 7291553765998122896, guid: 1de623a1b58f6894584508ca8bab43c5, type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1023,7 +1035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2669577939726962865, guid: ad5ec0c09664bdd42a78642e2de2c8e5, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1089,7 +1101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2669577939726962865, guid: ad5ec0c09664bdd42a78642e2de2c8e5, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1109,13 +1121,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 213869937404276262}
     m_Modifications:
+    - target: {fileID: 1681522790916305305, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     - target: {fileID: 7310759600130704883, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
       propertyPath: m_Name
       value: Right_Door
       objectReference: {fileID: 0}
     - target: {fileID: 7310759600130704883, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 8178274480313032051, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1165,6 +1181,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 524746497
       objectReference: {fileID: 0}
+    - target: {fileID: 8425555691884551863, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593878313409932045, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     - target: {fileID: 8677406696929466358, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
       propertyPath: m_SortingLayer
       value: 0
@@ -1197,7 +1221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1631105283125974911, guid: c238f9e5af2f6444e811cd797bc9255a, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 1818571452310554260, guid: c238f9e5af2f6444e811cd797bc9255a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1303,7 +1327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2669577939726962865, guid: ad5ec0c09664bdd42a78642e2de2c8e5, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

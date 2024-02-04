@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     public bool PlayerDamageDelay = false;
     public float time;
     public float PlayerDamageNuckbackTime = 1f;
+    public bool IsPlayerMove = false;
+
 
     public int CoinCount = 0;
 

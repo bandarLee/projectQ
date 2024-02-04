@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8603857912485388942}
   m_Layer: 3
   m_Name: LeftDoorBorder
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 5572374996319696207}
   m_Layer: 3
   m_Name: LeftDoorTrigger
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 3678748382664587297}
   m_Layer: 3
   m_Name: LeftDoorBackside
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

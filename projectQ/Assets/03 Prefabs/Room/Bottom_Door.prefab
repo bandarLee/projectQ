@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 531447591086488211}
   m_Layer: 3
   m_Name: BottomDoorBorder
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 2203960552265063309}
   m_Layer: 3
   m_Name: BottomDoorBackside
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 9216214152261394921}
   m_Layer: 3
   m_Name: BotDoorTrigger
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

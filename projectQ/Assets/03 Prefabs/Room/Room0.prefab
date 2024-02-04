@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3160523277002696939}
   m_Layer: 3
   m_Name: leftReplace
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 2657103996122115987}
   m_Layer: 3
   m_Name: top_wall
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 7879575825072743541}
   m_Layer: 3
   m_Name: leftReplace (1)
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 280479159611105151}
   m_Layer: 3
   m_Name: bot_wall
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 4391087501417237955}
   m_Layer: 3
   m_Name: right_wall
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -685,7 +685,7 @@ GameObject:
   - component: {fileID: 3578257957752100910}
   m_Layer: 3
   m_Name: left_wall
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -864,13 +864,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 201892651941278833, guid: 8ca5210aa762ce145a4b4bd81b115e00, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 3803712195182588079, guid: 8ca5210aa762ce145a4b4bd81b115e00, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788352033236614950, guid: 8ca5210aa762ce145a4b4bd81b115e00, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     - target: {fileID: 7827493802299666235, guid: 8ca5210aa762ce145a4b4bd81b115e00, type: 3}
       propertyPath: m_Name
       value: Left_Door
       objectReference: {fileID: 0}
     - target: {fileID: 7827493802299666235, guid: 8ca5210aa762ce145a4b4bd81b115e00, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -890,13 +902,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 203348115243580973}
     m_Modifications:
+    - target: {fileID: 1681522790916305305, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     - target: {fileID: 7310759600130704883, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
       propertyPath: m_Name
       value: Right_Door
       objectReference: {fileID: 0}
     - target: {fileID: 7310759600130704883, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 8178274480313032051, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -941,6 +957,14 @@ PrefabInstance:
     - target: {fileID: 8292909905644057757, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
       propertyPath: m_SortingLayerID
       value: 524746497
+      objectReference: {fileID: 0}
+    - target: {fileID: 8425555691884551863, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593878313409932045, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 8677406696929466358, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
       propertyPath: m_SortingLayerID

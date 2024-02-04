@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8292909905644057757}
   m_Layer: 3
   m_Name: RightDoorBorder
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 8677406696929466358}
   m_Layer: 3
   m_Name: RightDoorBackside
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 4737854007916119315}
   m_Layer: 3
   m_Name: RightDoorTrigger
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

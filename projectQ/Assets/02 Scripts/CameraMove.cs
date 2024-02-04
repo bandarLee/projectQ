@@ -40,12 +40,14 @@ public class CameraMove : MonoBehaviour
                 Vector3 newPosition = (transform.position + (Vector3)(dir * Movespeed * Time.deltaTime));
                 newPosition.z = -10;
                 transform.position = newPosition;
+                Player.Instance.IsPlayerMove = true;
 
             }
             else
             {
                 LeftMove = false;
                 intiatePosition = this.transform.position;
+                Player.Instance.IsPlayerMove = false;
             }
 
 
@@ -58,12 +60,15 @@ public class CameraMove : MonoBehaviour
                 Vector3 newPosition = (transform.position + (Vector3)(dir * Movespeed * Time.deltaTime));
                 newPosition.z = -10;
                 transform.position = newPosition;
+                Player.Instance.IsPlayerMove = true;
 
             }
             else
             {
                 RightMove = false;
                 intiatePosition = this.transform.position;
+                Player.Instance.IsPlayerMove = false;
+
             }
 
         }
@@ -75,12 +80,15 @@ public class CameraMove : MonoBehaviour
                 Vector3 newPosition = (transform.position + (Vector3)(dir * Movespeed * Time.deltaTime));
                 newPosition.z = -10;
                 transform.position = newPosition;
+                Player.Instance.IsPlayerMove = true;
 
             }
             else
             {
                 UpMove = false;
                 intiatePosition = this.transform.position;
+                Player.Instance.IsPlayerMove = false;
+
             }
 
         }
@@ -92,12 +100,16 @@ public class CameraMove : MonoBehaviour
                 Vector3 newPosition = (transform.position + (Vector3)(dir * Movespeed * Time.deltaTime));
                 newPosition.z = -10;
                 transform.position = newPosition;
+                Player.Instance.IsPlayerMove = true;
+
 
             }
             else
             {
                 DownMove = false;
                 intiatePosition = this.transform.position;
+                Player.Instance.IsPlayerMove = false;
+
             }
 
         }

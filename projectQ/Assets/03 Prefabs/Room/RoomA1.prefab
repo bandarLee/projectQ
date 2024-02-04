@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8879601757438493184}
   m_Layer: 3
   m_Name: right_wall
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 7108998215905494476}
   m_Layer: 3
   m_Name: bot_wall
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 8593515992834161987}
   m_Layer: 3
   m_Name: top_wall
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 9196052801751986219}
   m_Layer: 3
   m_Name: leftReplace (1)
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 3085587221292794919}
   m_Layer: 3
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -686,7 +686,7 @@ GameObject:
   - component: {fileID: 1078530704094783246}
   m_Layer: 3
   m_Name: left_wall
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -832,7 +832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7310759600130704883, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 8178274480313032051, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
       propertyPath: m_LocalScale.y
@@ -912,13 +912,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2495203073757465833}
     m_Modifications:
+    - target: {fileID: 612292303638486235, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     - target: {fileID: 2316573866694131637, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_Name
       value: Chest(All)
       objectReference: {fileID: 0}
     - target: {fileID: 2316573866694131637, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837528632736981157, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 6924587243836235735, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 8873367533658894646, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1050,13 +1062,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2495203073757465833}
     m_Modifications:
+    - target: {fileID: 724446129307425613, guid: c238f9e5af2f6444e811cd797bc9255a, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     - target: {fileID: 1631105283125974911, guid: c238f9e5af2f6444e811cd797bc9255a, type: 3}
       propertyPath: m_Name
       value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 1631105283125974911, guid: c238f9e5af2f6444e811cd797bc9255a, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 1818571452310554260, guid: c238f9e5af2f6444e811cd797bc9255a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1098,6 +1114,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2464167047932272282, guid: c238f9e5af2f6444e811cd797bc9255a, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 3362685117436234285, guid: c238f9e5af2f6444e811cd797bc9255a, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169676245704410855, guid: c238f9e5af2f6444e811cd797bc9255a, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193531026341729727, guid: c238f9e5af2f6444e811cd797bc9255a, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359984053111983016, guid: c238f9e5af2f6444e811cd797bc9255a, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443079487402099750, guid: c238f9e5af2f6444e811cd797bc9255a, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942044565650825184, guid: c238f9e5af2f6444e811cd797bc9255a, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1116,13 +1160,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2495203073757465833}
     m_Modifications:
+    - target: {fileID: 612292303638486235, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     - target: {fileID: 2316573866694131637, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_Name
       value: Chest(All) (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2316573866694131637, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837528632736981157, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 6924587243836235735, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 8873367533658894646, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_LocalPosition.x

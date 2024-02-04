@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 627723824888922213}
   m_Layer: 3
   m_Name: leftReplace
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 283739991276696699}
   m_Layer: 3
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 2452929126482651906}
   m_Layer: 3
   m_Name: right_wall
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 7864136442367010731}
   m_Layer: 3
   m_Name: leftReplace (1)
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 5239567837573893766}
   m_Layer: 3
   m_Name: left_wall
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 3174610179721722119}
   m_Layer: 3
   m_Name: top_wall
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -693,7 +693,7 @@ GameObject:
   - component: {fileID: 5500610848758492291}
   m_Layer: 3
   m_Name: bot_wall
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -838,7 +838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316573866694131637, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 8873367533658894646, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_LocalScale.y
@@ -908,7 +908,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1631105283125974911, guid: c238f9e5af2f6444e811cd797bc9255a, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 1818571452310554260, guid: c238f9e5af2f6444e811cd797bc9255a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -974,7 +974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316573866694131637, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 8873367533658894646, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_LocalScale.y
@@ -1041,6 +1041,10 @@ PrefabInstance:
     - target: {fileID: 4126484306638653213, guid: 6c405a87246c5c64bb9b7ef31ccf3c74, type: 3}
       propertyPath: m_Name
       value: w
+      objectReference: {fileID: 0}
+    - target: {fileID: 4126484306638653213, guid: 6c405a87246c5c64bb9b7ef31ccf3c74, type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 5775763775838630272, guid: 6c405a87246c5c64bb9b7ef31ccf3c74, type: 3}
       propertyPath: m_LocalScale.y
@@ -1118,7 +1122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 585615917344482201, guid: 1de623a1b58f6894584508ca8bab43c5, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 797097544800322085, guid: 1de623a1b58f6894584508ca8bab43c5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1168,6 +1172,18 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 524746497
       objectReference: {fileID: 0}
+    - target: {fileID: 5083084623419101299, guid: 1de623a1b58f6894584508ca8bab43c5, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668697638631956855, guid: 1de623a1b58f6894584508ca8bab43c5, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 7291553765998122896, guid: 1de623a1b58f6894584508ca8bab43c5, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1186,13 +1202,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5411720608458552534}
     m_Modifications:
+    - target: {fileID: 1681522790916305305, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     - target: {fileID: 7310759600130704883, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
       propertyPath: m_Name
       value: Right_Door
       objectReference: {fileID: 0}
     - target: {fileID: 7310759600130704883, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 8178274480313032051, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1242,6 +1262,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 524746497
       objectReference: {fileID: 0}
+    - target: {fileID: 8425555691884551863, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593878313409932045, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     - target: {fileID: 8677406696929466358, guid: ab0df411e5118b14bbd87cb90ec52c1d, type: 3}
       propertyPath: m_SortingLayer
       value: 0
@@ -1274,7 +1302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316573866694131637, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 8873367533658894646, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_LocalScale.y
@@ -1344,7 +1372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316573866694131637, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 8873367533658894646, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_LocalScale.y
@@ -1415,6 +1443,10 @@ PrefabInstance:
     - target: {fileID: 1998873333861008, guid: a566a4ec74b362446811254d0c887410, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998873333861008, guid: a566a4ec74b362446811254d0c887410, type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 4124728988837648, guid: a566a4ec74b362446811254d0c887410, type: 3}
       propertyPath: m_LocalScale.x
@@ -1585,6 +1617,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1998873333861008, guid: a566a4ec74b362446811254d0c887410, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     - target: {fileID: 4124728988837648, guid: a566a4ec74b362446811254d0c887410, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -1752,7 +1788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316573866694131637, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 8873367533658894646, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_LocalScale.y
@@ -1822,7 +1858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316573866694131637, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 8873367533658894646, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_LocalScale.y
@@ -1886,13 +1922,53 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4877716833448760086}
     m_Modifications:
+    - target: {fileID: 612292303638486235, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     - target: {fileID: 2316573866694131637, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_Name
       value: Chest(All) (6)
       objectReference: {fileID: 0}
     - target: {fileID: 2316573866694131637, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316639832849370369, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 4300596274468364271, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724130855909104353, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913622530024974361, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837528632736981157, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 6924587243836235735, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 7105096096392945673, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817642520175911105, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 8497778531434542543, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 8873367533658894646, guid: a3f5bcf888869dc4a93da77b3f0b889b, type: 3}
       propertyPath: m_LocalScale.y

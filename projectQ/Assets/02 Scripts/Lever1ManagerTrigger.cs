@@ -25,7 +25,7 @@ public class Lever1ManagerTrigger : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !Player.Instance.IsPlayerMove)
         {
             switch(doortype)
             {

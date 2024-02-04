@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 560040914929165556}
   m_Layer: 3
   m_Name: TopDoorTrigger
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 2858748095503107081}
   m_Layer: 3
   m_Name: TopDoorBackside
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 2297054604633654682}
   m_Layer: 3
   m_Name: TopDoorBorder
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
