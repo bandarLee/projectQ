@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         // 처음 시작하면 총알 발사
-        Player.Instance.BulletPower = 1;
+        Player.Instance.BulletPower = 0.5f;
 
     }
     public void SetDirection(Vector2 direction)
@@ -59,7 +59,7 @@ public class Bullet : MonoBehaviour
         }
         else if (Btype == BulletType.Blood)
         {
-            Player.Instance.BulletPower = 0.5f;
+            Player.Instance.BulletPower = 1f;
 
         }
     }

@@ -11,9 +11,10 @@ public class Item : MonoBehaviour
         Basic,
         FireItem,     // Epic
         KnifeItem,    // Rare
-        BloodItem,    // Unique
+        BloodItem,    // Rare
         CoinItem,     // Noraml
-        HeartItem     // Normal
+        HeartItem,    // Normal
+        BoomItem      // Unique
 
     }
 
@@ -78,6 +79,10 @@ public class Item : MonoBehaviour
                 {
                     Player.Instance.PlayerHealth = 3;
                 }
+            }
+            else if  (IType == ItemType.BoomItem)
+            {
+                Player.Instance.weapon = PlayerWeapon.BoomItem;
             }
 
             else

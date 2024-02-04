@@ -14,7 +14,7 @@ public class ItemMove : MonoBehaviour
     {
         startPos = transform.position;
     }
-
+    // 아이템이 생성되자마자 위아래로 일정한 속도로 흔들리도록 하는 코드
     void Update()
     {
         transform.position = startPos + amplitude * Mathf.Sin(Time.time * frequency) * Vector3.up;

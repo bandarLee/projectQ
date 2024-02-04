@@ -28,7 +28,8 @@ public class Player : MonoBehaviour
         Basic,
         FireItem,
         KnifeItem,
-        BloodItem
+        BloodItem,
+        BoomItem
 
     }
 
