@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using static Bullet;
 
 public enum EnemyBulletType
@@ -25,9 +26,27 @@ public class EnemyBullet : MonoBehaviour
 
     public float Speed = 5f;
 
+    // 플레이어를 향한 초기 방향을 저장할 변수
+    private Vector2 initialDirection;
+
+    void Start()
+    {
+        if (EnemyBType == EnemyBulletType.Skeleton) //target형 - 처음 위치 따라가기
+        {
+            // 플레이어를 향한 초기 방향을 계산
+            initialDirection = (Player.Instance.transform.position - this.transform.position).normalized;
+        }
+    }
+
     void Update()
     {
-        if(EnemyBType == EnemyBulletType.Blood)
+        if (EnemyBType == EnemyBulletType.Skeleton)
+        {
+            // 초기 방향으로 이동함
+            transform.position += (Vector3)(initialDirection * Speed) * Time.deltaTime;
+        }
+
+        if (EnemyBType == EnemyBulletType.Blood)
         {
             // 1. 이동할 방향을 구한다.
             Vector2 dir = Vector2.down; // 핏방울 아래로
@@ -35,12 +54,6 @@ public class EnemyBullet : MonoBehaviour
             // 2. 이동한다. 
             //transform.Translate(dir * Speed * Time.deltaTime);
             // 새로운 위치 = 현재 위치 + 속도 * 시간
-            transform.position += (Vector3)(dir * Speed) * Time.deltaTime;
-        }
-
-        if (EnemyBType == EnemyBulletType.Skeleton)
-        {
-            Vector2 dir = new Vector2((Player.Instance.transform.position.x - this.transform.position.x), (Player.Instance.transform.position.y - this.transform.position.y));
             transform.position += (Vector3)(dir * Speed) * Time.deltaTime;
         }
     }

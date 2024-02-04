@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 604605449080254570}
   - component: {fileID: -5144667139979755550}
-  - component: {fileID: 2397183128782137458}
   - component: {fileID: -6492573694252660283}
   - component: {fileID: -7731784915552228950}
+  - component: {fileID: -3233240528209700024}
   m_Layer: 0
   m_Name: BasicEnemy
   m_TagString: Enemy
@@ -29,10 +29,11 @@ Transform:
   m_GameObject: {fileID: 6770434394928461821}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.09, y: 1.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 874802681630467249}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &-5144667139979755550
@@ -87,33 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &2397183128782137458
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6770434394928461821}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!60 &-6492573694252660283
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -190,18 +164,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c35169ff5c4c047987374f71cce10e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicEnemyType: 0
   Health: 1
   ItemPrefab_Health: {fileID: 6453584616789025725, guid: d08cbafefbc1cea47bce85f738ca0e55, type: 3}
   ItemPrefab_Speed: {fileID: 264876756973874973, guid: 53465340c72be8c4aa9bcc141ae6d4b6, type: 3}
   ItemPrefab_Money: {fileID: 2110187213992637357, guid: 6730239b89874ad4eb8968f058f9a304, type: 3}
   ItemPrefab_CardKey: {fileID: 2163366232115821977, guid: 2f6229f82c171744690a05717b49af83, type: 3}
   Movespeed2: 1
-  swingtime: 0.6
+  swingtime: 2
   time2: 0
-  Speed: 1
+  Speed: 2
   _dir: {x: 0, y: 0}
-  MonsterBullet: {fileID: 0}
+  MonsterBullet: {fileID: 4922250336619242154, guid: 867594ed8b5751541aba7db100a5861e, type: 3}
   Muzzles:
-  - {fileID: 0}
-  Timer: 5.6
+  - {fileID: 6774090285247810052}
+  Timer: 1
+--- !u!50 &-3233240528209700024
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6770434394928461821}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!1 &6774090285247810052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 874802681630467249}
+  m_Layer: 9
+  m_Name: Muzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &874802681630467249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6774090285247810052}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 604605449080254570}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
