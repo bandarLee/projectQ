@@ -40,10 +40,10 @@ public class UIManager : MonoBehaviour
     {
         PlayerHealth = Player.Instance.PlayerHealth;
 
-        Damage.text = $"{Player.Instance.BulletPower}";
-        Range.text = $"{Player.Instance.maxDistance}";
-        BulletSpeed.text = $"{Player.Instance.NormalBulletSpeed}";
-        Coin.text = $"{Player.Instance.CoinCount}";
+        Damage.text = $"공격력 {Player.Instance.BulletPower}";
+        Range.text = $"사거리 {Player.Instance.maxDistance}";
+        BulletSpeed.text = $"탄속도 {Player.Instance.NormalBulletSpeed}";
+        Coin.text = $"{Player.Instance.CoinCount} Coin";
         
 
 

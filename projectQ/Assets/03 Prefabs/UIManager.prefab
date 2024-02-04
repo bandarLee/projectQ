@@ -55,3 +55,4 @@ MonoBehaviour:
   Damage: {fileID: 0}
   Range: {fileID: 0}
   BulletSpeed: {fileID: 0}
+  Coin: {fileID: 0}
