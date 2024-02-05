@@ -33,4 +33,27 @@ public class ItemSpawner : MonoBehaviour
 
         Instantiate(itemToSpawn, position, Quaternion.identity);
     }
+    public void DecideItem(Vector3 position)
+    {
+
+
+        if (ItemPercent < 25)
+        {
+            itemToSpawn = ItemPrefab_CardKey;
+        }
+        else if (ItemPercent < 50)
+        {
+            itemToSpawn = ItemPrefab_Money;
+        }
+        else if (ItemPercent < 75)
+        {
+            itemToSpawn = ItemPrefab_Health;
+        }
+        else
+        {
+            itemToSpawn = ItemPrefab_Speed;
+        }
+
+        Instantiate(itemToSpawn, position, Quaternion.identity);
+    }
 }

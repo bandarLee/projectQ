@@ -11,7 +11,7 @@ public class MarketManager : MonoBehaviour
 
     public bool IsPlayerMarket = false;
     public TextMeshProUGUI InputArea;
-
+    public ItemSpawner itemspawner;
 
     void Awake()
     {
@@ -91,14 +91,21 @@ public class MarketManager : MonoBehaviour
         switch (money/3)
         {
             case 0:
+                itemspawner.SpawnItem(this.transform.position);
 
                 break;
             case 1:
-                Debug.Log("10원입력");
+                itemspawner.SpawnItem(this.transform.position);
 
                 break;
-            case 2: break;
-            case 3: break;
+            case 2:
+                itemspawner.SpawnItem(this.transform.position);
+
+                break;
+            case 3:
+                itemspawner.SpawnItem(this.transform.position);
+
+                break;
             case 4: break;
             case 5: break;
             case 6: break;
