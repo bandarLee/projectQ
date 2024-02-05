@@ -14,8 +14,7 @@ public class Item : MonoBehaviour
         BloodItem,    // Rare
         CoinItem,     // Noraml
         HeartItem,    // Normal
-        BoomItem      // Unique
-
+        KeyCardItem
     }
 
     // 궁극기 종류
@@ -98,6 +97,10 @@ public class Item : MonoBehaviour
                 }
             }
 
+            else if (IType == ItemType.KeyCardItem)
+            {
+
+            }
             
 
 

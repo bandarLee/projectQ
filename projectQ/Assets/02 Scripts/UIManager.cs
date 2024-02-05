@@ -24,6 +24,10 @@ public class UIManager : MonoBehaviour
     [Header("궁극기 상태바")]
     public GameObject BombItem;
 
+    [Header("카드키 프리펩")]
+    public GameObject CardItem;
+
+
 
 
 
@@ -133,5 +137,9 @@ public class UIManager : MonoBehaviour
             Health[(int)i].SetActive(false);
 
         }
+    }
+    public void SetCardActiveStatus()
+    {
+        
     }
 }

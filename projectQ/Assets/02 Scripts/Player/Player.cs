@@ -94,12 +94,8 @@ public class Player : MonoBehaviour
             {
                 PlayerHealth -= 1f;
             }
-
-
             //PlayerDamageDelay = true;
-
         }
-
     }
     /*private void OnCollisionStay2D(Collision2D collision)
     {
@@ -110,7 +106,4 @@ public class Player : MonoBehaviour
 
     }
     */
-
-   
-
 }
