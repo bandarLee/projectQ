@@ -31,7 +31,7 @@ public class BasicEnemy : MonoBehaviour  // "Basic형"
 
     [Header("타이머")]
     public float Timer = 0f;
-    public const float COOL_TIME = 1f;
+    public const float COOL_TIME = 2f;
 
     void Start()
     {
