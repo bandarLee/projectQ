@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.224, y: -1.1505907, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0972, y: 1.0972, z: 1.0972}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8751642245585790810}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IType: 2
+  Bomb_Type: 0
 --- !u!1 &2539560345019248036
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,7 +77,7 @@ Transform:
   m_GameObject: {fileID: 2539560345019248036}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.07635671, y: 0.07593542, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6172901, y: 0.6172901, z: 0.6172901}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -161,6 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IType: 2
+  Bomb_Type: 0
 --- !u!60 &5983706596889159044
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -262,6 +264,7 @@ GameObject:
   - component: {fileID: 5394471053284877282}
   - component: {fileID: 5417135562925374912}
   - component: {fileID: 4801981399805724705}
+  - component: {fileID: 5778841870465082390}
   m_Layer: 8
   m_Name: itemShadow
   m_TagString: Item
@@ -278,7 +281,7 @@ Transform:
   m_GameObject: {fileID: 6778739065147821845}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1719, y: -0.3746, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5361883, y: 0.18071881, z: 0.66412}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -371,3 +374,17 @@ CircleCollider2D:
   m_Offset: {x: -0.025105864, y: 1.8156223}
   serializedVersion: 2
   m_Radius: 0.6098362
+--- !u!114 &5778841870465082390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6778739065147821845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd5cf14f02adf343a207ac4ed85d41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IType: 2
+  Bomb_Type: 0
