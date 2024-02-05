@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 282105069}
   - component: {fileID: 282105071}
   m_Layer: 3
-  m_Name: 1313131
+  m_Name: VendingMachine
   m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -208,12 +208,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282105065}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.72, y: 12.49, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.72, y: 2.2399998, z: 0}
   m_LocalScale: {x: 0.619058, y: 0.619058, z: 0.619058}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 456356120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &282105068
 BoxCollider2D:
@@ -710,6 +710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MarketMoneyInput: {fileID: 144388350}
+  VendingMachine: {fileID: 282105065}
   MarketNoticeText: {fileID: 1524573009}
   IsPlayerMarket: 0
   InputArea: {fileID: 1713803325}
@@ -996,6 +997,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 248605158867705205, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1743068022}
+    - targetCorrespondingSourceObject: {fileID: 248605158867705205, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 282105067}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
 --- !u!1660057539 &9223372036854775807
@@ -1006,5 +1010,4 @@ SceneRoots:
   - {fileID: 1585537896066948777}
   - {fileID: 641916878}
   - {fileID: 2054118678}
-  - {fileID: 282105067}
   - {fileID: 1657469624}

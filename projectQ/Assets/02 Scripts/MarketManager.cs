@@ -6,6 +6,7 @@ using TMPro;
 public class MarketManager : MonoBehaviour
 {
     public GameObject MarketMoneyInput;
+    public GameObject VendingMachine;
     public TextMeshProUGUI MarketNoticeText;
 
     public bool IsPlayerMarket = false;
@@ -21,7 +22,7 @@ public class MarketManager : MonoBehaviour
     {
         if (!IsPlayerMarket)
         {
-                            MarketMoneyInput.SetActive(false);
+            MarketMoneyInput.SetActive(false);
 
         }
     }
@@ -52,17 +53,33 @@ public class MarketManager : MonoBehaviour
     public void InputMoneyClick()
     {
         string inputText = InputArea.text.Trim();
-        Debug.Log("InputMoneyClick called with: '" + inputText + "'");
+        inputText = inputText.Replace("\u200B", "");
         try
         {
             int moneyInput = int.Parse(inputText);
-            GenerateItem(moneyInput);
-            MarketMoneyInput.SetActive(false);
+            if(moneyInput > Player.Instance.CoinCount)
+                {
+
+                    MarketNoticeText.text = "가진 돈보다 많이 입력하셨습니다";
+                    MarketMoneyInput.SetActive(false);
+
+                    InputArea.text = null;
+
+                
+
+                }
+            else if(moneyInput <= Player.Instance.CoinCount && moneyInput >=0 )
+            {
+                GenerateItem(moneyInput);
+                MarketMoneyInput.SetActive(false);
+                Destroy(VendingMachine);
+            }
+
         }
         catch (System.FormatException e)
         {
             Debug.Log(e);
-            MarketNoticeText.text = "가진 돈을 숫자로 입력하세요";
+            MarketNoticeText.text = "에러발생";
         }
     }
 
@@ -71,7 +88,7 @@ public class MarketManager : MonoBehaviour
     public void GenerateItem(int money)
     {
   
-        switch (money/10)
+        switch (money/3)
         {
             case 0:
                 Debug.Log("10원입력");
