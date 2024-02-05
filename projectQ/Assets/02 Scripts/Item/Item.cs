@@ -80,7 +80,7 @@ public class Item : MonoBehaviour
                 Player.Instance.weapon = PlayerWeapon.BloodItem;
 
                 Player.Instance.NormalBulletSpeed = 5.5f;
-                Player.Instance.maxDistance = 5.5f;
+                Player.Instance.maxDistance = 6f;
             }
 
             else if (IType == ItemType.CoinItem)
