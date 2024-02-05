@@ -96,15 +96,6 @@ public class Player : MonoBehaviour
             }
 
 
-            if (collision.collider.CompareTag("Item"))
-            {
-                if (bomb == PlayerBomb.Bomb)
-                {
-                    
-                }
-            }
-
-
             //PlayerDamageDelay = true;
 
         }

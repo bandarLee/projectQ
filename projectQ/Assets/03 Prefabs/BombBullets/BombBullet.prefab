@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3582938964050349011}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.044, y: -0.699, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5512, y: 0.5512, z: 0.5512}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -121,7 +121,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bomb_Type: 1
-  BombAnimator: {fileID: 0}
+  bombBoomTimer: 0
+  BombAnimator: {fileID: 7781917044209388781}
+  VfxExplosion: {fileID: 3944402347444442495, guid: ca0c28f881afe9f40b21b0e70d0b1a0c, type: 3}
 --- !u!1 &7432741642301304312
 GameObject:
   m_ObjectHideFlags: 0
