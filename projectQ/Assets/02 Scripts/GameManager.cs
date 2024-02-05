@@ -228,7 +228,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        roomInfos = roomPatterns[5];
+        roomInfos = roomPatterns[Random.Range(0, roomPatterns.Length)];
 
         foreach (var (position, roomType) in roomInfos)
         {

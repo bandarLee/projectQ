@@ -1,4 +1,3 @@
-using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -97,7 +96,6 @@ public class UIManager : MonoBehaviour
 
         if (Player.Instance.weapon == Player.PlayerWeapon.FireItem)
         {
-            Debug.Log("불");
             FireItem.SetActive(true);
             BloodItem.SetActive(false);
             KnifeItem.SetActive(false);
