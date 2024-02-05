@@ -38,6 +38,11 @@ public class UIManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        BloodItem.SetActive(false);
+        FireItem.SetActive(false);
+        KnifeItem.SetActive(false);
+        BombItem.SetActive(false);
+
 
     }
     void Start()
@@ -92,6 +97,7 @@ public class UIManager : MonoBehaviour
 
         if (Player.Instance.weapon == Player.PlayerWeapon.FireItem)
         {
+            Debug.Log("불");
             FireItem.SetActive(true);
             BloodItem.SetActive(false);
             KnifeItem.SetActive(false);

@@ -41,7 +41,15 @@ public class Item : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Player"))
+        {
+            if (Bomb_Type == BombType.Bomb)
+            {
+                //Debug.Log("플레이어무기 폭탄");
+                Player.Instance.bomb = PlayerBomb.Bomb;
 
+            }
+        }
 
 
         if (collision.CompareTag("Player"))
@@ -90,15 +98,9 @@ public class Item : MonoBehaviour
                     Player.Instance.PlayerHealth = 3;
                 }
             }
-            else
-            {
-                Player.Instance.weapon = PlayerWeapon.Basic;
-            }
 
-            if (Bomb_Type == BombType.Bomb)
-            {
-                
-            }
+            
+
 
             Destroy(this.gameObject);
 

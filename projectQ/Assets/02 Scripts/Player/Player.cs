@@ -73,6 +73,9 @@ public class Player : MonoBehaviour
                 PlayerDamageDelay = false;
             }
         }*/
+        Debug.Log(weapon);
+        Debug.Log(bomb);
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

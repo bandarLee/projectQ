@@ -3011,6 +3011,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8439999372185330751}
     - target: {fileID: 7064677394805747461, guid: 48adeeeba0b9e7a48a20ff07aef96942, type: 3}
+      propertyPath: BombItem
+      value: 
+      objectReference: {fileID: 1868421720849827276}
+    - target: {fileID: 7064677394805747461, guid: 48adeeeba0b9e7a48a20ff07aef96942, type: 3}
       propertyPath: BoomItem
       value: 
       objectReference: {fileID: 1868421720849827276}

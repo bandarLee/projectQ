@@ -48,6 +48,7 @@ MonoBehaviour:
   FireBulletPrefab: {fileID: 2246287635761883646, guid: 8fc50240308b8b24482d7e61da3c8738, type: 3}
   KnifeBulletPrefab: {fileID: 4586667306290933860, guid: c1e08cba98ed7d54ebffb1a12a68e0e3, type: 3}
   BloodBulletPrefab: {fileID: 6182391038347910382, guid: 70fc66810d1f0574a88b69a70b8b5b08, type: 3}
+  BombBulletPrefab: {fileID: 3582938964050349011, guid: cd7153344a68a1445bc86ba7e9a63c0e, type: 3}
   ShootTimer: 0
   Cool_Time: 0.2
   NormalMuzzles:
@@ -325,5 +326,7 @@ MonoBehaviour:
   PlayerDamageDelay: 0
   time: 0
   PlayerDamageNuckbackTime: 1
+  IsPlayerMove: 0
   CoinCount: 0
   weapon: 0
+  bomb: 0
