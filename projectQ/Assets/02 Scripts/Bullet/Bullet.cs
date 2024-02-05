@@ -98,5 +98,9 @@ public class Bullet : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if (collision.collider.CompareTag("Environment"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
