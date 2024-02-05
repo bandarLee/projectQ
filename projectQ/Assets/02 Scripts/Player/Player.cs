@@ -90,7 +90,21 @@ public class Player : MonoBehaviour
             {
                 PlayerHealth -= 1f;
             }
-            
+            if (collision.collider.CompareTag("Enemy"))
+            {
+                PlayerHealth -= 1f;
+            }
+
+
+            if (collision.collider.CompareTag("Item"))
+            {
+                if (bomb == PlayerBomb.Bomb)
+                {
+                    
+                }
+            }
+
+
             //PlayerDamageDelay = true;
 
         }
