@@ -31,9 +31,26 @@ public class BossCameraMove : MonoBehaviour
 
     void Update()
     {
+        if (Player.Instance.transform.position.x > 9.87f)
+        {
+            RightMove = true;
+        }
+        if (Player.Instance.transform.position.x < 8.25f)
+        {
+            LeftMove = true;
+        }
+        if (Player.Instance.transform.position.y > 3)
+        {
+            UpMove = true;
+        }
+        if (Player.Instance.transform.position.y > 3)
+        {
+            DownMove = true;
+        }
+
         if (LeftMove)
         {
-            Vector3 dir = new Vector3(-18.46f, 0f);
+            Vector3 dir = new Vector3(-16.17f, 0f);
             if (this.transform.position.x > (intiatePosition.x + dir.x))
             {
                 Vector3 newPosition = (transform.position + (Vector3)(dir * Movespeed * Time.deltaTime));
@@ -53,7 +70,7 @@ public class BossCameraMove : MonoBehaviour
         }
         if (RightMove)
         {
-            Vector3 dir = new Vector3(18.46f, 0f);
+            Vector3 dir = new Vector3(16.17f, 0f);
             if (this.transform.position.x < (intiatePosition.x + dir.x))
             {
                 Vector3 newPosition = (transform.position + (Vector3)(dir * Movespeed * Time.deltaTime));
@@ -73,7 +90,7 @@ public class BossCameraMove : MonoBehaviour
         }
         if (UpMove)
         {
-            Vector3 dir = new Vector3(0f, 10.25f);
+            Vector3 dir = new Vector3(0f, 7.66f);
             if (this.transform.position.y < (intiatePosition.y + dir.y))
             {
                 Vector3 newPosition = (transform.position + (Vector3)(dir * Movespeed * Time.deltaTime));
@@ -93,7 +110,7 @@ public class BossCameraMove : MonoBehaviour
         }
         if (DownMove)
         {
-            Vector3 dir = new Vector3(0f, -10.25f);
+            Vector3 dir = new Vector3(0f, -7.66f);
             if (this.transform.position.y > (intiatePosition.y + dir.y))
             {
                 Vector3 newPosition = (transform.position + (Vector3)(dir * Movespeed * Time.deltaTime));

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BossRoomManager : MonoBehaviour
@@ -14,6 +15,5 @@ public class BossRoomManager : MonoBehaviour
 
     void Update()
     {
-        
     }
 }
