@@ -173,22 +173,29 @@ public class OneEye : MonoBehaviour // follow 타입
 
     public void MakeItem()
         {
+        PlaceItem Item1 = new PlaceItem("item_CardKey");
+        PlaceItem Item2 = new PlaceItem("item_Money");
+        PlaceItem Item3 = new PlaceItem("item_Health");
+        PlaceItem Item4 = new PlaceItem("item_CardKey");
+
+
+        int ItemPercent = Random.Range(0, 100);
             // 목표: 25% 확률로 다음 층으로 넘어갈 수 있는 카드키, 머니, 체력, 스피드 아이템(확률넣기)
-            if (Random.Range(0, 100) < 25 )
+            if (ItemPercent < 25 )
             {
                 // -다음 층으로 넘어갈 수 있는 카드키 만들고
                 GameObject item_CardKey = Instantiate(ItemPrefab_CardKey);
                 // -위치를 나의 위치로 수정
                 item_CardKey.transform.position = this.transform.position;
             }
-            else if (Random.Range(0, 100) < 50)
+            else if (ItemPercent < 50)
              {
                 // -머니주는 아이템 만들고
                 GameObject item_Money = Instantiate(ItemPrefab_Money);
                 // -위치를 나의 위치로 수정
                 item_Money.transform.position = this.transform.position;
             }
-            else if (Random.Range(0, 100) < 75)
+            else if (ItemPercent < 75)
             {
             // -체력 아이템 만들고
             GameObject item_Health = Instantiate(ItemPrefab_Health);

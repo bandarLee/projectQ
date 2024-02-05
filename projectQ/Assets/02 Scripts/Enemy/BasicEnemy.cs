@@ -4,15 +4,7 @@ using UnityEngine;
 using static Snake;
 
 public class BasicEnemy : MonoBehaviour  // "Basic형"
-{
-    /*public enum BasicEnemyType
-    {
-        Left,
-        Right,
-        Top,
-        Bot
-    }
-    public BasicEnemyType basicEnemyType;*/
+{ 
     public float Health = 1;
 
     public GameObject ItemPrefab_Health; // DropItem
@@ -46,22 +38,6 @@ public class BasicEnemy : MonoBehaviour  // "Basic형"
 
     void Start()
     {
-        /*switch (basicEnemyType)
-        {
-            case BasicEnemyType.Left:
-                _dir = Vector2.right;
-                break;
-            case BasicEnemyType.Right:
-                _dir = Vector2.left;
-                break;
-            case BasicEnemyType.Top:
-                _dir = Vector2.down;
-                break;
-            case BasicEnemyType.Bot:
-                _dir = Vector2.up;
-                break;
-
-        }*/
     }
 
     void Update()
