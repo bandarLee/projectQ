@@ -6,11 +6,7 @@ using static Bullet;
 public class Virus : MonoBehaviour // " Follow 타입 "
 {
     public float Health = 1;
-
-    public GameObject ItemPrefab_Health; // DropItem
-    public GameObject ItemPrefab_Speed;
-    public GameObject ItemPrefab_Money;
-    public GameObject ItemPrefab_CardKey;
+    public ItemSpawner itemspawner;
 
     // 플레이어를 따라가는 속도
     public float Movespeed;
@@ -118,7 +114,7 @@ public class Virus : MonoBehaviour // " Follow 타입 "
             if (Health <= 0)
             {
                 gameObject.SetActive(false);
-                MakeItem();
+                itemspawner.SpawnItem(this.transform.position);
             }
         }
     }
@@ -142,40 +138,6 @@ public class Virus : MonoBehaviour // " Follow 타입 "
 
             // 1초 대기
             yield return new WaitForSeconds(1f);
-        }
-    }
-
-
-    public void MakeItem()
-    {
-        // 목표: 25% 확률로 다음 층으로 넘어갈 수 있는 카드키, 머니, 체력, 스피드 아이템(확률넣기)
-        if (Random.Range(0, 100) < 25)
-        {
-            // -다음 층으로 넘어갈 수 있는 카드키 만들고
-            GameObject item_CardKey = Instantiate(ItemPrefab_CardKey);
-            // -위치를 나의 위치로 수정
-            item_CardKey.transform.position = this.transform.position;
-        }
-        else if (Random.Range(0, 100) < 50)
-        {
-            // -머니주는 아이템 만들고
-            GameObject item_Money = Instantiate(ItemPrefab_Money);
-            // -위치를 나의 위치로 수정
-            item_Money.transform.position = this.transform.position;
-        }
-        else if (Random.Range(0, 100) < 75)
-        {
-            // -체력 아이템 만들고
-            GameObject item_Health = Instantiate(ItemPrefab_Health);
-            // -위치를 나의 위치로 수정
-            item_Health.transform.position = this.transform.position;
-        }
-        else
-        {
-            // -스피드 아이템 만들고
-            GameObject item_Speed = Instantiate(ItemPrefab_Speed);
-            // -위치를 나의 위치로 수정
-            item_Speed.transform.position = this.transform.position;
         }
     }
 }
