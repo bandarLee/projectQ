@@ -91,8 +91,6 @@ public class MarketManager : MonoBehaviour
         switch (money/3)
         {
             case 0:
-                GameObject item_CardKey = Instantiate(ItemPrefab_CardKey);
-                item_CardKey.transform.position = this.transform.position;
 
                 break;
             case 1:

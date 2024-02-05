@@ -6,11 +6,7 @@ public class OneEye : MonoBehaviour // follow 타입
 {
     public float aboveY = 1f; // enemy가 player 위에 떠다닐 y축 거리
     public float Health = 2;
-
-    public GameObject ItemPrefab_Health; // DropItem
-    public GameObject ItemPrefab_Speed;
-    public GameObject ItemPrefab_Money; // 상점에 꼭 필요
-    public GameObject ItemPrefab_CardKey; // 다음 층으로 넘어갈 수 있는 카드키
+    public ItemSpawner itemspawner;
     public bool replacesuccess = false;
     // 플레이어를 따라가는 속도
     public float Movespeed;
@@ -166,50 +162,12 @@ public class OneEye : MonoBehaviour // follow 타입
             {
 
                 gameObject.SetActive(false);
-                MakeItem();
+                itemspawner.SpawnItem(this.transform.position);
             }
         }
     }
 
-    public void MakeItem()
-        {
-        PlaceItem Item1 = new PlaceItem("item_CardKey");
-        PlaceItem Item2 = new PlaceItem("item_Money");
-        PlaceItem Item3 = new PlaceItem("item_Health");
-        PlaceItem Item4 = new PlaceItem("item_CardKey");
 
-
-        int ItemPercent = Random.Range(0, 100);
-            // 목표: 25% 확률로 다음 층으로 넘어갈 수 있는 카드키, 머니, 체력, 스피드 아이템(확률넣기)
-            if (ItemPercent < 25 )
-            {
-                // -다음 층으로 넘어갈 수 있는 카드키 만들고
-                GameObject item_CardKey = Instantiate(ItemPrefab_CardKey);
-                // -위치를 나의 위치로 수정
-                item_CardKey.transform.position = this.transform.position;
-            }
-            else if (ItemPercent < 50)
-             {
-                // -머니주는 아이템 만들고
-                GameObject item_Money = Instantiate(ItemPrefab_Money);
-                // -위치를 나의 위치로 수정
-                item_Money.transform.position = this.transform.position;
-            }
-            else if (ItemPercent < 75)
-            {
-            // -체력 아이템 만들고
-            GameObject item_Health = Instantiate(ItemPrefab_Health);
-            // -위치를 나의 위치로 수정
-            item_Health.transform.position = this.transform.position;
-             }
-            else
-            {
-            // -스피드 아이템 만들고
-            GameObject item_Speed = Instantiate(ItemPrefab_Speed);
-            // -위치를 나의 위치로 수정
-            item_Speed.transform.position = this.transform.position;
-            }
-        }
 
     public void ReplacePrefab()
     {
