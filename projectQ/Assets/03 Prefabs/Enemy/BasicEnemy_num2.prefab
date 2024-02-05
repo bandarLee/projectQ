@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 2419171472043956506}
   - component: {fileID: 5077517162820515419}
   - component: {fileID: 2912486671244722276}
+  - component: {fileID: -8078636264510269130}
   - component: {fileID: -4974933819169036991}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BasicEnemy_num2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +114,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-8078636264510269130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3162596950965838965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c35169ff5c4c047987374f71cce10e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 1
+  itemspawner: {fileID: 1835939221475135809, guid: dd53dcc5c1ab7b7418dbb38821964b46, type: 3}
+  Movespeed2: 1
+  swingtime: 2
+  time2: 0
+  Speed: 2
+  _dir: {x: 0, y: 0}
+  MonsterBullet: {fileID: 4922250336619242154, guid: 867594ed8b5751541aba7db100a5861e, type: 3}
+  Muzzles:
+  - {fileID: 0}
+  Timer: 0
 --- !u!60 &-4974933819169036991
 PolygonCollider2D:
   m_ObjectHideFlags: 0

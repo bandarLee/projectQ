@@ -86,6 +86,11 @@ public class Player : MonoBehaviour
             {
                 PlayerHealth -= 0.5f;
             }
+            if (collision.collider.CompareTag("Enemy"))
+            {
+                PlayerHealth -= 1f;
+            }
+            
             //PlayerDamageDelay = true;
 
         }
