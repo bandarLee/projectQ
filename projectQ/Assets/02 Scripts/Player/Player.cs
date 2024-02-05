@@ -29,11 +29,19 @@ public class Player : MonoBehaviour
         FireItem,
         KnifeItem,
         BloodItem,
-        BoomItem
 
     }
 
+    public enum PlayerBomb
+    {
+        None,
+        Bomb
+    }
+
+
     public PlayerWeapon weapon = PlayerWeapon.Basic;
+    public PlayerBomb bomb = PlayerBomb.None;
+
     private void Awake()
     {
         // 싱글톤 패턴 : 오직 한개의 클래스 인스턴스를 갖도록 보장

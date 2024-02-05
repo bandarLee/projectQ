@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
         Normal,
         Fire,     // 화염 아이템 얻으면 발동
         Knife,    // Knife 아이템 얻으면
-        Blood     // Blood 스킬
+        Blood,    // Blood 스킬
 
     }
 
@@ -49,7 +49,7 @@ public class Bullet : MonoBehaviour
             Player.Instance.BulletPower = 0.8f;
         }
         // 만약 총알 타입이 Fire 타입이면 총알 파워는 3
-        else if (Btype == BulletType.Fire) 
+        else if (Btype == BulletType.Fire)
         {
             Player.Instance.BulletPower = 3f;
         }

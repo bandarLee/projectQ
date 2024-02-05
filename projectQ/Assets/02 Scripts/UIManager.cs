@@ -21,7 +21,9 @@ public class UIManager : MonoBehaviour
     public GameObject FireItem;
     public GameObject BloodItem;
     public GameObject KnifeItem;
-    public GameObject BoomItem;
+
+    [Header("궁극기 상태바")]
+    public GameObject BombItem;
 
 
 
@@ -93,7 +95,6 @@ public class UIManager : MonoBehaviour
             FireItem.SetActive(true);
             BloodItem.SetActive(false);
             KnifeItem.SetActive(false);
-            BoomItem.SetActive(false);
 
         }
         else if (Player.Instance.weapon == Player.PlayerWeapon.BloodItem)
@@ -101,25 +102,21 @@ public class UIManager : MonoBehaviour
             BloodItem.SetActive(true);
             FireItem.SetActive(false);
             KnifeItem.SetActive(false);
-            BoomItem.SetActive(false);
 
         }
         else if (Player.Instance.weapon == Player.PlayerWeapon.KnifeItem)
         {
             KnifeItem.SetActive(true);
             BloodItem.SetActive(false);
-            FireItem.SetActive (false);
-            BoomItem.SetActive(false);
-
-        }
-        else if (Player.Instance.weapon == Player.PlayerWeapon.BoomItem)
-        {
-            BoomItem.SetActive(true);
-            BloodItem.SetActive (false);
             FireItem.SetActive(false);
-            KnifeItem.SetActive(false);
+
         }
 
+        // 궁극기 아이콘 나타나도록 
+        if (Player.Instance.bomb == Player.PlayerBomb.Bomb)
+        {
+            BombItem.SetActive(true);
+        }
     }
     void SetPlayerHealthUI()
     {

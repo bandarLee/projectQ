@@ -6,6 +6,7 @@ using static UnityEditor.Progress;
 
 public class Item : MonoBehaviour
 {
+    // 아이템 종류
     public enum ItemType
     {
         Basic,
@@ -18,7 +19,15 @@ public class Item : MonoBehaviour
 
     }
 
+    // 궁극기 종류
+    public enum BombType
+    {
+        None,
+        Bomb
+    }
+
     public ItemType IType;
+    public BombType Bomb_Type;
 
     void Start()
     {
@@ -37,7 +46,7 @@ public class Item : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
-      
+
 
             // 파이어볼, 데미지 3, 광역, 연사속도 +0.5,사거리 5(레어)
             if (IType == ItemType.FireItem)
@@ -75,19 +84,20 @@ public class Item : MonoBehaviour
             else if (IType == ItemType.HeartItem)
             {
                 Player.Instance.PlayerHealth += 0.5f;
+
                 if (Player.Instance.PlayerHealth >= 3)
                 {
                     Player.Instance.PlayerHealth = 3;
                 }
             }
-            else if  (IType == ItemType.BoomItem)
-            {
-                Player.Instance.weapon = PlayerWeapon.BoomItem;
-            }
-
             else
             {
                 Player.Instance.weapon = PlayerWeapon.Basic;
+            }
+
+            if (Bomb_Type == BombType.Bomb)
+            {
+                
             }
 
             Destroy(this.gameObject);
