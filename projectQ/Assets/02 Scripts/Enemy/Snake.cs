@@ -68,8 +68,8 @@ public class Snake : MonoBehaviour// " Basic 타입 "
         if (collision.gameObject.tag == "Environment")
         {
 
-            WallManager roomManager = collision.collider.GetComponent<WallManager>();
-            if (roomManager.walltype == WallManager.WallType.Bot)
+            WallManager wallmanager = collision.collider.GetComponent<WallManager>();
+            if (wallmanager.walltype == WallManager.WallType.Bot)
             {
                 _dir = Vector2.up;
                 RotateSnake(_dir);
@@ -77,7 +77,7 @@ public class Snake : MonoBehaviour// " Basic 타입 "
                 if (Speed < 7) AddSpeed(1);
                 
             }
-            else if(roomManager.walltype == WallManager.WallType.Top)
+            else if(wallmanager.walltype == WallManager.WallType.Top)
             {
                 _dir = Vector2.down;
                 RotateSnake(_dir);
@@ -85,7 +85,7 @@ public class Snake : MonoBehaviour// " Basic 타입 "
                 
                 if (Speed < 7) AddSpeed(1);
             }
-            else if (roomManager.walltype == WallManager.WallType.Left)
+            else if (wallmanager.walltype == WallManager.WallType.Left)
             {
                 _dir = Vector2.right;
                 RotateSnake(_dir);
@@ -93,13 +93,17 @@ public class Snake : MonoBehaviour// " Basic 타입 "
 
                 if (Speed < 7) AddSpeed(1);
             }
-            else if (roomManager.walltype == WallManager.WallType.Right)
+            else if (wallmanager.walltype == WallManager.WallType.Right)
             {
                 _dir = Vector2.left;
                 RotateSnake(_dir);
 
 
                 if (Speed < 7) AddSpeed(1);
+            }
+            else
+            {
+                Debug.Log("벽에 닿지않음");
             }
         }
 
