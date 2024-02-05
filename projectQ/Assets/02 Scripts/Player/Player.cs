@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
             {
                 PlayerHealth -= 0.5f;
             }
-            if (collision.collider.CompareTag("Enemy"))
+            if (collision.collider.CompareTag("EnemyBullet"))
             {
                 PlayerHealth -= 1f;
             }

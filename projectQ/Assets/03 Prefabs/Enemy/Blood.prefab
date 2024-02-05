@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8110646255457416071}
   m_Layer: 10
   m_Name: Blood
-  m_TagString: Untagged
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,4 +248,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyBType: 0
+  EnemyBulletDamage: 1
   Speed: 5
