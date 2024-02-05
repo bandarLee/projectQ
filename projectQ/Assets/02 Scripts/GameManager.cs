@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public OneEye[] oneeyes;
     public OneEye_Clone[] oneeyesClone;
     public OneEye1[] oneeyesred;
+    public BasicEnemy[] basicEnemy;
+    public Virus[] virus;
+    public Snake[] snake;
 
 
     public static GameManager Instance;
@@ -234,11 +237,14 @@ public class GameManager : MonoBehaviour
 
         Instantiate(Player, this.gameObject.transform.position, Quaternion.identity);
     }
-    private void Start()
+    private  void Start()
     {
         oneeyes = GameObject.FindObjectsOfType<OneEye>();
         oneeyesClone = GameObject.FindObjectsOfType<OneEye_Clone>();
         oneeyesred = GameObject.FindObjectsOfType<OneEye1>();
+        basicEnemy = GameObject.FindObjectsOfType<BasicEnemy>();
+        virus = GameObject.FindObjectsOfType<Virus>();
+        snake = GameObject.FindObjectsOfType<Snake>();
 
         foreach (OneEye oneeye in oneeyes)
         {
@@ -252,5 +258,19 @@ public class GameManager : MonoBehaviour
         {
             oneeyes.gameObject.SetActive(false);
         }
+        foreach (BasicEnemy basicenemies in basicEnemy)
+        {
+            basicenemies.gameObject.SetActive(false);
+        }
+        foreach (Virus viruses in virus)
+        {
+            viruses.gameObject.SetActive(false);
+        }
+        foreach (Snake snakes in snake)
+        {
+            snakes.gameObject.SetActive(false);
+        }
+
+
     }
 }
