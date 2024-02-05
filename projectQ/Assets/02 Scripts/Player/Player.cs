@@ -77,13 +77,13 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!PlayerDamageDelay)
+        //if (!PlayerDamageDelay)
         {
             if (collision.collider.CompareTag("OneEyeEnemy"))
             {
                 PlayerHealth -= 0.5f;
             }
-            PlayerDamageDelay = true;
+            //PlayerDamageDelay = true;
 
         }
 
