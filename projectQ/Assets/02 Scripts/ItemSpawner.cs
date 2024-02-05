@@ -37,7 +37,7 @@ public class ItemSpawner : MonoBehaviour
     {
 
 
-        if (ItemPercent < 25)
+        /*if (ItemPercent < 25)
         {
             itemToSpawn = ItemPrefab_CardKey;
         }
@@ -54,6 +54,6 @@ public class ItemSpawner : MonoBehaviour
             itemToSpawn = ItemPrefab_Speed;
         }
 
-        Instantiate(itemToSpawn, position, Quaternion.identity);
+        Instantiate(itemToSpawn, position, Quaternion.identity);*/
     }
 }
