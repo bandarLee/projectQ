@@ -89,17 +89,31 @@ public class Player : MonoBehaviour
             if (collision.collider.CompareTag("OneEyeEnemy"))
             {
                 PlayerHealth -= 0.5f;
+                UIManager.Instance.DamageScreen.SetActive(true);
+                StartCoroutine(DamageDelayCoroutine());
             }
             if (collision.collider.CompareTag("EnemyBullet"))
             {
                 PlayerHealth -= 1f;
+                UIManager.Instance.DamageScreen.SetActive(true);
+                StartCoroutine(DamageDelayCoroutine());
             }
             if (collision.collider.CompareTag("Enemy"))
             {
                 PlayerHealth -= 1f;
+                UIManager.Instance.DamageScreen.SetActive(true);
+                StartCoroutine(DamageDelayCoroutine());
             }
+
+
             //PlayerDamageDelay = true;
         }
+    }
+    IEnumerator DamageDelayCoroutine()
+    {
+        yield return new WaitForSeconds(1f);
+        UIManager.Instance.DamageScreen.SetActive(false);
+
     }
     /*private void OnCollisionStay2D(Collision2D collision)
     {
