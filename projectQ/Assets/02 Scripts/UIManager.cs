@@ -136,7 +136,10 @@ public class UIManager : MonoBehaviour
         }
 
         // 엑티브 템 아이콘 나타나도록
-        
+        if (Player.Instance.passive == Player.PlayerPassive.BulletUP)
+        {
+            BulletUp.SetActive(true);
+        }
     }
     void SetPlayerHealthUI()
     {

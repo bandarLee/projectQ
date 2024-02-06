@@ -31,7 +31,7 @@ public class PlayerFire : MonoBehaviour
     public List<GameObject> NormalMuzzles;
 
     [Header("두배 공격 총구")]
-    public List<GameObject> DoubleMuzzles;
+    public List<GameObject> DoubleMuzzle;
 
     public Vector3 bulletVector;
     public Animator playerAnimator;

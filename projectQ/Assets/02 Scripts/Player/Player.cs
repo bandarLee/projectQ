@@ -32,7 +32,6 @@ public class Player : MonoBehaviour
         FireItem,
         KnifeItem,
         BloodItem,
-
     }
 
     public enum PlayerBomb
@@ -42,9 +41,19 @@ public class Player : MonoBehaviour
         Laser,
     }
 
+    public enum PlayerPassive
+    {
+        None,
+        BulletUP,
+    }
+
+    
+
+
 
     public PlayerWeapon weapon = PlayerWeapon.Basic;
     public PlayerBomb bomb = PlayerBomb.None;
+    public PlayerPassive passive = PlayerPassive.None;
 
     private void Awake()
     {
@@ -53,6 +62,7 @@ public class Player : MonoBehaviour
         {
             Instance = this;
         }
+        
         else
         {
             Destroy(gameObject);

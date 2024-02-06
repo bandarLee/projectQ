@@ -114,9 +114,12 @@ public class Item : MonoBehaviour
                 // 카드를 획득하면, true로 표시
                 Player.Instance.HasPlayerCard = true;
             }
-            
+
 
             Destroy(this.gameObject);
+            {
+
+            }
         }
 
     }
