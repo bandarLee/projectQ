@@ -67,41 +67,33 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        /*if (PlayerDamageDelay)
-        {
-            time += Time.deltaTime;
-            if (time >= PlayerDamageNuckbackTime)
-            {
-                Debug.Log("넉백");
-                time = 0.0f;
-                PlayerDamageDelay = false;
-            }
-        }*/
-        //Debug.Log(weapon);
-        //Debug.Log(bomb);
-
+       
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //if (!PlayerDamageDelay)
+        if (!PlayerDamageDelay)
         {
             if (collision.collider.CompareTag("OneEyeEnemy"))
             {
                 PlayerHealth -= 0.5f;
                 UIManager.Instance.DamageScreen.SetActive(true);
+                PlayerDamageDelay = true;
+
                 StartCoroutine(DamageDelayCoroutine());
             }
             if (collision.collider.CompareTag("EnemyBullet"))
             {
-                PlayerHealth -= 1f;
+                PlayerHealth -= 0.5f;
                 UIManager.Instance.DamageScreen.SetActive(true);
+                PlayerDamageDelay = true;
                 StartCoroutine(DamageDelayCoroutine());
             }
             if (collision.collider.CompareTag("Enemy"))
             {
-                PlayerHealth -= 1f;
+                PlayerHealth -= 0.5f;
                 UIManager.Instance.DamageScreen.SetActive(true);
+                PlayerDamageDelay = true;
                 StartCoroutine(DamageDelayCoroutine());
             }
 
@@ -113,16 +105,8 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         UIManager.Instance.DamageScreen.SetActive(false);
-
+        PlayerDamageDelay = false;
     }
-    /*private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("OneEyeEnemy"))
-        {
-            PlayerHealth -= 0.1f * Time.deltaTime;
-        }
 
-    }
-    */
 
 }
