@@ -26,12 +26,6 @@ public class UIManager : MonoBehaviour
     public GameObject LaserItem;
 
 
-    [Header("카드키 프리펩")]
-    public GameObject CardItem;
-
-
-
-
 
     private void Awake()
     {
