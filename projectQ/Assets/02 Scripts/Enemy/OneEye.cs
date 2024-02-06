@@ -32,6 +32,8 @@ public class OneEye : MonoBehaviour // follow 타입
     // 위아래 흔들림 상태 변경까지 남은 시간
     public float time2;
 
+    private Vector3 initialPosition;
+
     // 몬스터 등장 이후 누적 시간
     public float progressTime = 0;
     public float replaceTime = 3f;
@@ -47,8 +49,10 @@ public class OneEye : MonoBehaviour // follow 타입
     public float Timer = 5.6f;
     public const float COOL_TIME = 0.6f;
 
-    private void Start()
+    private void Awake()
     {
+        initialPosition = transform.position;
+
     }
     private void OnEnable()
       {
@@ -57,8 +61,10 @@ public class OneEye : MonoBehaviour // follow 타입
         time = 0; 
         progressTime = 0;
         time2 = 0;
+        transform.position = initialPosition;
 
-      }
+
+    }
     void Update()
     {
         // 위로 이동하는 방향

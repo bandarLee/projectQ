@@ -17,6 +17,8 @@ public class BasicEnemy : MonoBehaviour  // "Basic형"
     // 위아래 흔들림 상태 변경까지 남은 시간
     public float time2;
 
+    private Vector3 initialPosition;
+
     // - 속력
     public float Speed = 2f; 
     // - 방향
@@ -32,7 +34,17 @@ public class BasicEnemy : MonoBehaviour  // "Basic형"
     [Header("타이머")]
     public float Timer = 0f;
     public const float COOL_TIME = 2f;
+    private void OnEnable()
+    {
+        Health = 1;
+        transform.position = initialPosition;
 
+    }
+    private void Awake()
+    {
+        initialPosition = transform.position;
+
+    }
     void Start()
     {
     }

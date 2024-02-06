@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DetailRoomManager : MonoBehaviour
@@ -108,6 +109,7 @@ public class DetailRoomManager : MonoBehaviour
                 if (viruses.gameObject.activeInHierarchy && roomRect.Contains(viruses.gameObject.transform.position))
                 {
                     viruses.gameObject.SetActive(false);
+      
                 }
             }
             foreach (Snake snakes in snake)

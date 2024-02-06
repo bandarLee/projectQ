@@ -18,6 +18,8 @@ public class Snake : MonoBehaviour// " Basic 타입 "
     public ItemSpawner itemspawner;
 
     public GameObject DamageEffect;
+    private Vector3 initialPosition;
+
 
     // 목표: 적을 벽 안에서 부딪힐 때까지 상하좌우로 이동시키고 싶다.
     // 속성:
@@ -27,6 +29,13 @@ public class Snake : MonoBehaviour// " Basic 타입 "
     public Vector2 _dir;
 
     // 시작할 때
+    /*private void OnEnable()
+    {
+        Health = 1;
+        Speed = 3f;
+        transform.position = initialPosition;
+
+    }*/
     void Start()
     {
         switch (snakeType)
@@ -45,6 +54,8 @@ public class Snake : MonoBehaviour// " Basic 타입 "
                 break;
 
         }
+        initialPosition = transform.position;
+
     }
 
     void Update()
@@ -54,8 +65,9 @@ public class Snake : MonoBehaviour// " Basic 타입 "
         // 새로운 위치 = 현재 위치 + 속도 * 시간
         transform.position += (Vector3)(_dir * Speed) * Time.deltaTime;
         _dir.Normalize();
+
     }
-    
+
 
     public void OnCollisionEnter2D(Collision2D collision)
     {

@@ -17,6 +17,7 @@ public class Virus : MonoBehaviour // " Follow 타입 "
     public float swingtime = 0.6f;
     // 위아래 흔들림 상태 변경까지 남은 시간
     public float time2;
+    private Vector3 initialPosition;
 
 
     // 자기 복제 프리팹 
@@ -27,10 +28,20 @@ public class Virus : MonoBehaviour // " Follow 타입 "
     public float Respawntime = 2f;
     // 자기 복제 생성까지 남은 시간
     public float time;
+    public List<GameObject> clones = new List<GameObject>();
+    private void Awake()
+    {
+        initialPosition = transform.position;
 
-
+    }
     void Start()
     {
+    }
+    private void OnEnable()
+    {
+        Health = 1;
+        transform.position = initialPosition;
+
     }
 
     void Update()
@@ -105,7 +116,6 @@ public class Virus : MonoBehaviour // " Follow 타입 "
         // 플레이어의 공격을 받았을 때 죽는다
         if (collision.collider.CompareTag("Bullet")) //enemy와 총알이 부딪혔을 때 
         {
-            Bullet bullet = collision.collider.GetComponent<Bullet>();
    
                 Health -= Player.Instance.BulletPower;
             
@@ -113,8 +123,14 @@ public class Virus : MonoBehaviour // " Follow 타입 "
             // 적의 체력이 끝
             if (Health <= 0)
             {
-                gameObject.SetActive(false);
                 itemspawner.SpawnItem(this.transform.position);
+                foreach (GameObject clone in clones)
+                {
+                    Destroy(clone);
+                }
+                clones.Clear();
+                gameObject.SetActive(false);
+
             }
         }
     }
@@ -135,7 +151,7 @@ public class Virus : MonoBehaviour // " Follow 타입 "
             // 복제물 생성
             GameObject enemy = Instantiate(shadowPrefab);
             enemy.transform.position = playerPos + newPos; // 복제물 위치 설정
-
+            clones.Add(enemy);
             // 1초 대기
             yield return new WaitForSeconds(1f);
         }

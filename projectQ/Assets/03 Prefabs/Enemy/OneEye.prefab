@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aboveY: 1
-  Health: 3
+  Health: 2
   itemspawner: {fileID: 1835939221475135809, guid: dd53dcc5c1ab7b7418dbb38821964b46, type: 3}
   replacesuccess: 0
   Movespeed: 2
