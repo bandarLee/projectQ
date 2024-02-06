@@ -6,13 +6,12 @@ using UnityEngine.Experimental.GlobalIllumination;
 
 public class BossCameraMove : MonoBehaviour
 {
-    private float Movespeed = 2f; // 이동 속도 : 초당 3만큼 이동하겠다.
+    private float Movespeed = 15f; // 이동 속도 : 초당 3만큼 이동하겠다.
     public static BossCameraMove Instance;
     public bool LeftMove = false;
     public bool RightMove = false;
     public bool UpMove = false;
     public bool DownMove = false;
-    public Vector3 intiatePosition;
 
     private void Awake()
     {
@@ -24,36 +23,18 @@ public class BossCameraMove : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        Vector3 intiateRoomPosition = this.transform.position;
-        intiatePosition = intiateRoomPosition;
-
+  
     }
 
     void Update()
     {
-        if (Player.Instance.transform.position.x > 9.87f)
-        {
-            RightMove = true;
-        }
-        if (Player.Instance.transform.position.x < 8.25f)
-        {
-            LeftMove = true;
-        }
-        if (Player.Instance.transform.position.y > 3)
-        {
-            UpMove = true;
-        }
-        if (Player.Instance.transform.position.y > 3)
-        {
-            DownMove = true;
-        }
 
         if (LeftMove)
         {
-            Vector3 dir = new Vector3(-16.17f, 0f);
-            if (this.transform.position.x > (intiatePosition.x + dir.x))
+            Vector3 dir = new Vector3(1.05f, 0f);
+            if (this.transform.position.x > (dir.x))
             {
-                Vector3 newPosition = (transform.position + (Vector3)(dir * Movespeed * Time.deltaTime));
+                Vector3 newPosition = (transform.position - (Vector3)(dir.normalized * Movespeed * Time.deltaTime));
                 newPosition.z = -10;
                 transform.position = newPosition;
                 Player.Instance.IsPlayerMove = true;
@@ -62,7 +43,6 @@ public class BossCameraMove : MonoBehaviour
             else
             {
                 LeftMove = false;
-                intiatePosition = this.transform.position;
                 Player.Instance.IsPlayerMove = false;
             }
 
@@ -70,10 +50,10 @@ public class BossCameraMove : MonoBehaviour
         }
         if (RightMove)
         {
-            Vector3 dir = new Vector3(16.17f, 0f);
-            if (this.transform.position.x < (intiatePosition.x + dir.x))
+            Vector3 dir = new Vector3(17.14f, 0f);
+            if (this.transform.position.x < ( dir.x))
             {
-                Vector3 newPosition = (transform.position + (Vector3)(dir * Movespeed * Time.deltaTime));
+                Vector3 newPosition = (transform.position + (Vector3)(dir.normalized * Movespeed * Time.deltaTime));
                 newPosition.z = -10;
                 transform.position = newPosition;
                 Player.Instance.IsPlayerMove = true;
@@ -82,7 +62,6 @@ public class BossCameraMove : MonoBehaviour
             else
             {
                 RightMove = false;
-                intiatePosition = this.transform.position;
                 Player.Instance.IsPlayerMove = false;
 
             }
@@ -90,10 +69,10 @@ public class BossCameraMove : MonoBehaviour
         }
         if (UpMove)
         {
-            Vector3 dir = new Vector3(0f, 7.66f);
-            if (this.transform.position.y < (intiatePosition.y + dir.y))
+            Vector3 dir = new Vector3(0f, 5.66f);
+            if (this.transform.position.y < (dir.y))
             {
-                Vector3 newPosition = (transform.position + (Vector3)(dir * Movespeed * Time.deltaTime));
+                Vector3 newPosition = (transform.position + (Vector3)(dir.normalized * Movespeed * Time.deltaTime));
                 newPosition.z = -10;
                 transform.position = newPosition;
                 Player.Instance.IsPlayerMove = true;
@@ -102,7 +81,6 @@ public class BossCameraMove : MonoBehaviour
             else
             {
                 UpMove = false;
-                intiatePosition = this.transform.position;
                 Player.Instance.IsPlayerMove = false;
 
             }
@@ -110,10 +88,10 @@ public class BossCameraMove : MonoBehaviour
         }
         if (DownMove)
         {
-            Vector3 dir = new Vector3(0f, -7.66f);
-            if (this.transform.position.y > (intiatePosition.y + dir.y))
+            Vector3 dir = new Vector3(0f, -2.57f);
+            if (this.transform.position.y > (dir.y))
             {
-                Vector3 newPosition = (transform.position + (Vector3)(dir * Movespeed * Time.deltaTime));
+                Vector3 newPosition = (transform.position + (Vector3)(dir.normalized * Movespeed * Time.deltaTime));
                 newPosition.z = -10;
                 transform.position = newPosition;
                 Player.Instance.IsPlayerMove = true;
@@ -123,7 +101,6 @@ public class BossCameraMove : MonoBehaviour
             else
             {
                 DownMove = false;
-                intiatePosition = this.transform.position;
                 Player.Instance.IsPlayerMove = false;
 
             }

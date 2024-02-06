@@ -6,11 +6,20 @@ using UnityEngine;
 public class BossRoomManager : MonoBehaviour
 {
     public GameObject Player;
-
-    void Start()
+    public GameObject BossWallLeft;
+    public GameObject BossWallRight;
+    public GameObject BossWallTop;
+    public GameObject BossWallBottom;
+    private void Awake()
     {
         Instantiate(Player, this.gameObject.transform.position, Quaternion.identity);
 
+
+    }
+
+    void Start()
+    {
+     
     }
 
     void Update()
