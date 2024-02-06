@@ -333,7 +333,7 @@ MonoBehaviour:
   CoinCount: 0
   weapon: 0
   bomb: 0
-  passive: 1
+  passive: 0
 --- !u!1 &8255778513030795813
 GameObject:
   m_ObjectHideFlags: 0
