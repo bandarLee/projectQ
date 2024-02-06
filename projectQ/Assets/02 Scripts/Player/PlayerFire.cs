@@ -108,7 +108,6 @@ public class PlayerFire : MonoBehaviour
     // 방향키에 따라 총알이 나가도록 하는 메서드
     private void BulletAxisShoot()
     {
-
         AnimatorStateInfo stateInfo = playerAnimator.GetCurrentAnimatorStateInfo(0);
 
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
