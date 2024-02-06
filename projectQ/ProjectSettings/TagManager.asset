@@ -24,7 +24,7 @@ TagManager:
   - Enemy
   - EnemyBullet
   - VFX
-  - 
+  - Ceiling
   - 
   - 
   - 
@@ -62,4 +62,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1994637125
+    locked: 0
+  - name: Ceiling
+    uniqueID: 424605883
     locked: 0
