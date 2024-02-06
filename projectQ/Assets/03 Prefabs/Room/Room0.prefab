@@ -855,7 +855,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2895490880289314991}
   - component: {fileID: 8162941207208758747}
-  m_Layer: 3
+  m_Layer: 12
   m_Name: Ceilng
   m_TagString: Environment
   m_Icon: {fileID: 0}
@@ -871,8 +871,8 @@ Transform:
   m_GameObject: {fileID: 4495332160196777065}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.66488, y: -0.54, z: -29}
-  m_LocalScale: {x: 18.126055, y: 10.181918, z: 8.4246}
+  m_LocalPosition: {x: -0.8, y: -0.52, z: -0.1}
+  m_LocalScale: {x: 18.394802, y: 10.185402, z: 7.6645}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 248605158867705205}
@@ -919,7 +919,7 @@ SpriteRenderer:
   m_SortingLayer: 6
   m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.08235294, g: 0.9058824, b: 0.8117648, a: 1}
+  m_Color: {r: 0.08235294, g: 0.9058824, b: 0.8117648, a: 0.49411765}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

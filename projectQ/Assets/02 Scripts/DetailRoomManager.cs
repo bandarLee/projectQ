@@ -5,6 +5,7 @@ using UnityEngine;
 public class DetailRoomManager : MonoBehaviour
 {
     public Rect roomRect;
+    public GameObject roomObject1;
 
 
     void Start()
@@ -19,6 +20,7 @@ public class DetailRoomManager : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
+
         OneEye[] oneeyes = GameManager.Instance.oneeyes;
         OneEye1[] oneeyesred = GameManager.Instance.oneeyesred;
         
@@ -63,6 +65,8 @@ public class DetailRoomManager : MonoBehaviour
                 }
 
             }
+
+            ChangeLayerOfChildren(roomObject1);
 
 
         }
@@ -116,4 +120,16 @@ public class DetailRoomManager : MonoBehaviour
         }
 
     }
+    void ChangeLayerOfChildren(GameObject parentObject)
+    {
+        foreach (Transform child in parentObject.transform)
+        {
+            if (LayerMask.LayerToName(child.gameObject.layer) == "NotEnterRoom")
+            {
+                child.gameObject.layer = LayerMask.NameToLayer("Environment");
+            }
+            ChangeLayerOfChildren(child.gameObject);
+        }
+    }
+
 }
