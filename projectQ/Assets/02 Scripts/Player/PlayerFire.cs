@@ -254,18 +254,24 @@ public class PlayerFire : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.UpArrow))
                 {
+                    bulletVector = new Vector3(0, 0, 180);
+
                     getfirebutton = GetFireButton.Up;
                 }
             if (Input.GetKeyDown(KeyCode.DownArrow))
                 {
+                    bulletVector = new Vector3(0, 0, 0);
+
                     getfirebutton = GetFireButton.Down;
                 }
             if (Input.GetKeyDown(KeyCode.RightArrow))
                 {
+                    bulletVector = new Vector3(0, 0, 90);
                     getfirebutton = GetFireButton.Right;
                 }
             if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
+                    bulletVector = new Vector3(0, 0, -90);
                     getfirebutton = GetFireButton.Left;
                 }
 
