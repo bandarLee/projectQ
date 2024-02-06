@@ -58,7 +58,6 @@ public class ShyGuy : MonoBehaviour // 'usual'Mode 프리팹
     {
         if (collision.gameObject.tag == "Player")
         {
-            //StartCoroutine(InfectWithY909(collision.gameObject.GetComponent<Player>()));
             Instantiate(DamageEffect, collision.transform.position, Quaternion.identity);
 
         }

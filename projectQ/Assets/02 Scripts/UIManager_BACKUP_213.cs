@@ -46,9 +46,12 @@ public class UIManager : MonoBehaviour
         KnifeItem.SetActive(false);
         BombItem.SetActive(false);
         LaserItem.SetActive(false);
+<<<<<<< HEAD
         DamageScreen.SetActive(false);
+=======
         BulletUp.SetActive(false);
 
+>>>>>>> b7af70aedfa3f05e82f0bbc4977e9afe1a4665da
 
     }
     void Start()

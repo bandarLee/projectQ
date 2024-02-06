@@ -16,7 +16,6 @@ public class UIManager : MonoBehaviour
     public TMP_Text BulletSpeed;
     public TMP_Text Coin;
 
-    public GameObject DamageScreen;
     [Header("아이템 상태바")]
     public GameObject FireItem;
     public GameObject BloodItem;
@@ -46,7 +45,6 @@ public class UIManager : MonoBehaviour
         KnifeItem.SetActive(false);
         BombItem.SetActive(false);
         LaserItem.SetActive(false);
-        DamageScreen.SetActive(false);
         BulletUp.SetActive(false);
 
 

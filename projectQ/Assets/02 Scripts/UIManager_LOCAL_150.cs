@@ -26,9 +26,6 @@ public class UIManager : MonoBehaviour
     public GameObject BombItem;
     public GameObject LaserItem;
 
-    [Header("엑티브 아이템 상태바")]
-    public GameObject BulletUp;
-
 
 
     private void Awake()
@@ -47,8 +44,6 @@ public class UIManager : MonoBehaviour
         BombItem.SetActive(false);
         LaserItem.SetActive(false);
         DamageScreen.SetActive(false);
-        BulletUp.SetActive(false);
-
 
     }
     void Start()
@@ -134,9 +129,6 @@ public class UIManager : MonoBehaviour
             LaserItem.SetActive(true);
             BombItem.SetActive(false);
         }
-
-        // 엑티브 템 아이콘 나타나도록
-        
     }
     void SetPlayerHealthUI()
     {
