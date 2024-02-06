@@ -29,6 +29,7 @@ public class Item : MonoBehaviour
 
     public enum PassiveType
     {
+        None,
         BulletUPItem,    // Normal 총구 개수 증가 
     }
 

@@ -159,7 +159,6 @@ public class PlayerFire : MonoBehaviour
 
     private void BulletAxisShoot()
     {
-
         AnimatorStateInfo stateInfo = playerAnimator.GetCurrentAnimatorStateInfo(0);
 
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))

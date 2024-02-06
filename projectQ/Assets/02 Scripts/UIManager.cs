@@ -41,6 +41,7 @@ public class UIManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
         BloodItem.SetActive(false);
         FireItem.SetActive(false);
         KnifeItem.SetActive(false);

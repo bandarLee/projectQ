@@ -7,7 +7,8 @@ public class BombBullet : MonoBehaviour
     public enum BombBulletType
     {
         None,
-        Bomb,        
+        Bomb,  
+        Laser
     }
 
     public BombBulletType Bomb_Type;
@@ -32,10 +33,10 @@ public class BombBullet : MonoBehaviour
         if (Bomb_Type == BombBulletType.Bomb )
         {
             BombAnimator.Play("BombAnimation");
-
+        }
+        else if (Bomb_Type == BombBulletType.Laser)
+        {
             
-
-
         }
 
     }

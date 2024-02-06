@@ -260,6 +260,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room0
       objectReference: {fileID: 0}
+    - target: {fileID: 2198560813794253191, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
+      propertyPath: roomObject1
+      value: 
+      objectReference: {fileID: 521025042}
+    - target: {fileID: 4585494229164671597, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
+      propertyPath: InputArea
+      value: 
+      objectReference: {fileID: 349827070612800763}
+    - target: {fileID: 4585494229164671597, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
+      propertyPath: MarketMoneyInput
+      value: 
+      objectReference: {fileID: 1704644593797657732}
+    - target: {fileID: 4585494229164671597, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
+      propertyPath: MarketNoticeText
+      value: 
+      objectReference: {fileID: 2117262247307355003}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -432,6 +448,11 @@ MonoBehaviour:
   UpMove: 0
   DownMove: 0
   intiatePosition: {x: 0, y: 0, z: 0}
+--- !u!1 &521025042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1692823173498779216, guid: 50a674f706c1d264aa7bca8e137e7de7, type: 3}
+  m_PrefabInstance: {fileID: 66032819}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &641916875
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,6 +980,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44f29dd5abee0754597b097157c64823, type: 3}
+--- !u!114 &349827070612800763 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8758307574468035391, guid: 91b2e5d5eafc4c043beae918be6146d2, type: 3}
+  m_PrefabInstance: {fileID: 7518973092939426574}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &932309308026041142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1016,6 +1048,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84e0f115ee13c58479afb78edae6fea1, type: 3}
+--- !u!1 &1704644593797657732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7708203997327242048, guid: 91b2e5d5eafc4c043beae918be6146d2, type: 3}
+  m_PrefabInstance: {fileID: 7518973092939426574}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2117262247307355003 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6931903218942174399, guid: 91b2e5d5eafc4c043beae918be6146d2, type: 3}
+  m_PrefabInstance: {fileID: 7518973092939426574}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2646625707523701563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1068,6 +1116,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8763238243334855361, guid: 61b69c1441438a644b6d949cd2279062, type: 3}
+      propertyPath: passive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1081,6 +1133,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4045663008081769863, guid: 8e4786de7dbc3d24084dc0a977b3ec40, type: 3}
+      propertyPath: PType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5817521468440541809, guid: 8e4786de7dbc3d24084dc0a977b3ec40, type: 3}
       propertyPath: m_Name
       value: PassiveItem_BulletUp
@@ -1243,6 +1299,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1332755940538795953, guid: 91b2e5d5eafc4c043beae918be6146d2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3712612943153905362, guid: 91b2e5d5eafc4c043beae918be6146d2, type: 3}
       propertyPath: BulletUp
       value: 
