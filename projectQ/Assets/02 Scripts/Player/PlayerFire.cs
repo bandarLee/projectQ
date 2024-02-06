@@ -3,10 +3,20 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using static Item;
+using static UnityEditorInternal.ReorderableList;
 
 public class PlayerFire : MonoBehaviour
 {
-    // 플레이어가 사용할 수 있는 공격 타입의 프리팹들
+    public enum GetFireButton
+    {
+        Default,
+        Left,
+        Up,
+        Down,
+        Right
+
+    }
+    public GetFireButton getfirebutton = GetFireButton.Default;
     [Header("플레이어 기본 공격 프리팹")]
     public GameObject NormalBulletPrefab;
     public GameObject FireBulletPrefab;
@@ -48,13 +58,16 @@ public class PlayerFire : MonoBehaviour
     {
         ShootTimer += Time.deltaTime;
         BombTimer += Time.deltaTime;
-
+        GetArrowKey();
         // 쿨타임이 다 찼고, 마우스 버튼이 눌렸다면 공격 실행
-        if (ShootTimer >= Cool_Time && Input.GetMouseButtonDown(0))
-        {
-            BulletAxisShoot();
-        }
-
+        if (ShootTimer >= Cool_Time && (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.Space)))
+            {
+                BulletAxisShoot();
+            }
+        if (ShootTimer >= Cool_Time && (getfirebutton != GetFireButton.Default))
+            {
+                BulletArrowKeyShoot();
+            }
         // 폭탄 쿨타임 
         if (BombTimer >= Bomb_Cool_Time && Input.GetKeyDown(KeyCode.F))
         {
@@ -68,9 +81,7 @@ public class PlayerFire : MonoBehaviour
     {
         // 공격이 실행되면 쿨타임 타이머를 0으로 초기화하고 총알 생성
         ShootTimer = 0;
-        if (Input.GetMouseButtonDown(0))
-        {
-            for (int i = 0; i < NormalMuzzles.Count; i++)
+                 for (int i = 0; i < NormalMuzzles.Count; i++)
             {
                 if (Player.Instance.weapon == Player.PlayerWeapon.Basic)
                 {
@@ -99,13 +110,53 @@ public class PlayerFire : MonoBehaviour
                 }
 
 
-            }
+          
 
         }
-    }
-    
 
-    // 방향키에 따라 총알이 나가도록 하는 메서드
+    }
+    public void Shooting2(Vector2 dir)
+    {
+        // 공격이 실행되면 쿨타임 타이머를 0으로 초기화하고 총알 생성
+        ShootTimer = 0;
+        getfirebutton = GetFireButton.Default;
+
+
+        for (int i = 0; i < NormalMuzzles.Count; i++)
+        {
+            if (Player.Instance.weapon == Player.PlayerWeapon.Basic)
+            {
+                GameObject normalBullet = Instantiate(NormalBulletPrefab, transform.position, Quaternion.Euler(bulletVector));
+                normalBullet.transform.position = NormalMuzzles[i].transform.position;
+                normalBullet.GetComponent<Bullet>().SetDirection(dir.normalized);
+            }
+            else if (Player.Instance.weapon == Player.PlayerWeapon.FireItem)
+            {
+                GameObject fireBullet = Instantiate(FireBulletPrefab, transform.position, Quaternion.Euler(bulletVector));
+                fireBullet.transform.position = NormalMuzzles[i].transform.position;
+                fireBullet.GetComponent<Bullet>().SetDirection(dir.normalized);
+            }
+
+            else if (Player.Instance.weapon == Player.PlayerWeapon.KnifeItem)
+            {
+                GameObject knifeBullet = Instantiate(KnifeBulletPrefab, transform.position, Quaternion.Euler(bulletVector));
+                knifeBullet.transform.position = NormalMuzzles[i].transform.position;
+                knifeBullet.GetComponent<Bullet>().SetDirection(dir.normalized);
+            }
+            else if (Player.Instance.weapon == Player.PlayerWeapon.BloodItem)
+            {
+                GameObject bloodBullet = Instantiate(BloodBulletPrefab, transform.position, Quaternion.Euler(bulletVector));
+                bloodBullet.transform.position = NormalMuzzles[i].transform.position;
+                bloodBullet.GetComponent<Bullet>().SetDirection(dir.normalized);
+            }
+
+
+
+
+        }
+
+    }
+
     private void BulletAxisShoot()
     {
 
@@ -166,6 +217,28 @@ public class PlayerFire : MonoBehaviour
 
         }
     }
+    private void BulletArrowKeyShoot()
+    {
+        switch(getfirebutton)
+        {
+            case GetFireButton.Left:
+                Shooting2(new Vector2(-1, 0));
+
+                break;
+            case GetFireButton.Right:
+                Shooting2(new Vector2(1, 0));
+
+                break; 
+            case GetFireButton.Up:
+                Shooting2(new Vector2(0, 1));
+
+                break; 
+            case GetFireButton.Down:
+                Shooting2(new Vector2(0, -1));
+
+                break;
+        }
+    }
 
     // F키를 누르면 궁극기 발동 - 폭탄
     private void BombShoot()
@@ -177,6 +250,26 @@ public class PlayerFire : MonoBehaviour
             GameObject bomb = Instantiate(BombBulletPrefab);
             bomb.transform.position = this.transform.position;
         }
+    }
+    private void GetArrowKey()
+        {
+            if(Input.GetKeyDown(KeyCode.UpArrow))
+                {
+                    getfirebutton = GetFireButton.Up;
+                }
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+                {
+                    getfirebutton = GetFireButton.Down;
+                }
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+                {
+                    getfirebutton = GetFireButton.Right;
+                }
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+                {
+                    getfirebutton = GetFireButton.Left;
+                }
+
     }
 
 }
