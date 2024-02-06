@@ -20,6 +20,9 @@ public class Player : MonoBehaviour
     public float PlayerDamageNuckbackTime = 1f;
     public bool IsPlayerMove = false;
 
+    public bool HasPlayerCard = false;
+
+
 
     public int CoinCount = 0;
 
@@ -35,7 +38,8 @@ public class Player : MonoBehaviour
     public enum PlayerBomb
     {
         None,
-        Bomb
+        Bomb,
+        Laser,
     }
 
 
@@ -106,4 +110,5 @@ public class Player : MonoBehaviour
 
     }
     */
+
 }

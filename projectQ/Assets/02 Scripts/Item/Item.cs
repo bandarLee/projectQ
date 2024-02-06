@@ -6,6 +6,7 @@ using static Player;
 public class Item : MonoBehaviour
 {
     // 아이템 종류
+    // Normal, Rare, Epic, Legend 총 4가지 등급의 아이템들
     public enum ItemType
     {
         Basic,
@@ -14,14 +15,16 @@ public class Item : MonoBehaviour
         BloodItem,    // Rare
         CoinItem,     // Noraml
         HeartItem,    // Normal
-        KeyCardItem
+        KeyCardItem,  
     }
 
     // 궁극기 종류
     public enum BombType
     {
         None,
-        Bomb
+        Bomb,         // Normal
+        LaserItem     // Legend
+        
     }
 
     public ItemType IType;
@@ -47,8 +50,11 @@ public class Item : MonoBehaviour
                 Player.Instance.bomb = PlayerBomb.Bomb;
 
             }
+            if (Bomb_Type == BombType.LaserItem)
+            {
+                Player.Instance.bomb = PlayerBomb.Laser;
+            }
         }
-
 
         if (collision.CompareTag("Player"))
         {
@@ -96,16 +102,15 @@ public class Item : MonoBehaviour
                     Player.Instance.PlayerHealth = 3;
                 }
             }
-
+            // 카드 아이템
             else if (IType == ItemType.KeyCardItem)
             {
-
+                // 카드를 획득하면, true로 표시
+                Player.Instance.HasPlayerCard = true;
             }
             
 
-
             Destroy(this.gameObject);
-
         }
 
     }

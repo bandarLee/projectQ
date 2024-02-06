@@ -23,6 +23,8 @@ public class UIManager : MonoBehaviour
 
     [Header("궁극기 상태바")]
     public GameObject BombItem;
+    public GameObject LaserItem;
+
 
     [Header("카드키 프리펩")]
     public GameObject CardItem;
@@ -45,6 +47,7 @@ public class UIManager : MonoBehaviour
         FireItem.SetActive(false);
         KnifeItem.SetActive(false);
         BombItem.SetActive(false);
+        LaserItem.SetActive(false);
 
 
     }
@@ -124,6 +127,12 @@ public class UIManager : MonoBehaviour
         if (Player.Instance.bomb == Player.PlayerBomb.Bomb)
         {
             BombItem.SetActive(true);
+            LaserItem.SetActive(false);
+        }
+        else if (Player.Instance.bomb == Player.PlayerBomb.Laser)
+        {
+            LaserItem.SetActive(true);
+            BombItem.SetActive(false);
         }
     }
     void SetPlayerHealthUI()
@@ -137,9 +146,5 @@ public class UIManager : MonoBehaviour
             Health[(int)i].SetActive(false);
 
         }
-    }
-    public void SetCardActiveStatus()
-    {
-        
     }
 }
