@@ -36,7 +36,8 @@ public class GameManager : MonoBehaviour
                 (new Vector3(-1, 2), 11),
                 (new Vector3(-2, 0), 10),
                 (new Vector3(0, -3), 1),
-                (new Vector3(1, -3), 1)
+                (new Vector3(1, -3), 1),
+                (new Vector3(-2, 0), 17)
             },
         new (Vector3 position, int roomType)[]
             {
@@ -228,7 +229,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        roomInfos = roomPatterns[Random.Range(0, roomPatterns.Length)];
+        roomInfos = roomPatterns[0];
 
         foreach (var (position, roomType) in roomInfos)
         {
