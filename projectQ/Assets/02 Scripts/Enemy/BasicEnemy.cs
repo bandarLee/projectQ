@@ -125,26 +125,28 @@ public class BasicEnemy : MonoBehaviour  // "Basic형"
         }
 
         // 플레이어의 공격을 받았을 때 죽는다
+        // 플레이어의 공격을 받았을 때 죽는다
         if (collision.collider.CompareTag("Bullet")) //enemy와 총알이 부딪혔을 때 
         {
-
             Health -= Player.Instance.BulletPower;
 
-
-            // 총알 삭제
-            collision.collider.gameObject.SetActive(false);
-
             // 적의 체력이 끝
-            if (Health <= 0)
-            {
-                int a = Random.Range(0, 2);
-                if (a == 0)
-                {
-                    itemspawner.SpawnItem(this.transform.position);
 
-                }
-                gameObject.SetActive(false);
+        }
+        if (collision.collider.CompareTag("VFX"))
+        {
+            Health -= 5f;
+
+        }
+        if (Health <= 0)
+        {
+            int a = Random.Range(0, 2);
+            if (a == 0)
+            {
+                itemspawner.SpawnItem(this.transform.position);
+
             }
+            gameObject.SetActive(false);
         }
     }
 }

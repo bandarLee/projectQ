@@ -116,10 +116,10 @@ public class Virus : MonoBehaviour // " Follow 타입 "
         // 플레이어의 공격을 받았을 때 죽는다
         if (collision.collider.CompareTag("Bullet")) //enemy와 총알이 부딪혔을 때 
         {
-   
-                Health -= Player.Instance.BulletPower;
-            
 
+            Health -= Player.Instance.BulletPower;
+
+        }
             // 적의 체력이 끝
             if (Health <= 0)
             {
@@ -137,7 +137,13 @@ public class Virus : MonoBehaviour // " Follow 타입 "
                 gameObject.SetActive(false);
 
             }
+
+        if (collision.collider.CompareTag("VFX"))
+        {
+            Health -= 5f;
+
         }
+
     }
 
     private IEnumerator CreateClones()

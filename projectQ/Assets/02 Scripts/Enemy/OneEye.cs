@@ -164,17 +164,24 @@ public class OneEye : MonoBehaviour // follow 타입
             Health -= Player.Instance.BulletPower;
 
             // 적의 체력이 끝
-            if (Health <= 0)
-            {
-                int a = Random.Range(0, 2);
-                if (a == 0)
-                {
-                    itemspawner.SpawnItem(this.transform.position);
-
-                }
-                gameObject.SetActive(false);
-            }
+            
         }
+        if (collision.collider.CompareTag("VFX"))
+        {
+            Health -= 5f;
+
+        }
+        if (Health <= 0)
+        {
+            int a = Random.Range(0, 2);
+            if (a == 0)
+            {
+                itemspawner.SpawnItem(this.transform.position);
+
+            }
+            gameObject.SetActive(false);
+        }
+
     }
 
 
