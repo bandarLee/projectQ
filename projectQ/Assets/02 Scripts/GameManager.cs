@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+using static Lever1ManagerTrigger;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject[] Rooms;
+    public GameObject[] BossDoors;
     public float RoomX = 18.46f;
     public float RoomY = 10.25f;
     public GameObject Player;
@@ -213,10 +215,6 @@ public class GameManager : MonoBehaviour
                 (new Vector3(-3, 2), 10)
              }
     };
-
-
-
-
     private (Vector3 position, int roomType)[] roomInfos;
 
     void Awake()
@@ -229,14 +227,39 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        roomInfos = roomPatterns[0];
-
+        int DecideRoomPattern = Random.Range(0, roomPatterns.Length);
+        roomInfos = roomPatterns[DecideRoomPattern];
+        Instantiate(Player, this.gameObject.transform.position, Quaternion.identity);
+        switch (DecideRoomPattern)
+        {
+            case 0:
+                Instantiate(BossDoors[0], new Vector3(-37.54f, 0.15f, 0), Quaternion.identity);
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                    
+                break;
+            case 8:
+                break;
+            case 9:
+                break;                                     
+        }
         foreach (var (position, roomType) in roomInfos)
         {
             Instantiate(Rooms[roomType], new Vector3(position.x * RoomX, position.y * RoomY, 0), Quaternion.identity);
         }
 
-        Instantiate(Player, this.gameObject.transform.position, Quaternion.identity);
     }
     private  void Start()
     {
