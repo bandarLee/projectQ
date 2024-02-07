@@ -62,6 +62,8 @@ public class CasinoMarketScript : MonoBehaviour
             
         if(DecideItem < RegendRate)
             {
+                ItemSpawner.Instance.SpawnRegendItem(MarketManager.Instance.transform.position);
+
                 itemtype = ItemType.Regend;
 
                 itemspawner.SpawnItem(this.transform.position);
@@ -70,6 +72,8 @@ public class CasinoMarketScript : MonoBehaviour
         }
         else if(DecideItem < EpicRate)
             {
+                ItemSpawner.Instance.SpawnEpicItem(MarketManager.Instance.transform.position);
+
                 itemtype = ItemType.Epic;
                 itemspawner.SpawnItem(this.transform.position);
 
@@ -77,6 +81,7 @@ public class CasinoMarketScript : MonoBehaviour
         }
         else if (DecideItem < RareRate)
             {
+                ItemSpawner.Instance.SpawnRareItem(MarketManager.Instance.transform.position);
 
                 itemtype = ItemType.Rare;
                 itemspawner.SpawnItem(this.transform.position);
@@ -85,6 +90,8 @@ public class CasinoMarketScript : MonoBehaviour
         }
         else if (DecideItem < NormalRate)
             {
+                ItemSpawner.Instance.SpawnNormalItem(MarketManager.Instance.transform.position);
+
                 itemtype = ItemType.Normal;
                 itemspawner.SpawnItem(this.transform.position);
 
@@ -137,6 +144,7 @@ public class CasinoMarketScript : MonoBehaviour
             case ItemType.Rare:
                 if (Images[16].transform.position.y > 900)
                 {
+
                     CasinoOn = false;
                     StartCoroutine(ItemDelayCoroutine());
 
@@ -146,6 +154,8 @@ public class CasinoMarketScript : MonoBehaviour
             case ItemType.Epic:
                 if (Images[11].transform.position.y > 900)
                 {
+
+
                     CasinoOn = false;
                     StartCoroutine(ItemDelayCoroutine());
 
@@ -154,7 +164,7 @@ public class CasinoMarketScript : MonoBehaviour
                 break;
             case ItemType.Regend:
                 if (Images[15].transform.position.y > 900)
-                {
+                {   
                     CasinoOn = false;
                     StartCoroutine(ItemDelayCoroutine());
 

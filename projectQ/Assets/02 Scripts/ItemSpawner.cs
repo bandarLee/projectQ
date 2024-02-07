@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class ItemSpawner : MonoBehaviour
 {
@@ -17,7 +18,21 @@ public class ItemSpawner : MonoBehaviour
 
     public GameObject ItemPrefab_Money; // 상점에 꼭 필요
     public GameObject ItemPrefab_CardKey; // 다음 층으로 넘어갈 수 있는 카드키
+    public static ItemSpawner Instance;
 
+    private void Awake()
+    {
+        // 싱글톤 패턴 : 오직 한개의 클래스 인스턴스를 갖도록 보장
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+    }
     public void SpawnItem(Vector3 position)
     {
         int ItemPercent = Random.Range(0, 100);
@@ -39,6 +54,7 @@ public class ItemSpawner : MonoBehaviour
         }
 
     }
+
     public void SpawnNormalItem(Vector3 position)
     {
         int ItemPercentNormal = Random.Range(0, 100);

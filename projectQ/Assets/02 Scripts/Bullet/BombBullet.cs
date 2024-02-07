@@ -48,9 +48,8 @@ public class BombBullet : MonoBehaviour
 
         bombBoomTimer += Time.deltaTime;
 
-        if (bombBoomTimer >= 4f)
+        if (bombBoomTimer >= 2.5f)
         {
-            Debug.Log("폭탄삭제");
             Instantiate(VfxExplosion, this.transform.position, Quaternion.identity);
             
             Destroy(this.gameObject);
