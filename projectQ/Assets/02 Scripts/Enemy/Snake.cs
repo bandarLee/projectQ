@@ -16,7 +16,6 @@ public class Snake : MonoBehaviour// " Basic 타입 "
     public SnakeType snakeType;
     public float Health = 1;
     public ItemSpawner itemspawner;
-
     public GameObject DamageEffect;
     private Vector3 initialPosition;
 
@@ -27,15 +26,23 @@ public class Snake : MonoBehaviour// " Basic 타입 "
     public float Speed = 3f; // 이동 속도: 초당 1unit만큼 이동하겠다.
     // - 방향
     public Vector2 _dir;
-
-    // 시작할 때
-    /*private void OnEnable()
+    private void Awake()
     {
-        Health = 1;
+        initialPosition = transform.position;
+
+    }
+    // 시작할 때
+    private void OnEnable()
+    {
+        if (Player.Instance.RoomLevel == 1)
+        {
+            Health = 1;
+        }
         Speed = 3f;
         transform.position = initialPosition;
 
-    }*/
+
+    }
     void Start()
     {
         switch (snakeType)

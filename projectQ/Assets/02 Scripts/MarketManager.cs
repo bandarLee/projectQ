@@ -29,8 +29,9 @@ public class MarketManager : MonoBehaviour
             Destroy(gameObject);
         }
         moneyInput = 0;
-        MarketMoneyInput.SetActive(false);
         Casino.SetActive(false);
+
+        MarketMoneyInput.SetActive(false);
         BlackScreen1.SetActive(false); 
         BlackScreen2.SetActive(false);
     }

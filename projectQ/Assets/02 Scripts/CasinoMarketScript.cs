@@ -62,8 +62,10 @@ public class CasinoMarketScript : MonoBehaviour
             
         if(DecideItem < RegendRate)
             {
+            if (MarketManager.Instance != null)
+            {
                 ItemSpawner.Instance.SpawnRegendItem(MarketManager.Instance.transform.position);
-
+            }
                 itemtype = ItemType.Regend;
 
                 itemspawner.SpawnItem(this.transform.position);
@@ -72,17 +74,21 @@ public class CasinoMarketScript : MonoBehaviour
         }
         else if(DecideItem < EpicRate)
             {
+            if (MarketManager.Instance != null)
+            {
                 ItemSpawner.Instance.SpawnEpicItem(MarketManager.Instance.transform.position);
-
+            }
                 itemtype = ItemType.Epic;
                 itemspawner.SpawnItem(this.transform.position);
 
 
         }
         else if (DecideItem < RareRate)
+        {
+            if (MarketManager.Instance != null)
             {
                 ItemSpawner.Instance.SpawnRareItem(MarketManager.Instance.transform.position);
-
+            }
                 itemtype = ItemType.Rare;
                 itemspawner.SpawnItem(this.transform.position);
 
@@ -90,8 +96,10 @@ public class CasinoMarketScript : MonoBehaviour
         }
         else if (DecideItem < NormalRate)
             {
+            if (MarketManager.Instance != null)
+            {
                 ItemSpawner.Instance.SpawnNormalItem(MarketManager.Instance.transform.position);
-
+            }
                 itemtype = ItemType.Normal;
                 itemspawner.SpawnItem(this.transform.position);
 
