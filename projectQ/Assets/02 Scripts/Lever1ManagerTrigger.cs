@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Lever1ManagerTrigger : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class Lever1ManagerTrigger : MonoBehaviour
         Left,
         Right,
         Top,
-        Bot
+        Bot,
+        Boss
         }
     public DoorType doortype;
     void Start()
@@ -47,6 +49,10 @@ public class Lever1ManagerTrigger : MonoBehaviour
                 case DoorType.Bot:
                     CameraMove.Instance.DownMove = true;
                     PlayerMove.Instance.moveDirection = DoorType.Bot;
+
+                    break;
+                case DoorType.Boss:
+                    SceneManager.LoadScene("BossRoom");
 
                     break;
                 default:

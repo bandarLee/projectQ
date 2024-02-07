@@ -227,8 +227,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        int DecideRoomPattern = Random.Range(0, roomPatterns.Length);
-        roomInfos = roomPatterns[DecideRoomPattern];
+        int DecideRoomPattern = 5;
+        roomInfos = roomPatterns[5];
         Instantiate(Player, this.gameObject.transform.position, Quaternion.identity);
         switch (DecideRoomPattern)
         {
@@ -236,23 +236,44 @@ public class GameManager : MonoBehaviour
                 Instantiate(BossDoors[0], new Vector3(-37.54f, 0.15f, 0), Quaternion.identity);
                 break;
             case 1:
+                Instantiate(BossDoors[2], new Vector3(18.52f, 20.69f, 0), Quaternion.identity);
+
                 break;
             case 2:
+                Instantiate(BossDoors[2], new Vector3(0.04f, 20.728f, 0), Quaternion.identity);
+
                 break;
             case 3:
+                Instantiate(BossDoors[3], new Vector3(-1.37f, -32.27f, 0), Quaternion.identity);
+
                 break;
             case 4:
+                Instantiate(BossDoors[0], new Vector3(-0.64f, 30.91f, 0), Quaternion.identity);
+
                 break;
             case 5:
+                Instantiate(BossDoors[1], new Vector3(37.559f, 0.158f, 0), Quaternion.identity);
+
                 break;
             case 6:
+                Instantiate(BossDoors[1], new Vector3(-54.61f, -20.33f, 0), Quaternion.identity);
+
+
                 break;
             case 7:
-                    
+                Instantiate(BossDoors[3], new Vector3(-1.363f, -32.318f, 0), Quaternion.identity);
+
+
+
                 break;
             case 8:
+                Instantiate(BossDoors[1], new Vector3(56.049f, 20.658f, 0), Quaternion.identity);
+
+
                 break;
             case 9:
+                Instantiate(BossDoors[1], new Vector3(-36.275f, 20.693f, 0), Quaternion.identity);
+
                 break;                                     
         }
         foreach (var (position, roomType) in roomInfos)

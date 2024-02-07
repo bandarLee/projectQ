@@ -676,9 +676,29 @@ PrefabInstance:
       value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7208463829575871227, guid: 69e1d603a3fb90244984280318cd09ec, type: 3}
+      propertyPath: BossDoors.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7208463829575871227, guid: 69e1d603a3fb90244984280318cd09ec, type: 3}
       propertyPath: Rooms.Array.data[17]
       value: 
       objectReference: {fileID: 7827493802299666235, guid: d8406932cb7bc394e8494a179f2e73f7, type: 3}
+    - target: {fileID: 7208463829575871227, guid: 69e1d603a3fb90244984280318cd09ec, type: 3}
+      propertyPath: BossDoors.Array.data[0]
+      value: 
+      objectReference: {fileID: 7827493802299666235, guid: d8406932cb7bc394e8494a179f2e73f7, type: 3}
+    - target: {fileID: 7208463829575871227, guid: 69e1d603a3fb90244984280318cd09ec, type: 3}
+      propertyPath: BossDoors.Array.data[1]
+      value: 
+      objectReference: {fileID: 7310759600130704883, guid: 3d4ac7d9682712541abaf31852435196, type: 3}
+    - target: {fileID: 7208463829575871227, guid: 69e1d603a3fb90244984280318cd09ec, type: 3}
+      propertyPath: BossDoors.Array.data[2]
+      value: 
+      objectReference: {fileID: 5159514771318690939, guid: e39553527e2fa924c83f620b24b5ea78, type: 3}
+    - target: {fileID: 7208463829575871227, guid: 69e1d603a3fb90244984280318cd09ec, type: 3}
+      propertyPath: BossDoors.Array.data[3]
+      value: 
+      objectReference: {fileID: 585615917344482201, guid: 24011f865fc1b47499f503490eee1474, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
