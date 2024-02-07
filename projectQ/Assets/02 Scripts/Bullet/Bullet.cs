@@ -10,7 +10,6 @@ public class Bullet : MonoBehaviour
         Fire,     // 화염 아이템 얻으면 발동
         Knife,    // Knife 아이템 얻으면
         Blood,    // Blood 스킬
-
     }
 
     public BulletType Btype;

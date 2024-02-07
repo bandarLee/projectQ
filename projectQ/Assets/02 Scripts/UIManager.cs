@@ -168,6 +168,7 @@ public class UIManager : MonoBehaviour
         {
             Health[(int)i].SetActive(false);
         }
+
     }
 
 
