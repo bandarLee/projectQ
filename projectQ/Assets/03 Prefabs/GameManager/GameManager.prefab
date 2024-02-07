@@ -62,6 +62,17 @@ MonoBehaviour:
   - {fileID: 1946652181106567044, guid: ccddcf5de9aba4d4ab371f14670bd515, type: 3}
   - {fileID: 5311241854555866645, guid: be9b3151b3ac3c740aa433792256a786, type: 3}
   - {fileID: 5551068039274124315, guid: 285ead76370dca843b88e843d5a79f07, type: 3}
+  BossDoors:
+  - {fileID: 7827493802299666235, guid: d8406932cb7bc394e8494a179f2e73f7, type: 3}
+  - {fileID: 7310759600130704883, guid: 3d4ac7d9682712541abaf31852435196, type: 3}
+  - {fileID: 5159514771318690939, guid: e39553527e2fa924c83f620b24b5ea78, type: 3}
+  - {fileID: 585615917344482201, guid: 24011f865fc1b47499f503490eee1474, type: 3}
   RoomX: 18.46
   RoomY: 10.25
-  Player: {fileID: 4878934592145815868, guid: 7341a5159d565a343a79974c756a658a, type: 3}
+  Player: {fileID: 4878934592145815868, guid: 61b69c1441438a644b6d949cd2279062, type: 3}
+  oneeyes: []
+  oneeyesClone: []
+  oneeyesred: []
+  basicEnemy: []
+  virus: []
+  snake: []
