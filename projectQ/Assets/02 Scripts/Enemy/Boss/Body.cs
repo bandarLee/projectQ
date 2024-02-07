@@ -24,7 +24,6 @@ public class Body : MonoBehaviour
             if (Health <= 0)
             {
                 gameObject.SetActive(false);
-                itemspawner.SpawnItem(this.transform.position);
             }
         }
     }

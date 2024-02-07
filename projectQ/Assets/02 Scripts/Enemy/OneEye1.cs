@@ -113,7 +113,6 @@ public class OneEye1 : MonoBehaviour // follow 타입
             {
 
                 gameObject.SetActive(false);
-                itemspawner.SpawnItem(this.transform.position);
             }    
         }
     }

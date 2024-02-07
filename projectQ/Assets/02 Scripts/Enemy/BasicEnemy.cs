@@ -138,7 +138,6 @@ public class BasicEnemy : MonoBehaviour  // "Basic형"
             if (Health <= 0)
             {
                 gameObject.SetActive(false);
-                itemspawner.SpawnItem(this.transform.position);
             }
         }
     }

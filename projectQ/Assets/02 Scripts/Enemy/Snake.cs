@@ -133,7 +133,6 @@ public class Snake : MonoBehaviour// " Basic 타입 "
               if (Health <= 0)
               {
                 gameObject.SetActive(false);
-                itemspawner.SpawnItem(this.transform.position);
             }
           }
     }
