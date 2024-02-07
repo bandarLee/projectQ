@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1980885397828143691}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,6 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IType: 4
   Bomb_Type: 0
+  PType: 0
 --- !u!114 &5595579043665973862
 MonoBehaviour:
   m_ObjectHideFlags: 0

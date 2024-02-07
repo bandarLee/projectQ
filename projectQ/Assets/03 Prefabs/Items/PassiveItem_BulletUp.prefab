@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IType: 0
   Bomb_Type: 0
-  PType: 0
+  PType: 1
 --- !u!114 &3538241360296028752
 MonoBehaviour:
   m_ObjectHideFlags: 0

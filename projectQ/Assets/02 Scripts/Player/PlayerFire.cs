@@ -97,7 +97,7 @@ public class PlayerFire : MonoBehaviour
     {
         // 공격이 실행되면 쿨타임 타이머를 0으로 초기화하고 총알 생성
         ShootTimer = 0;
-                 for (int i = 0; i < NormalMuzzles.Count; i++)
+                 for (int i = 0; i < Player.Instance.Muzzles; i++)
             {
                 if (Player.Instance.weapon == Player.PlayerWeapon.Basic)
                 {
@@ -132,9 +132,9 @@ public class PlayerFire : MonoBehaviour
         // 공격이 실행되면 쿨타임 타이머를 0으로 초기화하고 총알 생성
         ShootTimer = 0;
         getfirebutton = GetFireButton.Default;
+        Debug.Log(Player.Instance.Muzzles);
 
-
-        for (int i = 0; i < NormalMuzzles.Count; i++)
+        for (int i = 0; i < Player.Instance.Muzzles; i++)
         {
             if (Player.Instance.weapon == Player.PlayerWeapon.Basic)
             {

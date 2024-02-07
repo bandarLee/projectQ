@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
 
     public bool HasPlayerCard = false;
 
+    public int Muzzles = 1;
 
 
     public int CoinCount = 0;

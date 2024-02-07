@@ -61,6 +61,10 @@ public class Item : MonoBehaviour
             {
                 Player.Instance.bomb = PlayerBomb.Laser;
             }
+            if (PType == PassiveType.BulletUPItem)
+            {
+                Player.Instance.Muzzles += 1;
+            }
         }
 
         if (collision.CompareTag("Player"))
