@@ -134,9 +134,18 @@ public class UIManager : MonoBehaviour
             if (playerfire != null)
             {
                 testbombtimer = playerfire.BombTimer;
+                string bombtimer_text = testbombtimer.ToString("F2");
+                //Debug.Log(testbombtimer);
+                CoolTimeShow.text = $"{bombtimer_text}";
+
+                if (testbombtimer >= 7)
+                {
+                    CoolTimeShow.text = $"Use";
+                }
+
             }
-            Debug.Log(testbombtimer);
-            CoolTimeShow.text = $"{testbombtimer}";
+
+
         }
         else if (Player.Instance.bomb == Player.PlayerBomb.Laser)
         {
@@ -168,7 +177,6 @@ public class UIManager : MonoBehaviour
         {
             Health[(int)i].SetActive(false);
         }
-
     }
 
 
