@@ -8,14 +8,30 @@ public class MarketManager : MonoBehaviour
     public GameObject MarketMoneyInput;
     public GameObject VendingMachine;
     public TextMeshProUGUI MarketNoticeText;
+    public GameObject ErrorMessage;
+    public GameObject Casino;
+    public static MarketManager Instance;
+    public GameObject BlackScreen1;
+    public GameObject BlackScreen2;
 
     public bool IsPlayerMarket = false;
     public TextMeshProUGUI InputArea;
     public ItemSpawner itemspawner;
-
+    public int moneyInput = 0;
     void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         MarketMoneyInput.SetActive(false);
+        Casino.SetActive(false);
+        BlackScreen1.SetActive(false); 
+        BlackScreen2.SetActive(false);
     }
 
     void Update()
@@ -23,6 +39,8 @@ public class MarketManager : MonoBehaviour
         if (!IsPlayerMarket)
         {
             MarketMoneyInput.SetActive(false);
+            BlackScreen1.SetActive(false);
+            BlackScreen2.SetActive(false);
 
         }
     }
@@ -36,6 +54,9 @@ public class MarketManager : MonoBehaviour
         if (IsPlayerMarket && Input.GetKey(KeyCode.E))
             {
             MarketMoneyInput.SetActive(true);
+            BlackScreen1.SetActive(true);
+            BlackScreen2.SetActive(true);
+            ErrorMessage.SetActive(false);
 
 
         }
@@ -56,12 +77,15 @@ public class MarketManager : MonoBehaviour
         inputText = inputText.Replace("\u200B", "");
         try
         {
-            int moneyInput = int.Parse(inputText);
+              moneyInput = int.Parse(inputText);
             if(moneyInput > Player.Instance.CoinCount)
                 {
 
                     MarketNoticeText.text = "가진 돈보다 많이 입력하셨습니다";
                     MarketMoneyInput.SetActive(false);
+                    BlackScreen1.SetActive(false);
+                    BlackScreen2.SetActive(false);
+                    ErrorMessage.SetActive(true);
 
                     InputArea.text = null;
 
@@ -70,14 +94,18 @@ public class MarketManager : MonoBehaviour
                 }
             else if(moneyInput <= Player.Instance.CoinCount && moneyInput >=0 )
             {
-                GenerateItem(moneyInput);
-                MarketMoneyInput.SetActive(false);
+                BlackScreen1.SetActive(false);
+                BlackScreen2.SetActive(false);
+                Casino.SetActive(true);
+
                 Destroy(VendingMachine);
             }
 
         }
         catch (System.FormatException e)
         {
+            ErrorMessage.SetActive(true);
+
             Debug.Log(e);
             MarketNoticeText.text = "에러발생";
         }
@@ -85,33 +113,7 @@ public class MarketManager : MonoBehaviour
 
 
 
-    public void GenerateItem(int money)
-    {
-  
-        switch (money/3)
-        {
-            case 0:
-                itemspawner.SpawnItem(this.transform.position);
-
-                break;
-            case 1:
-                itemspawner.SpawnItem(this.transform.position);
-
-                break;
-            case 2:
-                itemspawner.SpawnItem(this.transform.position);
-
-                break;
-            case 3:
-                itemspawner.SpawnItem(this.transform.position);
-
-                break;
-            case 4: break;
-            case 5: break;
-            case 6: break;
-
-        }
-    }
+   
 
 
 }

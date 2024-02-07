@@ -39,7 +39,6 @@ public class GameManager : MonoBehaviour
                 (new Vector3(-2, 0), 10),
                 (new Vector3(0, -3), 1),
                 (new Vector3(1, -3), 1),
-                (new Vector3(-2, 0), 17)
             },
         new (Vector3 position, int roomType)[]
             {
@@ -227,8 +226,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        int DecideRoomPattern = 5;
-        roomInfos = roomPatterns[5];
+        int DecideRoomPattern = Random.Range(0, roomPatterns.Length);
+        roomInfos = roomPatterns[DecideRoomPattern];
         Instantiate(Player, this.gameObject.transform.position, Quaternion.identity);
         switch (DecideRoomPattern)
         {
