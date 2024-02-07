@@ -123,7 +123,6 @@ public class Virus : MonoBehaviour // " Follow 타입 "
             // 적의 체력이 끝
             if (Health <= 0)
             {
-                itemspawner.SpawnItem(this.transform.position);
                 foreach (GameObject clone in clones)
                 {
                     Destroy(clone);

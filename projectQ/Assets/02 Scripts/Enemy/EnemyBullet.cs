@@ -17,6 +17,8 @@ public class EnemyBullet : MonoBehaviour
     public EnemyBulletType EnemyBType;
     public float EnemyBulletDamage = 1;
 
+    
+
     // 목표 : 총알이 어디(방향)으로 이동하고 싶다.
     // 속성:
     // - 속력
@@ -36,6 +38,7 @@ public class EnemyBullet : MonoBehaviour
             // 플레이어를 향한 초기 방향을 계산
             initialDirection = (Player.Instance.transform.position - this.transform.position).normalized;
         }
+
     }
 
     void Update()
@@ -58,7 +61,7 @@ public class EnemyBullet : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Player") || collision.collider.CompareTag("Environment") || collision.collider.CompareTag("Bullet")) 
         {
