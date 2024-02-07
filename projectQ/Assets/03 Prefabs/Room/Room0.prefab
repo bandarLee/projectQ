@@ -4030,9 +4030,14 @@ MonoBehaviour:
   MarketMoneyInput: {fileID: 0}
   VendingMachine: {fileID: 3460584956622614121}
   MarketNoticeText: {fileID: 0}
+  ErrorMessage: {fileID: 0}
+  Casino: {fileID: 0}
+  BlackScreen1: {fileID: 0}
+  BlackScreen2: {fileID: 0}
   IsPlayerMarket: 0
   InputArea: {fileID: 0}
   itemspawner: {fileID: 1835939221475135809, guid: dd53dcc5c1ab7b7418dbb38821964b46, type: 3}
+  moneyInput: 0
 --- !u!61 &4578207822509576539
 BoxCollider2D:
   m_ObjectHideFlags: 0
