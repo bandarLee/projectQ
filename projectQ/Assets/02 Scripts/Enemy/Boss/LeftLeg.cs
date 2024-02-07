@@ -10,30 +10,53 @@ public class LeftLeg : MonoBehaviour
     private float currentAngle = 0f;
     private int rotateDirection = -1; // 초기 회전 방향 반대
 
+    private float moveSpeed = 3f;
+    private float moveDistance = 1.5f; // 이동 거리
+
+    private float currentDistance = 0f;
+    private int moveDirection = -1; // 초기 이동 방향 아래로
+
     void Start()
     {
         Rotate();
+        Move();
+
     }
 
 
     void Update()
     {
         Rotate();
+        Move();
     }
+    void Move()
+    {
+        currentDistance += moveSpeed * Time.deltaTime * moveDirection;
+        currentDistance = Mathf.Clamp(currentDistance, -moveDistance, 0f); // 이동 범위를 설정
+
+        if (currentDistance <= -moveDistance || currentDistance >= 0f)
+        {
+            moveDirection *= -1;
+        }
+
+        // Y축을 기준으로 이동
+        transform.position = new Vector3(transform.position.x, currentDistance, transform.position.z);
+    }
+
     void Rotate()
     {
 
-        // 현재 각도가 -20도 이상이고, 방향이 내려가는 방향일 때 가속도를 적용
-        if (currentAngle >= -20f && rotateDirection == 1)
+        // 현재 각도가 -15도 이상이고, 방향이 내려가는 방향일 때 가속도를 적용
+        if (currentAngle >= -15f && rotateDirection == 1)
         {
             StartCoroutine(AccelerateLeftarm());
 
         }
 
         currentAngle += rotateSpeed * Time.deltaTime * rotateDirection;
-        currentAngle = Mathf.Clamp(currentAngle, -40f, 0f); // 회전 범위를 반대로 설정
+        currentAngle = Mathf.Clamp(currentAngle, -30f, 0f); // 회전 범위를 반대로 설정
 
-        if (currentAngle <= -40f || currentAngle >= 0f)
+        if (currentAngle <= -30f || currentAngle >= 0f)
         {
             rotateSpeed = 30f;
             rotateDirection *= -1;
@@ -45,8 +68,5 @@ public class LeftLeg : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         rotateSpeed *= acceleration;
-
-
     }
-
 }

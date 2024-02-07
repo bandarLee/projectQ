@@ -26,16 +26,16 @@ public class LeftArm : MonoBehaviour
     {
 
         // 현재 각도가 -20도 이상이고, 방향이 내려가는 방향일 때 가속도를 적용
-        if (currentAngle >= -20f && rotateDirection == 1)
+        if (currentAngle >= -45f && rotateDirection == 1)
         {
             StartCoroutine(AccelerateLeftarm());
 
         }
 
         currentAngle += rotateSpeed * Time.deltaTime * rotateDirection;
-        currentAngle = Mathf.Clamp(currentAngle, -40f, 0f); // 회전 범위를 반대로 설정
+        currentAngle = Mathf.Clamp(currentAngle, -100f, 0f); // 회전 범위를 반대로 설정
 
-        if (currentAngle <= -40f || currentAngle >= 0f)
+        if (currentAngle <= -100f || currentAngle >= 0f)
         {
             rotateSpeed = 30f;
             rotateDirection *= -1;
