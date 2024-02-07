@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
     public TMP_Text CoolTimeShow;
 
     public GameObject DamageScreen;
+    public GameObject CardKeyScreen;
 
     [Header("아이템 상태바")]
     public GameObject FireItem;
@@ -51,6 +52,7 @@ public class UIManager : MonoBehaviour
         LaserItem.SetActive(false);
         DamageScreen.SetActive(false);
         BulletUp.SetActive(false);
+        CardKeyScreen.SetActive(false);
     }
 
     void Start()

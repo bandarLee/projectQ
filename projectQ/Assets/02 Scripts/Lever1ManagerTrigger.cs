@@ -52,7 +52,16 @@ public class Lever1ManagerTrigger : MonoBehaviour
 
                     break;
                 case DoorType.Boss:
-                    SceneManager.LoadScene("BossRoom");
+                    if (Player.Instance.HasPlayerCard)
+                    {
+                        SceneManager.LoadScene("BossRoom");
+                    }
+                    else if (!Player.Instance.HasPlayerCard)
+                    {
+                        UIManager.Instance.CardKeyScreen.SetActive(true);
+                        StartCoroutine(CardDelayCoroutine());
+
+                    }
 
                     break;
                 default:
@@ -60,5 +69,10 @@ public class Lever1ManagerTrigger : MonoBehaviour
                     break;
             }
         }
+    }
+    IEnumerator CardDelayCoroutine()
+    {
+        yield return new WaitForSeconds(1f);
+        UIManager.Instance.CardKeyScreen.SetActive(false);
     }
 }

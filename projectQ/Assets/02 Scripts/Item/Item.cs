@@ -71,8 +71,9 @@ public class Item : MonoBehaviour
             if (IType == ItemType.FireItem)
             {
                 Player.Instance.weapon = PlayerWeapon.FireItem;
+                Player.Instance.BulletPower = 3f;
 
-                Player.Instance.NormalBulletSpeed = 4.5f;
+                Player.Instance.NormalBulletSpeed = 5.5f;
                 Player.Instance.maxDistance = 7f;
 
             }
@@ -80,18 +81,20 @@ public class Item : MonoBehaviour
             else if (IType == ItemType.KnifeItem)
             {
                 //Debug.Log("표창");
+                Player.Instance.BulletPower = 1f;
 
                 Player.Instance.weapon = PlayerWeapon.KnifeItem;
 
-                Player.Instance.NormalBulletSpeed = 6f;
-                Player.Instance.maxDistance = 4.5f;
+                Player.Instance.NormalBulletSpeed = 7f;
+                Player.Instance.maxDistance = 5.5f;
             }
             else if (IType == ItemType.BloodItem)
             {
                 //Debug.Log("피");
                 Player.Instance.weapon = PlayerWeapon.BloodItem;
+                Player.Instance.BulletPower = 1.5f;
 
-                Player.Instance.NormalBulletSpeed = 5.5f;
+                Player.Instance.NormalBulletSpeed = 6f;
                 Player.Instance.maxDistance = 6f;
             }
 

@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 2163366232115821977}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.224, y: -1.1505907, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0972, y: 1.0972, z: 1.0972}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IType: 2
   Bomb_Type: 0
+  PType: 0
 --- !u!1 &2539560345019248036
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,6 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IType: 2
   Bomb_Type: 0
+  PType: 0
 --- !u!60 &5983706596889159044
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -281,7 +283,7 @@ Transform:
   m_GameObject: {fileID: 6778739065147821845}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.045, y: -0.449, z: 0}
   m_LocalScale: {x: 0.5361883, y: 0.18071881, z: 0.66412}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -388,3 +390,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IType: 2
   Bomb_Type: 0
+  PType: 0

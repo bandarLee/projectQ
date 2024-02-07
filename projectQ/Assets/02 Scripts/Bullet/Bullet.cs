@@ -29,7 +29,6 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         // 처음 시작하면 총알 발사
-        Player.Instance.BulletPower = 0.5f;
 
     }
     public void SetDirection(Vector2 direction)
@@ -42,25 +41,10 @@ public class Bullet : MonoBehaviour
         // 총알의 시작 위치를 저장
         startPos = transform.position;
 
-        // 만약 총알 타입이 Knife 타입이면 총알 파워는 0.8
-        if (Btype == BulletType.Knife)
-        {
-            Player.Instance.BulletPower = 0.8f;
-        }
-        // 만약 총알 타입이 Fire 타입이면 총알 파워는 3
-        else if (Btype == BulletType.Fire)
-        {
-            Player.Instance.BulletPower = 3f;
-        }
-        else if (Btype == BulletType.Normal)
-        {
-            Player.Instance.BulletPower = 0.5f;
-        }
-        else if (Btype == BulletType.Blood)
-        {
-            Player.Instance.BulletPower = 1f;
 
-        }
+
+
+       
     }
     // 목표: 총알이 방향키를 누름에 따라 앞으로 나아가도록
 

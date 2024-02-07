@@ -1,59 +1,139 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ItemSpawner : MonoBehaviour
 {
     public GameObject ItemPrefab_Health; // DropItem
-    public GameObject ItemPrefab_Speed;
+    public GameObject ItemPrefab_Fire;
+    public GameObject ItemPrefab_Blood;
+        
+    public GameObject ItemPrefab_Knife;
+    public GameObject ItemPrefab_Laser;
+    public GameObject ItemPrefab_Boom;
+    public GameObject ItemPrefab_BulletUp;
+
     public GameObject ItemPrefab_Money; // 상점에 꼭 필요
     public GameObject ItemPrefab_CardKey; // 다음 층으로 넘어갈 수 있는 카드키
 
     public void SpawnItem(Vector3 position)
     {
         int ItemPercent = Random.Range(0, 100);
-        GameObject itemToSpawn;
-
-        if (ItemPercent < 25)
+        if (ItemPercent < 45)
         {
-            itemToSpawn = ItemPrefab_CardKey;
+            SpawnNormalItem(position);
         }
-        else if (ItemPercent < 50)
+        else if (ItemPercent < 70)
         {
-            itemToSpawn = ItemPrefab_Money;
+            SpawnRareItem(position);
         }
-        else if (ItemPercent < 75)
+        else if (ItemPercent < 85)
         {
-            itemToSpawn = ItemPrefab_Health;
+            SpawnEpicItem(position);
         }
         else
         {
-            itemToSpawn = ItemPrefab_Speed;
+            SpawnRegendItem(position);
+        }
+
+    }
+    public void SpawnNormalItem(Vector3 position)
+    {
+        int ItemPercentNormal = Random.Range(0, 100);
+        GameObject itemToSpawn;
+
+        if (ItemPercentNormal < 25)
+        {
+            itemToSpawn = ItemPrefab_Money;
+        }
+        else if (ItemPercentNormal < 50)
+        {
+            itemToSpawn = ItemPrefab_Money;
+        }
+        else if (ItemPercentNormal < 75)
+        {
+            itemToSpawn = ItemPrefab_Boom;
+        }
+        else
+        {
+            itemToSpawn = ItemPrefab_Health;
         }
 
         Instantiate(itemToSpawn, position, Quaternion.identity);
     }
-    public void DecideItem(Vector3 position)
+    public void SpawnRareItem(Vector3 position)
     {
+        int ItemPercentRare = Random.Range(0, 100);
+        GameObject itemToSpawn;
 
-
-        /*if (ItemPercent < 25)
+        if (ItemPercentRare < 20)
         {
-            itemToSpawn = ItemPrefab_CardKey;
+            itemToSpawn = ItemPrefab_BulletUp;
         }
-        else if (ItemPercent < 50)
+        else if (ItemPercentRare < 40)
         {
-            itemToSpawn = ItemPrefab_Money;
+            itemToSpawn = ItemPrefab_Knife;
         }
-        else if (ItemPercent < 75)
+        else if (ItemPercentRare < 60)
         {
-            itemToSpawn = ItemPrefab_Health;
+            itemToSpawn = ItemPrefab_Blood;
+        }
+        else if (ItemPercentRare < 80)
+        {
+            itemToSpawn = ItemPrefab_Blood;
         }
         else
         {
-            itemToSpawn = ItemPrefab_Speed;
+            itemToSpawn = ItemPrefab_Knife;
         }
 
-        Instantiate(itemToSpawn, position, Quaternion.identity);*/
+        Instantiate(itemToSpawn, position, Quaternion.identity);
+    }
+    public void SpawnEpicItem(Vector3 position)
+    {
+        int ItemPercentEpic = Random.Range(0, 100);
+
+        GameObject itemToSpawn;
+
+        if (ItemPercentEpic < 25)
+        {
+            itemToSpawn = ItemPrefab_Fire;
+        }
+        else if (ItemPercentEpic < 50)
+        {
+            itemToSpawn = ItemPrefab_Fire;
+        }
+        else if (ItemPercentEpic < 75)
+        {
+            itemToSpawn = ItemPrefab_CardKey;
+        }
+        else
+        {
+            itemToSpawn = ItemPrefab_CardKey;
+        }
+
+        Instantiate(itemToSpawn, position, Quaternion.identity);
+    }
+    public void SpawnRegendItem(Vector3 position)
+    {
+        int ItemPercentRegend = Random.Range(0, 100);
+        GameObject itemToSpawn;
+
+        if (ItemPercentRegend < 60)
+        {
+            itemToSpawn = ItemPrefab_CardKey;
+        }
+      
+     
+        else
+        {
+            itemToSpawn = ItemPrefab_Laser;
+
+
+        }
+
+        Instantiate(itemToSpawn, position, Quaternion.identity);
     }
 }

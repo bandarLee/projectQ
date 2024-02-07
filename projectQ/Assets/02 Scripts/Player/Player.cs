@@ -12,8 +12,8 @@ public class Player : MonoBehaviour
 
     public float PlayerHealth = 5f;
     public float maxDistance = 5.5f;   // 총알 사거리
-    public float NormalBulletSpeed;   // 총알의 속도
-    public float BulletPower;         // 총알의 데미지
+    public float NormalBulletSpeed = 4.5f;   // 총알의 속도
+    public float BulletPower = 0.5f;         // 총알의 데미지
 
     public bool PlayerDamageDelay = false;
     public float time;
