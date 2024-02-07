@@ -15,8 +15,10 @@ public class UIManager : MonoBehaviour
     public TMP_Text Range;
     public TMP_Text BulletSpeed;
     public TMP_Text Coin;
+    public TMP_Text CoolTimeShow;
 
     public GameObject DamageScreen;
+
     [Header("아이템 상태바")]
     public GameObject FireItem;
     public GameObject BloodItem;
@@ -49,9 +51,8 @@ public class UIManager : MonoBehaviour
         LaserItem.SetActive(false);
         DamageScreen.SetActive(false);
         BulletUp.SetActive(false);
-
-
     }
+
     void Start()
     {
         foreach (GameObject heart in Health)
@@ -68,9 +69,6 @@ public class UIManager : MonoBehaviour
         Range.text = $"사거리 {Player.Instance.maxDistance}";
         BulletSpeed.text = $"탄속도 {Player.Instance.NormalBulletSpeed}";
         Coin.text = $"{Player.Instance.CoinCount} Coin";
-
-
-
 
         switch (PlayerHealth)
         {
@@ -127,8 +125,18 @@ public class UIManager : MonoBehaviour
         // 궁극기 아이콘 나타나도록 
         if (Player.Instance.bomb == Player.PlayerBomb.Bomb)
         {
+            PlayerFire playerfire = GameObject.Find("NormalMuzzle").GetComponent<PlayerFire>();
             BombItem.SetActive(true);
-            LaserItem.SetActive(false);
+
+            //LaserItem.SetActive(false);
+            float testbombtimer = 0;
+
+            if (playerfire != null)
+            {
+                testbombtimer = playerfire.BombTimer;
+            }
+            Debug.Log(testbombtimer);
+            CoolTimeShow.text = $"{testbombtimer}";
         }
         else if (Player.Instance.bomb == Player.PlayerBomb.Laser)
         {
@@ -141,6 +149,14 @@ public class UIManager : MonoBehaviour
         {
             BulletUp.SetActive(true);
         }
+
+        /*PlayerFire playerfire = GetComponent<PlayerFire>();
+        if (Player.Instance.bomb == Player.PlayerBomb.Bomb)
+        {
+            CoolTimeShow
+        }
+        */
+
     }
     void SetPlayerHealthUI()
     {
@@ -151,7 +167,8 @@ public class UIManager : MonoBehaviour
         for (float i = PlayerHealth * 2; i < Health.Length; i++)
         {
             Health[(int)i].SetActive(false);
-
         }
     }
+
+
 }

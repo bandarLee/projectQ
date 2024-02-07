@@ -48,9 +48,6 @@ public class Player : MonoBehaviour
     }
 
     
-
-
-
     public PlayerWeapon weapon = PlayerWeapon.Basic;
     public PlayerBomb bomb = PlayerBomb.None;
     public PlayerPassive passive = PlayerPassive.None;
@@ -67,6 +64,7 @@ public class Player : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
 
 
     }

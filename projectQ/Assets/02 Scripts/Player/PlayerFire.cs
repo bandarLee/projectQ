@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using static Item;
-using static UnityEditorInternal.ReorderableList;
 
 public class PlayerFire : MonoBehaviour
 {
@@ -16,7 +15,9 @@ public class PlayerFire : MonoBehaviour
         Right
 
     }
+
     public GetFireButton getfirebutton = GetFireButton.Default;
+
     [Header("플레이어 기본 공격 프리팹")]
     public GameObject NormalBulletPrefab;
     public GameObject FireBulletPrefab;
@@ -33,8 +34,8 @@ public class PlayerFire : MonoBehaviour
 
     // 궁극기 폭탄 쿨타임 설정
     [Header("궁극기 타이머 & 쿨타임")]
-    private float BombTimer = 0f;
-    private float Bomb_Cool_Time = 7f;
+    public float BombTimer = 0f;
+    public float Bomb_Cool_Time = 7f;
 
 
     [Header("일반 공격 총구")]
