@@ -33,9 +33,18 @@ public class PlayerFire : MonoBehaviour
     public float Cool_Time = 4f;
 
     // 궁극기 폭탄 쿨타임 설정
-    [Header("궁극기 타이머 & 쿨타임")]
+    [Header("궁극기 타이머 (폭탄) & 쿨타임")]
     public float BombTimer = 0f;
     public float Bomb_Cool_Time = 7f;
+
+    [Header("궁극기 타이머 (레이저) & 쿨타임")]
+    public float BombTimer_Laser = 0f;
+    public float Bomb_Cool_Time_Laser = 10f;
+
+
+    // 
+    [Header("VFX 이펙트")]
+    public GameObject Laser;
 
 
     [Header("일반 공격 총구")]
@@ -59,6 +68,7 @@ public class PlayerFire : MonoBehaviour
     {
         ShootTimer += Time.deltaTime;
         BombTimer += Time.deltaTime;
+
         GetArrowKey();
         // 쿨타임이 다 찼고, 마우스 버튼이 눌렸다면 공격 실행
         if (ShootTimer >= Cool_Time && (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.Space)))
@@ -69,12 +79,17 @@ public class PlayerFire : MonoBehaviour
             {
                 BulletArrowKeyShoot();
             }
+
         // 폭탄 쿨타임 
         if (BombTimer >= Bomb_Cool_Time && Input.GetKeyDown(KeyCode.F))
         {
             BombShoot();
         }
+        if (BombTimer_Laser >= Bomb_Cool_Time_Laser && Input.GetKeyDown(KeyCode.F))
 
+        {
+            StartCoroutine(LaserShoot());
+        }
     }
 
     // 총알을 발사하는 메서드
@@ -109,10 +124,6 @@ public class PlayerFire : MonoBehaviour
                     bloodBullet.transform.position = NormalMuzzles[i].transform.position;
                     bloodBullet.GetComponent<Bullet>().SetDirection(dir.normalized);
                 }
-
-
-          
-
         }
 
     }
@@ -150,9 +161,6 @@ public class PlayerFire : MonoBehaviour
                 bloodBullet.transform.position = NormalMuzzles[i].transform.position;
                 bloodBullet.GetComponent<Bullet>().SetDirection(dir.normalized);
             }
-
-
-
 
         }
 
@@ -217,6 +225,7 @@ public class PlayerFire : MonoBehaviour
 
         }
     }
+
     private void BulletArrowKeyShoot()
     {
         switch(getfirebutton)
@@ -250,7 +259,29 @@ public class PlayerFire : MonoBehaviour
             GameObject bomb = Instantiate(BombBulletPrefab);
             bomb.transform.position = this.transform.position;
         }
+       
     }
+    // F키를 누르면 궁극기 발동 - 레이저
+    private IEnumerator LaserShoot()
+    {
+        BombTimer_Laser = 0;
+
+        if (Player.Instance.bomb == Player.PlayerBomb.Laser && Input.GetKeyDown(KeyCode.F))
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                Vector3 randomPosition = GetRandomPosition(); // 랜덤한 위치 계산
+
+                GameObject effect = Instantiate(Laser, randomPosition, Quaternion.identity); // 이펙트 생성
+
+                yield return new WaitForSeconds(0.1f); // 0.1초 대기
+
+            }
+        }
+
+
+    }
+
     private void GetArrowKey()
         {
             if(Input.GetKeyDown(KeyCode.UpArrow))
@@ -275,7 +306,15 @@ public class PlayerFire : MonoBehaviour
                     bulletVector = new Vector3(0, 0, -90);
                     getfirebutton = GetFireButton.Left;
                 }
-
     }
 
+    private Vector3 GetRandomPosition()
+    {
+        // 플레이어 주변의 랜덤한 위치 계산
+        Vector3 playerPosition = transform.position;
+        Vector3 randomOffset = Random.insideUnitSphere * 5f; // 반지름 5의 구 안에서 랜덤한 위치 계산
+        Vector3 randomPosition = playerPosition + randomOffset;
+
+        return randomPosition;
+    }
 }

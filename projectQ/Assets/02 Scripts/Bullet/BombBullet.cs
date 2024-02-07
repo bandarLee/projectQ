@@ -20,6 +20,8 @@ public class BombBullet : MonoBehaviour
     // 폭탄 궁극기가 터질 때 발동하는 Animator
     public Animator BombAnimator;
     public GameObject VfxExplosion;
+    public GameObject VfxLaser;
+
     void Start()
     {
         BombAnimator = GetComponent<Animator>();
