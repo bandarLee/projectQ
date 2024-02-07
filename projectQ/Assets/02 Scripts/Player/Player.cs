@@ -65,6 +65,7 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
         }
 
+        DontDestroyOnLoad(this.gameObject);
 
 
     }

@@ -111,6 +111,12 @@ public class OneEye1 : MonoBehaviour // follow 타입
             // 적의 체력이 끝
             if (Health <= 0)
             {
+                int a = Random.Range(0, 2);
+                if (a == 0)
+                {
+                    itemspawner.SpawnItem(this.transform.position);
+
+                }
 
                 gameObject.SetActive(false);
             }    

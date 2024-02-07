@@ -128,6 +128,12 @@ public class Virus : MonoBehaviour // " Follow 타입 "
                     Destroy(clone);
                 }
                 clones.Clear();
+                int a = Random.Range(0, 2);
+                if (a == 0)
+                {
+                    itemspawner.SpawnItem(this.transform.position);
+
+                }
                 gameObject.SetActive(false);
 
             }
