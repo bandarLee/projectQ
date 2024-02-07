@@ -17,7 +17,7 @@ public class MarketManager : MonoBehaviour
     public bool IsPlayerMarket = false;
     public TextMeshProUGUI InputArea;
     public ItemSpawner itemspawner;
-    public int moneyInput = 0;
+    public static int moneyInput;
     void Awake()
     {
         if (Instance == null)
@@ -28,6 +28,7 @@ public class MarketManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        moneyInput = 0;
         MarketMoneyInput.SetActive(false);
         Casino.SetActive(false);
         BlackScreen1.SetActive(false); 

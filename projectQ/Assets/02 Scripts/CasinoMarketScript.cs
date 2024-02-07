@@ -51,11 +51,11 @@ public class CasinoMarketScript : MonoBehaviour
     }
     void OnEnable()
     {
-
-        EpicRate += (MarketManager.Instance.moneyInput * 3);
-        RegendRate += (MarketManager.Instance.moneyInput * 3);
-        RareRate += (MarketManager.Instance.moneyInput * 3);
-        NormalRate += (MarketManager.Instance.moneyInput * 3);
+        int a = MarketManager.moneyInput * 3;
+        EpicRate += a;
+        RegendRate += a;
+        RareRate += a;
+        NormalRate += a;
 
         
         DecideItem = Random.Range(0, NormalRate + 1);
