@@ -1020,6 +1020,22 @@ PrefabInstance:
       propertyPath: Rooms.Array.data[16]
       value: 
       objectReference: {fileID: 5551068039274124315, guid: 4148e910e76bf7041a8486dafa399b06, type: 3}
+    - target: {fileID: 7208463829575871227, guid: 69e1d603a3fb90244984280318cd09ec, type: 3}
+      propertyPath: BossDoors.Array.data[0]
+      value: 
+      objectReference: {fileID: 7827493802299666235, guid: d332ee4600228f94f98d73aef6bd7a50, type: 3}
+    - target: {fileID: 7208463829575871227, guid: 69e1d603a3fb90244984280318cd09ec, type: 3}
+      propertyPath: BossDoors.Array.data[1]
+      value: 
+      objectReference: {fileID: 7310759600130704883, guid: 35ecac0fdaa0db247819d141803d0aa3, type: 3}
+    - target: {fileID: 7208463829575871227, guid: 69e1d603a3fb90244984280318cd09ec, type: 3}
+      propertyPath: BossDoors.Array.data[2]
+      value: 
+      objectReference: {fileID: 5159514771318690939, guid: 8c5fe15e5ac688047886c9805646fe2d, type: 3}
+    - target: {fileID: 7208463829575871227, guid: 69e1d603a3fb90244984280318cd09ec, type: 3}
+      propertyPath: BossDoors.Array.data[3]
+      value: 
+      objectReference: {fileID: 585615917344482201, guid: 38eda1b05705fdf4b89ac04a812dbd18, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

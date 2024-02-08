@@ -43,7 +43,6 @@ public class BossRoom2Manager : MonoBehaviour
     void Start()
     {
         {
-            boss = GameObject.FindObjectsOfType<Boss2>();
             oneeyes = GameObject.FindObjectsOfType<OneEye>();
             oneeyesClone = GameObject.FindObjectsOfType<OneEye_Clone>();
             oneeyesred = GameObject.FindObjectsOfType<OneEye1>();
@@ -90,9 +89,7 @@ public class BossRoom2Manager : MonoBehaviour
         // 모든 보스 몹이 파괴되었는지 확인
         if (destroyedBosses >= totalBosses)
         {
-            // 여기서 씬 로드 로직을 구현합니다.
-            // 예를 들어, SceneManager.LoadScene 메서드를 사용하여 씬을 로드할 수 있습니다.
-            // SceneManager.LoadScene("NextScene");
+            Debug.Log("엔딩");
         }
     }
     void Update()
@@ -101,7 +98,7 @@ public class BossRoom2Manager : MonoBehaviour
         {
             if ((BossCamera2Move.Instance.transform.position.x > 9.5))
             {
-                SetActiveBoss(3);
+                SetActiveBoss(1);
             }
             if ((BossCamera2Move.Instance.transform.position.x < 9.5))
             {
@@ -112,7 +109,7 @@ public class BossRoom2Manager : MonoBehaviour
         {
             if ((BossCamera2Move.Instance.transform.position.x > 9.5))
             {
-                SetActiveBoss(1);
+                SetActiveBoss(3);
             }
             if ((BossCamera2Move.Instance.transform.position.x < 9.5))
             {

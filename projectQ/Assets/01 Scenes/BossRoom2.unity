@@ -1364,7 +1364,11 @@ MonoBehaviour:
   basicEnemy: []
   virus: []
   snake: []
-  boss: []
+  boss:
+  - {fileID: 851312009}
+  - {fileID: 7906233269503988077}
+  - {fileID: 593893952}
+  - {fileID: 1252753954}
   totalBosses: 4
 --- !u!1 &708999965
 GameObject:
