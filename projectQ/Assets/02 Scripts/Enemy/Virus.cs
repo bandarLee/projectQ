@@ -7,7 +7,7 @@ public class Virus : MonoBehaviour // " Follow 타입 "
 {
     public float Health = 1;
     public ItemSpawner itemspawner;
-
+    public AudioSource HitSource;
     // 플레이어를 따라가는 속도
     public float Movespeed;
     // 위아래로 흔들리는 속도 
@@ -116,7 +116,7 @@ public class Virus : MonoBehaviour // " Follow 타입 "
         // 플레이어의 공격을 받았을 때 죽는다
         if (collision.collider.CompareTag("Bullet")) //enemy와 총알이 부딪혔을 때 
         {
-
+            HitSource.Play();
             Health -= Player.Instance.BulletPower;
 
         }

@@ -189,7 +189,7 @@ Transform:
   m_GameObject: {fileID: 4878934592145815868}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.54, y: -0.78, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.69809794, y: 0.73484, z: 0.73484}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -434,6 +434,7 @@ MonoBehaviour:
   IsPlayerMove: 0
   HasPlayerCard: 0
   Muzzles: 1
+  RoomLevel: 1
   CoinCount: 0
   weapon: 0
   bomb: 0
