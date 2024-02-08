@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 using static Lever1ManagerTrigger;
+using static Player;
 
 public class GameManager : MonoBehaviour
 {
@@ -228,6 +229,7 @@ public class GameManager : MonoBehaviour
         }
         int DecideRoomPattern = Random.Range(0, roomPatterns.Length);
         roomInfos = roomPatterns[DecideRoomPattern];
+        Player.transform.position = this.gameObject.transform.position;
         Instantiate(Player, this.gameObject.transform.position, Quaternion.identity);
         switch (DecideRoomPattern)
         {

@@ -28,7 +28,7 @@ public class BossRoom2Manager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
+        Player.Instance.transform.position = this.transform.position;
 
     }
     public enum RoomNumber

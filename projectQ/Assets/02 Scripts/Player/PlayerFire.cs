@@ -13,7 +13,6 @@ public class PlayerFire : MonoBehaviour
         Up,
         Down,
         Right
-
     }
 
     public GetFireButton getfirebutton = GetFireButton.Default;
@@ -40,10 +39,11 @@ public class PlayerFire : MonoBehaviour
     [Header("궁극기 타이머 (레이저) & 쿨타임")]
     public float BombTimer_Laser = 0f;
     public float Bomb_Cool_Time_Laser = 10f;
+    
 
 
     // 
-    [Header("VFX 이펙트")]
+    [Header("레이저 이펙트")]
     public GameObject Laser;
 
 
@@ -88,7 +88,7 @@ public class PlayerFire : MonoBehaviour
         if (BombTimer_Laser >= Bomb_Cool_Time_Laser && Input.GetKeyDown(KeyCode.F))
 
         {
-            StartCoroutine(LaserShoot());
+            
         }
     }
 
@@ -147,7 +147,6 @@ public class PlayerFire : MonoBehaviour
                 fireBullet.transform.position = NormalMuzzles[i].transform.position;
                 fireBullet.GetComponent<Bullet>().SetDirection(dir.normalized);
             }
-
             else if (Player.Instance.weapon == Player.PlayerWeapon.KnifeItem)
             {
                 GameObject knifeBullet = Instantiate(KnifeBulletPrefab, transform.position, Quaternion.Euler(bulletVector));
@@ -160,6 +159,8 @@ public class PlayerFire : MonoBehaviour
                 bloodBullet.transform.position = NormalMuzzles[i].transform.position;
                 bloodBullet.GetComponent<Bullet>().SetDirection(dir.normalized);
             }
+
+
 
         }
 
@@ -214,14 +215,12 @@ public class PlayerFire : MonoBehaviour
             bulletVector = new Vector3(0, 0, -90);
 
             Shooting(new Vector2(-1, 0));
-
         }
         else if (Input.GetKey(KeyCode.D) || stateInfo.IsName("Right_Idle"))
         {
             bulletVector = new Vector3(0, 0, 90);
 
             Shooting(new Vector2(1, 0));
-
         }
     }
 
@@ -261,25 +260,6 @@ public class PlayerFire : MonoBehaviour
        
     }
     // F키를 누르면 궁극기 발동 - 레이저
-    private IEnumerator LaserShoot()
-    {
-        BombTimer_Laser = 0;
-
-        if (Player.Instance.bomb == Player.PlayerBomb.Laser && Input.GetKeyDown(KeyCode.F))
-        {
-            for (int i = 0; i < 7; i++)
-            {
-                Vector3 randomPosition = GetRandomPosition(); // 랜덤한 위치 계산
-
-                GameObject effect = Instantiate(Laser, randomPosition, Quaternion.identity); // 이펙트 생성
-
-                yield return new WaitForSeconds(0.1f); // 0.1초 대기
-
-            }
-        }
-
-
-    }
 
     private void GetArrowKey()
         {

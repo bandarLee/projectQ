@@ -10,7 +10,10 @@ public class LeftLeg1 : MonoBehaviour
 
     public float Health = 5;
     public ItemSpawner itemspawner;
-
+    private void Awake()
+    {
+        
+    }
     public void OnCollisionEnter2D(Collision2D collision)
     {
         // 플레이어의 공격을 받았을 때 죽는다
@@ -26,6 +29,7 @@ public class LeftLeg1 : MonoBehaviour
             // 적의 체력이 끝
             if (Health <= 0)
             {
+                BossRoomManager.Instance.OnBossDestroyed();
                 gameObject.SetActive(false);
             }
         }

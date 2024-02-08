@@ -12,13 +12,17 @@ public class LobbyManager : MonoBehaviour
     public GameObject Image3;
     public GameObject Image4;
     public GameObject Image5;
+    public GameObject Image6;
+    public GameObject Image7;
 
     private CanvasGroup canvasGroup1;
     private CanvasGroup canvasGroup2;
     private CanvasGroup canvasGroup3;
     private CanvasGroup canvasGroup4;
     private CanvasGroup canvasGroup5;
-
+    private CanvasGroup canvasGroup6;
+    private CanvasGroup canvasGroup7;
+        
 
 
     public float fadeDuration = 1f; // 페이드 지속 시간
@@ -32,12 +36,16 @@ public class LobbyManager : MonoBehaviour
         canvasGroup3 = Image3.GetComponent<CanvasGroup>();
         canvasGroup4 = Image4.GetComponent<CanvasGroup>();
         canvasGroup5 = Image5.GetComponent<CanvasGroup>();
+        canvasGroup6 = Image6.GetComponent<CanvasGroup>();
+        canvasGroup7 = Image7.GetComponent<CanvasGroup>();
 
         Image1.SetActive(false);
         Image2.SetActive(false);
         Image3.SetActive(false);
         Image4.SetActive(false);
         Image5.SetActive(false);
+        Image6.SetActive(false);
+        Image7.SetActive(false);
    
         
 
@@ -74,6 +82,16 @@ public class LobbyManager : MonoBehaviour
         Image5.SetActive(true);
         StartCoroutine(FadeCanvasGroup(canvasGroup5, 0f, 1f, fadeDuration));
         yield return new WaitForSeconds(4);
+        Image4.SetActive(false);
+        Image6.SetActive(true);
+        StartCoroutine(FadeCanvasGroup(canvasGroup6, 0f, 1f, fadeDuration));
+        yield return new WaitForSeconds(4);
+        Image5.SetActive(false);
+        Image7.SetActive(true);
+        StartCoroutine(FadeCanvasGroup(canvasGroup7, 0f, 1f, fadeDuration));
+        yield return new WaitForSeconds(4);
+
+
 
 
         SceneManager.LoadScene("DemoScene");
