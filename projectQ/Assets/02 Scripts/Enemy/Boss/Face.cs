@@ -9,7 +9,7 @@ public class Face : MonoBehaviour // rotation Y좌표: 0도 했다가 180도 돌
     public ItemSpawner itemspawner;
 
     // - 속력
-    public float Speed = 1f;
+    public float Speed = 0.02f;
     // - 방향
     public Vector2 dir;
 
@@ -18,7 +18,7 @@ public class Face : MonoBehaviour // rotation Y좌표: 0도 했다가 180도 돌
 
     [Header("총구들")]
     public GameObject[] Muzzles;
-    private float rotateSpeed = 100f;
+    private float rotateSpeed = 10f;
 
     public void SetDirection(Vector2 direction)
     {
@@ -55,6 +55,8 @@ public class Face : MonoBehaviour // rotation Y좌표: 0도 했다가 180도 돌
             // 적의 체력이 끝
             if (Health <= 0)
             {
+                BossRoomManager.Instance.OnBossDestroyed();
+
                 gameObject.SetActive(false);
             }
         }

@@ -23,6 +23,8 @@ public class Body : MonoBehaviour
             // 적의 체력이 끝
             if (Health <= 0)
             {
+                BossRoomManager.Instance.OnBossDestroyed();
+
                 gameObject.SetActive(false);
             }
         }

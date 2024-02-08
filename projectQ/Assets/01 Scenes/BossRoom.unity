@@ -2301,6 +2301,7 @@ MonoBehaviour:
   BossWallRight: {fileID: 541337737}
   BossWallTop: {fileID: 119551404}
   BossWallBottom: {fileID: 2108342485}
+  totalBosses: 6
 --- !u!1 &2084628882
 GameObject:
   m_ObjectHideFlags: 0
@@ -3200,6 +3201,10 @@ PrefabInstance:
     - target: {fileID: 7242559538363919744, guid: dfaaadd5f1bce714d8abf33e16e84385, type: 3}
       propertyPath: m_Name
       value: Face
+      objectReference: {fileID: 0}
+    - target: {fileID: 7266558597017040315, guid: dfaaadd5f1bce714d8abf33e16e84385, type: 3}
+      propertyPath: Speed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9099667167664646091, guid: dfaaadd5f1bce714d8abf33e16e84385, type: 3}
       propertyPath: m_Pivot.x
