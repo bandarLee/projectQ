@@ -44,7 +44,9 @@ public class PlayerFire : MonoBehaviour
 
     // 
     [Header("레이저 공격 프리팹")]
-    public GameObject LaserBulletPrefab;
+    public GameObject LaserBulletPrefab1;
+    public GameObject LaserBulletPrefab2;
+    public GameObject LaserBulletPrefab3;
 
 
     [Header("일반 공격 총구")]
@@ -307,12 +309,16 @@ public class PlayerFire : MonoBehaviour
     }
     IEnumerator LaserDestroyCoroutine()
     {
-        LaserBulletPrefab.SetActive(true);
+        LaserBulletPrefab1.SetActive(true);
+        LaserBulletPrefab2.SetActive(true);
+        LaserBulletPrefab3.SetActive(true);
 
         yield return new WaitForSeconds(1f);
         Debug.Log("Laser");
 
-        LaserBulletPrefab.SetActive(false);
+        LaserBulletPrefab1.SetActive(false);
+        LaserBulletPrefab2.SetActive(false);
+        LaserBulletPrefab3.SetActive(false);
 
     }
 }
