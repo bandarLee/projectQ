@@ -2,19 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossSceneManager1 : MonoBehaviour
+public class BossSceneManager2 : MonoBehaviour
 {
+
     public GameObject Image1;
     public GameObject Image2;
     public GameObject Image3;
     public GameObject Image4;
     public GameObject Image5;
+    public GameObject Image6;
+    public GameObject Image7;
 
     private CanvasGroup canvasGroup1;
     private CanvasGroup canvasGroup2;
     private CanvasGroup canvasGroup3;
     private CanvasGroup canvasGroup4;
     private CanvasGroup canvasGroup5;
+    private CanvasGroup canvasGroup6;
+    private CanvasGroup canvasGroup7;
 
     public float fadeDuration = 1f; // 페이드 지속 시간
 
@@ -26,12 +31,14 @@ public class BossSceneManager1 : MonoBehaviour
         canvasGroup3 = Image3.GetComponent<CanvasGroup>();
         canvasGroup4 = Image4.GetComponent<CanvasGroup>();
         canvasGroup5 = Image5.GetComponent<CanvasGroup>();
+        canvasGroup6 = Image6.GetComponent<CanvasGroup>();
 
         Image1.SetActive(false);
         Image2.SetActive(false);
         Image3.SetActive(false);
         Image4.SetActive(false);
         Image5.SetActive(false);
+        Image6.SetActive(false);
     }
 
     void Start()
@@ -45,22 +52,26 @@ public class BossSceneManager1 : MonoBehaviour
 
         Image1.SetActive(true);
         StartCoroutine(FadeCanvasGroup(canvasGroup1, 0f, 1f, fadeDuration));
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(5);
         Image2.SetActive(true);
         StartCoroutine(FadeCanvasGroup(canvasGroup2, 0f, 1f, fadeDuration));
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(5);
         Image1.SetActive(false);
         Image3.SetActive(true);
         StartCoroutine(FadeCanvasGroup(canvasGroup3, 0f, 1f, fadeDuration));
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(5);
         Image2.SetActive(false);
         Image4.SetActive(true);
         StartCoroutine(FadeCanvasGroup(canvasGroup4, 0f, 1f, fadeDuration));
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(5);
         Image3.SetActive(false);
         Image5.SetActive(true);
         StartCoroutine(FadeCanvasGroup(canvasGroup5, 0f, 1f, fadeDuration));
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(5);
+        Image4.SetActive(false);
+        Image6.SetActive(true);
+        StartCoroutine(FadeCanvasGroup(canvasGroup6, 0f, 1f, fadeDuration));
+        yield return new WaitForSeconds(5);
 
         //SceneManager.LoadScene("Scene3");
     }
@@ -78,4 +89,6 @@ public class BossSceneManager1 : MonoBehaviour
         cg.alpha = end;
     }
 
+
 }
+

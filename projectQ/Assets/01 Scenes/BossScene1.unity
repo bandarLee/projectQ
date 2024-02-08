@@ -802,11 +802,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df3f40eb08a5a04bb4a7a42c1b85e89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Image1: {fileID: 649252288}
-  Image2: {fileID: 1173496161}
-  Image3: {fileID: 1203360063}
-  Image4: {fileID: 903492154}
-  Image5: {fileID: 769240469}
+  Image1: {fileID: 1173496161}
+  Image2: {fileID: 1203360063}
+  Image3: {fileID: 903492154}
+  Image4: {fileID: 769240469}
+  Image5: {fileID: 253615846}
   Image6: {fileID: 253615846}
   fadeDuration: 1
 --- !u!1 &1295748242
