@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snakeType: 0
   Health: 1
+  HitSource: {fileID: 1373712879010211287}
   itemspawner: {fileID: 1835939221475135809, guid: dd53dcc5c1ab7b7418dbb38821964b46, type: 3}
   DamageEffect: {fileID: 1972207730512856, guid: ea4fb55d0227e604386f44f905cfe7c0, type: 3}
   Speed: 3

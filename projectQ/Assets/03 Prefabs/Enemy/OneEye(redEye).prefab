@@ -166,6 +166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aboveY: 1
   Health: 2
+  HitSource: {fileID: -4868853278083394102}
+  HitSource1: {fileID: 4990139336382007303, guid: 7f72719c03fc56544b1027e9f2c056f6, type: 3}
   itemspawner: {fileID: 1835939221475135809, guid: dd53dcc5c1ab7b7418dbb38821964b46, type: 3}
   replacesuccess: 0
   Movespeed: 2

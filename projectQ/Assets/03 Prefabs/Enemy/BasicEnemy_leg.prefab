@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 1
-  HitSource: {fileID: 0}
+  HitSource: {fileID: 2780547352575727311}
   itemspawner: {fileID: 1835939221475135809, guid: dd53dcc5c1ab7b7418dbb38821964b46, type: 3}
   Movespeed2: 1
   swingtime: 2

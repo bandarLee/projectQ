@@ -7,7 +7,8 @@ public class OneEye1 : MonoBehaviour // follow 타입
     public float aboveY = 1f; // enemy가 player 위에 떠다닐 y축 거리
     public float Health = 2;
 
-
+    public AudioSource HitSource; // enemydamage
+    public AudioSource HitSource1; // enemyBullet
     public ItemSpawner itemspawner;
     public bool replacesuccess = false;
     // 플레이어를 따라가는 속도
@@ -36,8 +37,12 @@ public class OneEye1 : MonoBehaviour // follow 타입
     [Header("타이머")]
     public float Timer = 0f;
     public const float COOL_TIME = 0.1f;
-    private void Awake()
+
+    private void Start()
     {
+        GameObject SoundController1 = GameObject.Find("SoundManager");
+        HitSource = SoundController1.GetComponent<AudioSource>();
+        HitSource1 = SoundController1.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -94,6 +99,7 @@ public class OneEye1 : MonoBehaviour // follow 타입
 
     private void Fire()
     {
+        
         for (int i = 0; i < Mathf.Min(bulletCount, Muzzles.Length); i++)
         {
         // 총구의 위치에서 총알 오브젝트를 생성한다.
@@ -102,11 +108,11 @@ public class OneEye1 : MonoBehaviour // follow 타입
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
-
         // 플레이어의 공격을 받았을 때 죽는다
         // 플레이어의 공격을 받았을 때 죽는다
         if (collision.collider.CompareTag("Bullet")) //enemy와 총알이 부딪혔을 때 
         {
+            HitSource.Play();
             Health -= Player.Instance.BulletPower;
 
             // 적의 체력이 끝
@@ -128,8 +134,6 @@ public class OneEye1 : MonoBehaviour // follow 타입
             gameObject.SetActive(false);
         }
     }
-
-   
 
 }
 

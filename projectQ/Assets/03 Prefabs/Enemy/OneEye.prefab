@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aboveY: 1
   Health: 2
+  HitSource: {fileID: 7554091675217590067}
   itemspawner: {fileID: 1835939221475135809, guid: dd53dcc5c1ab7b7418dbb38821964b46, type: 3}
   replacesuccess: 0
   Movespeed: 2

@@ -6,8 +6,10 @@ using static Bullet;
 public class Virus : MonoBehaviour // " Follow 타입 "
 {
     public float Health = 1;
-    public ItemSpawner itemspawner;
     public AudioSource HitSource;
+    public AudioSource HitSource1;
+    public ItemSpawner itemspawner;
+    
     // 플레이어를 따라가는 속도
     public float Movespeed;
     // 위아래로 흔들리는 속도 
@@ -101,7 +103,7 @@ public class Virus : MonoBehaviour // " Follow 타입 "
         // 플레이어와 충돌했는지 확인
         if (collision.collider.CompareTag("Player"))
         {
-
+            HitSource1.Play();
             // 복제 생성 여부
             if (!isCloneDelay)
             {

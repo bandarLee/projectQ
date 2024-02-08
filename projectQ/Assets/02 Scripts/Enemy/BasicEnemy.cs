@@ -7,7 +7,7 @@ public class BasicEnemy : MonoBehaviour  // "Basic형"
 { 
     public float Health = 1;
     public AudioSource HitSource;
-
+    public AudioSource HitSource1;
     public ItemSpawner itemspawner;
 
     // 위아래로 흔들리는 속도 
@@ -103,9 +103,10 @@ public class BasicEnemy : MonoBehaviour  // "Basic형"
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+       
         if (collision.gameObject.tag == "Environment")
         {
-
+            HitSource1.Play();
             WallManager roomManager = collision.collider.GetComponent<WallManager>();
             if (roomManager.walltype == WallManager.WallType.Bot)
             {

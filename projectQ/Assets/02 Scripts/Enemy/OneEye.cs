@@ -6,8 +6,11 @@ public class OneEye : MonoBehaviour // follow 타입
 {
     public float aboveY = 1f; // enemy가 player 위에 떠다닐 y축 거리
     public float Health = 2;
+    public AudioSource HitSource;
+    //public AudioSource HitSource1;
     public ItemSpawner itemspawner;
     public bool replacesuccess = false;
+
     // 플레이어를 따라가는 속도
     public float Movespeed;
 

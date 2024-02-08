@@ -15,6 +15,8 @@ public class Snake : MonoBehaviour// " Basic 타입 "
     }
     public SnakeType snakeType;
     public float Health = 1;
+    public AudioSource HitSource;
+    public AudioSource HitSource1;
     public ItemSpawner itemspawner;
     public GameObject DamageEffect;
     private Vector3 initialPosition;
@@ -84,6 +86,7 @@ public class Snake : MonoBehaviour// " Basic 타입 "
     {
         if (collision.gameObject.tag == "Player")
         {
+            HitSource1.Play();
             //StartCoroutine(InfectWithY909(collision.gameObject.GetComponent<Player>()));
             Instantiate(DamageEffect, collision.transform.position, Quaternion.identity);
 
@@ -134,6 +137,7 @@ public class Snake : MonoBehaviour// " Basic 타입 "
         // 플레이어의 공격을 받았을 때 죽는다
         if (collision.collider.CompareTag("Bullet")) //enemy와 총알이 부딪혔을 때 
         {
+            HitSource.Play();
             Health -= Player.Instance.BulletPower;
 
             // 적의 체력이 끝
