@@ -509,8 +509,8 @@ MonoBehaviour:
   Image3: {fileID: 1802450959}
   Image4: {fileID: 141061617}
   Image5: {fileID: 134112725}
-  Image6: {fileID: 0}
-  Image7: {fileID: 0}
+  Image6: {fileID: 111930344}
+  Image7: {fileID: 1878419973}
   fadeDuration: 1
 --- !u!4 &337047200
 Transform:
