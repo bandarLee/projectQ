@@ -3442,14 +3442,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArmBone_Right
       objectReference: {fileID: 0}
-    - target: {fileID: 187309656624686048, guid: d8d090f9fa086144f9b48596bf7e86ed, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 273581825033570307, guid: d8d090f9fa086144f9b48596bf7e86ed, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 744253615820330420, guid: d8d090f9fa086144f9b48596bf7e86ed, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3529,22 +3521,6 @@ PrefabInstance:
     - target: {fileID: 744253615820330420, guid: d8d090f9fa086144f9b48596bf7e86ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2358766636183281750, guid: d8d090f9fa086144f9b48596bf7e86ed, type: 3}
-      propertyPath: bossBullet
-      value: 
-      objectReference: {fileID: -4854448498125417283, guid: 40bd22e728b223b4b8fd7e217cd4e60f, type: 3}
-    - target: {fileID: 3782731093413883449, guid: d8d090f9fa086144f9b48596bf7e86ed, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8008435982865056495, guid: d8d090f9fa086144f9b48596bf7e86ed, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8157207655575401117, guid: d8d090f9fa086144f9b48596bf7e86ed, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4441,10 +4417,6 @@ PrefabInstance:
     - target: {fileID: 6729281450974522108, guid: 61af696a924ec4046a0fafa2b2ab8d56, type: 3}
       propertyPath: m_Name
       value: LeftLeg
-      objectReference: {fileID: 0}
-    - target: {fileID: 6729281450974522108, guid: 61af696a924ec4046a0fafa2b2ab8d56, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21425,14 +21397,6 @@ PrefabInstance:
     - target: {fileID: 8339245714497370839, guid: b9ad79a80cd0aa34dad8662335fe77d8, type: 3}
       propertyPath: m_Name
       value: ArmBone_Left
-      objectReference: {fileID: 0}
-    - target: {fileID: 8339245714497370839, guid: b9ad79a80cd0aa34dad8662335fe77d8, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8597087457361569666, guid: b9ad79a80cd0aa34dad8662335fe77d8, type: 3}
-      propertyPath: Health
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
