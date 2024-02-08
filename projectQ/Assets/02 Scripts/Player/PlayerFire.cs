@@ -74,24 +74,29 @@ public class PlayerFire : MonoBehaviour
         GetArrowKey();
         // 쿨타임이 다 찼고, 마우스 버튼이 눌렸다면 공격 실행
         if (ShootTimer >= Cool_Time && (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.Space)))
-            {
-                BulletAxisShoot();
-            }
+        {
+            BulletAxisShoot();
+        }
         if (ShootTimer >= Cool_Time && (getfirebutton != GetFireButton.Default))
-            {
-                BulletArrowKeyShoot();
-            }
+        {
+            BulletArrowKeyShoot();
+        }
 
         // 폭탄 쿨타임 
         if (BombTimer >= Bomb_Cool_Time && Input.GetKeyDown(KeyCode.F))
         {
             BombShoot();
         }
-        if (BombTimer_Laser >= Bomb_Cool_Time_Laser && Input.GetKeyDown(KeyCode.F))
 
-        {
-           
-        }
+    
+
+        if (Player.Instance.bomb == Player.PlayerBomb.Laser && Input.GetKeyDown(KeyCode.F))
+            {
+
+                StartCoroutine(LaserDestroyCoroutine());
+
+            }
+        
     }
 
     // 총알을 발사하는 메서드
@@ -137,16 +142,7 @@ public class PlayerFire : MonoBehaviour
         BombTimer_Laser = 0;
 
 
-        for (int i = 0; i < Player.Instance.Muzzles; i++)
-        {
-            if (Player.Instance.bomb == Player.PlayerBomb.Laser)
-            {
-                GameObject laserBullet = Instantiate(LaserBulletPrefab, transform.position, Quaternion.Euler(bulletVector));
-                laserBullet.transform.position = NormalMuzzles[i].transform.position;
-                laserBullet.GetComponent<Bullet>().SetDirection(dir.normalized);
 
-            }
-        }
 
         for (int i = 0; i < Player.Instance.Muzzles; i++)
         {
@@ -269,6 +265,8 @@ public class PlayerFire : MonoBehaviour
             GameObject bomb = Instantiate(BombBulletPrefab);
             bomb.transform.position = this.transform.position;
         }
+
+        
     }
 
     private void GetArrowKey()
@@ -306,5 +304,15 @@ public class PlayerFire : MonoBehaviour
         Vector3 randomPosition = playerPosition + randomOffset;
 
         return randomPosition;
+    }
+    IEnumerator LaserDestroyCoroutine()
+    {
+        LaserBulletPrefab.SetActive(true);
+
+        yield return new WaitForSeconds(1f);
+        Debug.Log("Laser");
+
+        LaserBulletPrefab.SetActive(false);
+
     }
 }

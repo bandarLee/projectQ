@@ -12,14 +12,13 @@ GameObject:
   - component: {fileID: 4063429651682407104}
   - component: {fileID: 3336957826029238209}
   - component: {fileID: 7137812861459031017}
-  - component: {fileID: 2732374350540736382}
   m_Layer: 7
   m_Name: LaserBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7124213053444511464
 Transform:
   m_ObjectHideFlags: 0
@@ -159,17 +158,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2732374350540736382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8381693329927935428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63d003a0fe4e6ec429d2a235651a4b08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Btype: 4
-  FireVFX: {fileID: 0}
