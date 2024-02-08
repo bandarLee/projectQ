@@ -80,7 +80,7 @@ public class Player : MonoBehaviour
     {
         if(PlayerHealth <= 0)
         {
-            SceneManager.LoadScene("EndingScene");
+            SceneManager.LoadScene("GameOverScene");
 
         }
     }
