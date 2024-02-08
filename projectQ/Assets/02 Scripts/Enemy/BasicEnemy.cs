@@ -6,6 +6,7 @@ using static Snake;
 public class BasicEnemy : MonoBehaviour  // "Basic형"
 { 
     public float Health = 1;
+    public AudioSource HitSource;
 
     public ItemSpawner itemspawner;
 
@@ -128,6 +129,8 @@ public class BasicEnemy : MonoBehaviour  // "Basic형"
         // 플레이어의 공격을 받았을 때 죽는다
         if (collision.collider.CompareTag("Bullet")) //enemy와 총알이 부딪혔을 때 
         {
+            HitSource.Play();
+
             Health -= Player.Instance.BulletPower;
 
             // 적의 체력이 끝
