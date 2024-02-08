@@ -38,6 +38,10 @@ public class Snake : MonoBehaviour// " Basic 타입 "
         {
             Health = 1;
         }
+        if (Player.Instance.RoomLevel == 2)
+        {
+            Health = 2;
+        }
         Speed = 3f;
         transform.position = initialPosition;
 

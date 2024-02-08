@@ -99,7 +99,7 @@ public class MarketManager : MonoBehaviour
                 BlackScreen1.SetActive(false);
                 BlackScreen2.SetActive(false);
                 Casino.SetActive(true);
-
+                Player.Instance.CoinCount -= moneyInput;
                 Destroy(VendingMachine);
             }
 
