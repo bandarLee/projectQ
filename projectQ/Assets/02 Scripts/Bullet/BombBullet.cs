@@ -8,7 +8,6 @@ public class BombBullet : MonoBehaviour
     {
         None,
         Bomb,  
-        Laser
     }
 
     public BombBulletType Bomb_Type;
@@ -20,7 +19,6 @@ public class BombBullet : MonoBehaviour
     // 폭탄 궁극기가 터질 때 발동하는 Animator
     public Animator BombAnimator;
     public GameObject VfxExplosion;
-    public GameObject VfxLaser;
 
     void Start()
     {
@@ -36,11 +34,6 @@ public class BombBullet : MonoBehaviour
         {
             BombAnimator.Play("BombAnimation");
         }
-        else if (Bomb_Type == BombBulletType.Laser)
-        {
-            
-        }
-
     }
 
     void Update()

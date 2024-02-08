@@ -10,21 +10,17 @@ public class Bullet : MonoBehaviour
         Fire,     // 화염 아이템 얻으면 발동
         Knife,    // Knife 아이템 얻으면
         Blood,    // Blood 스킬
+        Laser     // Laser 총알 
     }
 
     public BulletType Btype;
 
     private float rotateSpeed = 300f;
 
-
-
-
     private Vector2 startPos;   // 총알이 발사된 시작 위치
     private Vector2 dir;        // 임의의 방향
 
-
     public GameObject FireVFX;
-
 
     void Start()
     {
@@ -40,11 +36,6 @@ public class Bullet : MonoBehaviour
     {
         // 총알의 시작 위치를 저장
         startPos = transform.position;
-
-
-
-
-       
     }
     // 목표: 총알이 방향키를 누름에 따라 앞으로 나아가도록
 
@@ -62,6 +53,11 @@ public class Bullet : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        if (Btype == BulletType.Laser)
+        {
+
+        }
+
     }
     public void GetBullettype(string bullettype)
     {
@@ -72,7 +68,6 @@ public class Bullet : MonoBehaviour
     {
         // 게임 오브젝트를 Z축을 중심으로 회전.
         transform.Rotate(new Vector3(0, 0, 1), rotateSpeed * Time.deltaTime);
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -85,5 +80,6 @@ public class Bullet : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
     }
 }
