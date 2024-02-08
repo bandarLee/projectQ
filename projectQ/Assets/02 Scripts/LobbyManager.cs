@@ -76,7 +76,7 @@ public class LobbyManager : MonoBehaviour
         yield return new WaitForSeconds(4);
 
 
-        //SceneManager.LoadScene("Scene3");
+        SceneManager.LoadScene("DemoScene");
     }
 
     private IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float duration)

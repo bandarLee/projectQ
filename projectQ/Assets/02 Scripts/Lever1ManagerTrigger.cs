@@ -54,7 +54,7 @@ public class Lever1ManagerTrigger : MonoBehaviour
                 case DoorType.Boss:
                     if (Player.Instance.HasPlayerCard)
                     {
-                        SceneManager.LoadScene("BossRoom");
+                        SceneManager.LoadScene("BossScene1");
                     }
                     else if (!Player.Instance.HasPlayerCard)
                     {
