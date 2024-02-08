@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossSceneManager2 : MonoBehaviour
 {
@@ -73,7 +74,7 @@ public class BossSceneManager2 : MonoBehaviour
         StartCoroutine(FadeCanvasGroup(canvasGroup6, 0f, 1f, fadeDuration));
         yield return new WaitForSeconds(5);
 
-        //SceneManager.LoadScene("Scene3");
+        SceneManager.LoadScene("BossRoom2");
     }
 
 
