@@ -78,7 +78,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-       
+        if(PlayerHealth <= 0)
+        {
+            SceneManager.LoadScene("EndingScene");
+
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
