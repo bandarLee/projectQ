@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 343912376479416195}
   - component: {fileID: 2956449645816072552}
   - component: {fileID: 6759353284725731746}
+  - component: {fileID: 4374901743094977709}
   m_Layer: 9
   m_Name: ArmMuscle_Left
   m_TagString: Enemy
@@ -253,6 +254,21 @@ PolygonCollider2D:
       - {x: -0.024999999, y: -0.85999995}
       - {x: -0.085, y: -0.71999997}
   m_UseDelaunayMesh: 0
+--- !u!114 &4374901743094977709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3009494785748539279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07806ea80b00d564cb7e48eebf482ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossBullet: {fileID: 0}
+  Health: 5
+  itemspawner: {fileID: 1835939221475135809, guid: dd53dcc5c1ab7b7418dbb38821964b46, type: 3}
 --- !u!1 &3562670070921702896
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +363,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8339245714497370839}
-  m_LocalRotation: {x: -0, y: -0, z: -0.27802303, w: 0.96057445}
+  m_LocalRotation: {x: 0, y: 0, z: -0.27802724, w: 0.9605732}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4.1794853, y: 2.7863235, z: 2.7863235}
   m_ConstrainProportionsScale: 0
@@ -376,9 +392,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f509e59a3d9d5d40a225eaaa84c555b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossBullet: {fileID: -4854448498125417283, guid: 40bd22e728b223b4b8fd7e217cd4e60f, type: 3}
-  Health: 5
-  itemspawner: {fileID: 1835939221475135809, guid: dd53dcc5c1ab7b7418dbb38821964b46, type: 3}
   Speed: 2
   _dir: {x: 0, y: 0}
   MonsterBullet: {fileID: 87244421547497764, guid: 40bd22e728b223b4b8fd7e217cd4e60f, type: 3}

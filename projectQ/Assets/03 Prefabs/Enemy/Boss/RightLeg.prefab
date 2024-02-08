@@ -53,9 +53,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64eb2a1017849d34191c7c848f8905d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossBullet: {fileID: -4854448498125417283, guid: 40bd22e728b223b4b8fd7e217cd4e60f, type: 3}
-  Health: 5
-  itemspawner: {fileID: 1835939221475135809, guid: dd53dcc5c1ab7b7418dbb38821964b46, type: 3}
   Speed: 2
   _dir: {x: 0, y: 0}
   MonsterBullet: {fileID: 87244421547497764, guid: ee603a60f12319540b6f6bd65adb94e4, type: 3}
@@ -76,6 +73,7 @@ GameObject:
   - component: {fileID: 3204573744089321733}
   - component: {fileID: 5438745546813659857}
   - component: {fileID: 5833042422218556096}
+  - component: {fileID: 5629983095856735299}
   m_Layer: 9
   m_Name: RightLeg
   m_TagString: Untagged
@@ -330,6 +328,21 @@ PolygonCollider2D:
       - {x: 0.125, y: -5.1549997}
       - {x: 0.265, y: -5.035}
   m_UseDelaunayMesh: 0
+--- !u!114 &5629983095856735299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3146029626397114919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07806ea80b00d564cb7e48eebf482ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossBullet: {fileID: 0}
+  Health: 5
+  itemspawner: {fileID: 1835939221475135809, guid: dd53dcc5c1ab7b7418dbb38821964b46, type: 3}
 --- !u!1 &4805593287615796893
 GameObject:
   m_ObjectHideFlags: 0
