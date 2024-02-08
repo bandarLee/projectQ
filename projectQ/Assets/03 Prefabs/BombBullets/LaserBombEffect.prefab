@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8123665739981311184}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBombEffect
-  m_TagString: Untagged
+  m_TagString: VFX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,6 +134,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8038344524183138615, guid: 0277167a12290af47801444830a2be97, type: 3}
       propertyPath: InitialModule.gravitySource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8038344524183138615, guid: 0277167a12290af47801444830a2be97, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8038344524183138615, guid: 0277167a12290af47801444830a2be97, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8038344524183138615, guid: 0277167a12290af47801444830a2be97, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

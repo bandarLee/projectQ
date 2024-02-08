@@ -147,7 +147,6 @@ public class PlayerFire : MonoBehaviour
                 fireBullet.transform.position = NormalMuzzles[i].transform.position;
                 fireBullet.GetComponent<Bullet>().SetDirection(dir.normalized);
             }
-
             else if (Player.Instance.weapon == Player.PlayerWeapon.KnifeItem)
             {
                 GameObject knifeBullet = Instantiate(KnifeBulletPrefab, transform.position, Quaternion.Euler(bulletVector));
@@ -160,6 +159,8 @@ public class PlayerFire : MonoBehaviour
                 bloodBullet.transform.position = NormalMuzzles[i].transform.position;
                 bloodBullet.GetComponent<Bullet>().SetDirection(dir.normalized);
             }
+
+
 
         }
 
@@ -214,14 +215,12 @@ public class PlayerFire : MonoBehaviour
             bulletVector = new Vector3(0, 0, -90);
 
             Shooting(new Vector2(-1, 0));
-
         }
         else if (Input.GetKey(KeyCode.D) || stateInfo.IsName("Right_Idle"))
         {
             bulletVector = new Vector3(0, 0, 90);
 
             Shooting(new Vector2(1, 0));
-
         }
     }
 
