@@ -164,7 +164,7 @@ public class OneEye : MonoBehaviour // follow 타입
         // 플레이어의 공격을 받았을 때 죽는다
         if (collision.collider.CompareTag("Bullet")) //enemy와 총알이 부딪혔을 때 
         {
-            HitSource.Play();
+            //HitSource.Play();
             Health -= Player.Instance.BulletPower;
 
             // 적의 체력이 끝

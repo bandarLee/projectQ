@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     public GameObject[] BossDoors;
     public float RoomX = 18.46f;
     public float RoomY = 10.25f;
-    public GameObject Player;
     public OneEye[] oneeyes;
     public OneEye_Clone[] oneeyesClone;
     public OneEye1[] oneeyesred;
@@ -229,8 +228,6 @@ public class GameManager : MonoBehaviour
         }
         int DecideRoomPattern = Random.Range(0, roomPatterns.Length);
         roomInfos = roomPatterns[DecideRoomPattern];
-        Player.transform.position = this.gameObject.transform.position;
-        Instantiate(Player, this.gameObject.transform.position, Quaternion.identity);
         switch (DecideRoomPattern)
         {
             case 0:
@@ -291,6 +288,7 @@ public class GameManager : MonoBehaviour
         basicEnemy = GameObject.FindObjectsOfType<BasicEnemy>();
         virus = GameObject.FindObjectsOfType<Virus>();
         snake = GameObject.FindObjectsOfType<Snake>();
+        Player.Instance.transform.position = this.gameObject.transform.position;
 
         foreach (OneEye oneeye in oneeyes)
         {

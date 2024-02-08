@@ -121,6 +121,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(1f);
         UIManager.Instance.DamageScreen.SetActive(false);
         PlayerDamageDelay = false;
+
     }
 
 
