@@ -428,7 +428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerPosition: {x: 0, y: 0}
   PlayerHealth: 3
-  maxDistance: 4.5
+  maxDistance: 5.5
   NormalBulletSpeed: 4.5
   BulletPower: 0.5
   PlayerDamageDelay: 0

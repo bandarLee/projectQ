@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public static Player Instance;
     public Vector2 PlayerPosition;
 
-    public float PlayerHealth = 5f;
+    public float PlayerHealth = 3f;
     public float maxDistance = 5.5f;   // 총알 사거리
     public float NormalBulletSpeed = 4.5f;   // 총알의 속도
     public float BulletPower = 0.5f;         // 총알의 데미지
@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     public float time;
     public float PlayerDamageNuckbackTime = 1f;
     public bool IsPlayerMove = false;
+    public bool IsDie = false;
 
     public bool HasPlayerCard = false;
 
@@ -80,8 +81,13 @@ public class Player : MonoBehaviour
     {
         if(PlayerHealth <= 0)
         {
-            SceneManager.LoadScene("GameOverScene");
+            if (!IsDie)
+            {
 
+                SceneManager.LoadScene("GameOverScene");
+                IsDie = true;
+
+            }
         }
     }
 

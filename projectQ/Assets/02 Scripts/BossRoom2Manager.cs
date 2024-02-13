@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossRoom2Manager : MonoBehaviour
 {
@@ -89,7 +90,7 @@ public class BossRoom2Manager : MonoBehaviour
         // 모든 보스 몹이 파괴되었는지 확인
         if (destroyedBosses >= totalBosses)
         {
-            Debug.Log("엔딩");
+            SceneManager.LoadScene("EndingScene");
         }
     }
     void Update()
